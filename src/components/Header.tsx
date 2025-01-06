@@ -11,34 +11,34 @@ const Header = () => {
     {
       title: 'Product',
       items: [
-        { title: 'Overview', href: '/product/overview' },
-        { title: 'Asset Transfer', href: '/product/asset-transfer' },
-        { title: 'Stable Coin', href: '/product/stable-coin' },
-        { title: 'TLS Notary', href: '/product/tls-notary' },
-        { title: 'Privacy for Blockchain', href: '/product/privacy-blockchain' },
-        { title: 'Custom Services', href: '/product/custom-services' },
-        { title: 'FAQ', href: '/product/faq' }
+        { title: 'Overview', href: '/product-overview' },
+        { title: 'Asset Transfer', href: '/asset-transfer' },
+        { title: 'Stable Coin', href: '/stable-coin' },
+        { title: 'TLS Notary', href: '/tls-notary' },
+        { title: 'Privacy for Blockchain', href: '/privacy-on-blockchains' },
+        { title: 'Custom Services', href: '/custom-services' },
+        { title: 'FAQ', href: '/faq' }
       ]
     },
     {
       title: 'Company',
       items: [
-        { title: 'About Us', href: '/company/about' },
-        { title: 'Careers', href: '/company/careers' },
-        { title: 'Partners', href: '/company/partners' },
-        { title: 'Security', href: '/company/security' }
+        { title: 'About Us', href: '/about-us' },
+        { title: 'Careers', href: '/careers' },
+        { title: 'Partners', href: '/partners' },
+        { title: 'Security', href: '/security' }
       ]
     },
     {
       title: 'Media',
       items: [
-        { title: 'News', href: '/media/news' },
-        { title: 'Blog', href: '/media/blog' }
+        { title: 'News', href: '/news' },
+        { title: 'Blog', href: '/blog' }
       ]
     },
     {
       title: 'Contact',
-      href: '/contact'
+      href: '/contact-us'
     }
   ];
 

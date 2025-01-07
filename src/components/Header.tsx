@@ -48,7 +48,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/qedit-logo.svg"
+              src="/images/qedit-logo.svg"
               alt="QEDIT Logo"
               width={120}
               height={40}

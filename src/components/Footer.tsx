@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           <div className="col-span-1">
             <Image
-              src="/qedit-logo-white.svg"
+              src="/images/qedit-logo-white.svg"
               alt="QEDIT Logo"
               width={100}
               height={35}
@@ -63,8 +63,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col items-center text-center space-y-4">
             <div className="flex flex-col items-center space-y-2">
-              <span className="text-sm text-gray-400">© {currentYear} QEDIT</span>
-              <span className="text-sm text-gray-400">All Rights Reserved</span>
+              <span className="text-sm text-gray-400">© {currentYear} QEDIT. All Rights Reserved</span>
               <span className="text-sm text-gray-400">Rothschild 22, Tel-Aviv - Yafo, Israel</span>
             </div>
             

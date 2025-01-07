@@ -1,27 +1,145 @@
-import Image from "next/image";
+import { getMarkdownData } from '@/lib/markdown';
+import Image from 'next/image';
+import Link from 'next/link';
+import type { HomePageContent } from '@/types/blocks';
 
 export default function Home() {
+  const { data: pageData } = getMarkdownData<HomePageContent>('pages', 'home.md');
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col md:flex-row items-center justify-between py-20 gap-12">
-        <div className="flex-1">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Privacy-Preserving Enterprise Solutions
-          </h1>
-          <p className="text-xl text-gray-600">
-            Empowering businesses with zero-knowledge proof technology for secure and private blockchain transactions.
-          </p>
+    <div className="space-y-24">
+      {/* Hero Section */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between py-20 gap-12">
+            <div className="flex-1">
+              <h1 className="text-5xl font-bold text-gray-900 mb-6">{pageData.hero.title}</h1>
+              <h2 className="text-3xl font-normal text-gray-800 mb-4">{pageData.hero.subtitle}</h2>
+              {pageData.hero.description && (
+                <p className="text-xl text-gray-600">{pageData.hero.description}</p>
+              )}
+            </div>
+            <div className="flex-1 w-full">
+              <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px]">
+                <Image
+                  src={pageData.hero.image || "/images/hero.png"}
+                  alt="QEDIT Technology Illustration"
+                  fill
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-contain"
+                  quality={90}
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex-1 w-full">
-          <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px]">
-            <Image
-              src="/hero.png"
-              alt="QEDIT Technology Illustration"
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-contain"
-              priority
-            />
+      </div>
+
+      {/* Features Section */}
+      <div className="bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-gray-800 mb-4">{pageData.features.header.title}</h2>
+            <p className="text-xl text-gray-600">{pageData.features.header.description}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pageData.features.items.map((feature, index) => (
+              <div key={index} className="flex flex-col">
+                <div className="relative h-64 mb-4">
+                  <Image
+                    src={feature.image}
+                    alt={feature.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <Link 
+                  href={feature.link} 
+                  className="text-blue-600 hover:text-blue-800"
+                  {...(feature.link.startsWith('http') ? {
+                    target: "_blank",
+                    rel: "noopener noreferrer"
+                  } : {})}
+                >
+                  {feature.linkText} →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Partners Section */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-semibold text-center mb-12">{pageData.partners.title}</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+            {pageData.partners.partners.map((partner, index) => (
+              <div key={index} className="relative h-12">
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Benefits Section */}
+      <div className="bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-semibold text-center mb-12">{pageData.benefits.title}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {pageData.benefits.items.map((benefit, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                <div className="relative w-36 h-36 mb-6">
+                  <Image
+                    src={benefit.icon}
+                    alt={benefit.title}
+                    fill
+                    sizes="(max-width: 768px) 144px, 144px"
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Media Features Section */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 mb-24">
+          <h2 className="text-3xl font-semibold text-center mb-12">{pageData.media.title}</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+            {pageData.media.items.map((media, index) => (
+              <a 
+                key={index} 
+                href={media.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative h-16"
+              >
+                <Image
+                  src={media.logo}
+                  alt={media.name}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-contain"
+                />
+              </a>
+            ))}
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50">
+    <header className="fixed top-0 left-0 right-0 bg-[#1e2125] backdrop-blur-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex-shrink-0">
@@ -62,7 +62,7 @@ const Header = () => {
                 {item.external ? (
                   <a
                     href={item.href}
-                    className="text-gray-700 hover:text-[#38b1de] transition-colors"
+                    className="text-white hover:text-[#38b1df] transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -70,16 +70,29 @@ const Header = () => {
                   </a>
                 ) : item.items ? (
                   <>
-                    <button className="text-gray-700 hover:text-[#38b1de] transition-colors">
+                    <button className="text-white hover:text-[#38b1df] transition-colors inline-flex items-center">
                       {item.title}
+                      <svg
+                        className="ml-1 w-4 h-4 text-[#38b1df]"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
                     </button>
                     <div className="absolute hidden group-hover:block w-48 pt-2 left-1/2 -translate-x-1/2">
-                      <div className="bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div className="bg-[#1e2125] rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         {item.items.map((subItem) => (
                           <Link
                             key={subItem.title}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            className="block px-4 py-2 text-sm text-white hover:text-[#38b1df] hover:bg-[#2a2e33]"
                           >
                             {subItem.title}
                           </Link>
@@ -90,7 +103,11 @@ const Header = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-700 hover:text-[#38b1de] transition-colors"
+                    className={`transition-colors ${
+                      item.title === 'Contact' 
+                        ? 'border-2 border-[#38b1df] rounded-full px-6 py-2 text-white hover:bg-[#38b1df] hover:text-white'
+                        : 'text-white hover:text-[#38b1df]'
+                    }`}
                   >
                     {item.title}
                   </Link>

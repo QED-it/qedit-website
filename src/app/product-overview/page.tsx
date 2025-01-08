@@ -59,14 +59,14 @@ export default function ProductOverview() {
       <div className="bg-[#1e2125] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-start justify-center py-20">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-normal text-white mb-8 max-w-4xl">
               {pageData.hero.title}
             </h1>
             <Link
               href="/contact-us"
-              className="border-2 border-[#38b1df] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#38b1df]/10 transition-all"
+              className="border-2 border-[#38b1df] text-white px-8 py-3 rounded-full text-lg font-normal hover:bg-[#38b1df] transition-all"
             >
-              Request a Demo
+              REQUEST A DEMO
             </Link>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function ProductOverview() {
       <div className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-semibold text-[#38b1df] mb-6">
+            <h2 className="text-3xl font-normal text-[#38b1df] mb-6">
               {pageData.overview.title}
             </h2>
             <p className="text-xl text-gray-600">
@@ -100,7 +100,7 @@ export default function ProductOverview() {
       {/* Techniques Section */}
       <div className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-semibold text-center mb-12">
+          <h2 className="text-3xl font-normal text-center mb-12">
             {pageData.techniques.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -178,7 +178,7 @@ export default function ProductOverview() {
       {/* How it Works Section */}
       <div className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-center mb-16">
+          <h2 className="text-3xl font-semibold text-center mb-16">
             {pageData.howItWorks.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">

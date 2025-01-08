@@ -1,9 +1,14 @@
-import { Inter } from 'next/font/google';
+import { Red_Hat_Text } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const redHatText = Red_Hat_Text({ 
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  fallback: ['sans-serif']
+});
 
 export const metadata = {
   title: 'QEDIT - Enterprise Privacy Solutions',
@@ -17,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={redHatText.className}>
         <Header />
         <main className="min-h-screen pt-20">
           {children}

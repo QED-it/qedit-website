@@ -81,13 +81,13 @@ export default function Home() {
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-gray-50">
+      <div className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-semibold mb-4">{pageData.benefits.title}</h2>
           <p className="text-xl text-gray-800 mb-12">{pageData.benefits.subtitle}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {pageData.benefits.items.map((benefit, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
+              <div key={index} className="flex flex-col items-center text-center p-6 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
                 <div className="relative w-36 h-36 mb-6">
                   <Image
                     src={benefit.icon}
@@ -106,7 +106,7 @@ export default function Home() {
       </div>      
 
       {/* Partners Section */}
-      <div className="bg-white">
+      <div className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-normal text-center mb-12">{pageData.partners.title}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">

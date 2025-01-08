@@ -7,12 +7,12 @@ export default function Home() {
   const { data: pageData } = getMarkdownData<HomePageContent>('pages', 'home.md');
 
   return (
-    <div className="space-y-24">
+    <div>
       {/* Hero Section */}
-      <div className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between py-20 gap-12">
-            <div className="flex-1">
+      <div className="bg-white min-h-[calc(100vh-5rem)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex">
+          <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between w-full">
+            <div className="flex-1 max-w-xl z-10 md:mt-[20vh]">
               <h1 className="text-5xl font-normal text-gray-900 mb-6">{pageData.hero.title}</h1>
               <h2 className="text-xl font-normal text-gray-800 mb-4">{pageData.hero.subtitle}</h2>
               <Link
@@ -25,18 +25,16 @@ export default function Home() {
                 <p className="text-xl text-gray-600 mt-6">{pageData.hero.description}</p>
               )}
             </div>
-            <div className="flex-1 w-full">
-              <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px]">
-                <Image
-                  src={pageData.hero.image || "/images/hero.svg"}
-                  alt="QEDIT Technology Illustration"
-                  fill
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-contain"
-                  quality={90}
-                />
-              </div>
+            <div className="w-full h-[400px] md:h-[500px] lg:h-[800px] relative md:absolute md:right-0 md:top-20 md:w-2/3">
+              <Image
+                src={pageData.hero.image || "/images/hero.svg"}
+                alt="QEDIT Technology Illustration"
+                fill
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 66vw"
+                className="object-contain object-right-top"
+                quality={90}
+              />
             </div>
           </div>
         </div>
@@ -130,7 +128,7 @@ export default function Home() {
       {/* Media Features Section */}
       <div className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 mb-24">
-          <h2 className="text-3xl font-semibold text-center mb-12">{pageData.media.title}</h2>
+          <h2 className="text-3xl font-normal text-center mb-12">{pageData.media.title}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
             {pageData.media.items.map((media, index) => (
               <a 

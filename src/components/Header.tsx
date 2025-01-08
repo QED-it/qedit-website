@@ -44,8 +44,8 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-[#1e2125] backdrop-blur-md z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      <div className="mx-4 sm:mx-6 lg:mx-[80px] px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center h-20">
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/images/qedit-logo.svg"
@@ -56,7 +56,7 @@ const Header = () => {
               priority
             />
           </Link>
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 ml-auto">
             {menuItems.map((item) => (
               <div key={item.title} className="relative group">
                 {item.external ? (

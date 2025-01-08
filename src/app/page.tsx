@@ -13,7 +13,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex">
           <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between w-full">
             <div className="flex-1 max-w-xl z-10 md:mt-[20vh]">
-              <h1 className="text-5xl font-normal text-gray-900 mb-6">{pageData.hero.title}</h1>
+              <h1 className="text-4xl md:text-5xl font-normal text-gray-900 mb-6">{pageData.hero.title}</h1>
               <h2 className="text-xl font-normal text-gray-800 mb-4">{pageData.hero.subtitle}</h2>
               <Link
                 href="/contact-us"

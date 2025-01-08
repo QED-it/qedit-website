@@ -1,7 +1,12 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
+  const [isMenuOpen,setIsMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string>('');
+
   const menuItems = [
     {
       title: 'ZKProof',
@@ -42,6 +47,12 @@ const Header = () => {
     }
   ];
 
+  useEffect(() => {
+    if (!isMenuOpen) {
+      setOpenDropdown('');
+    }
+  }, [isMenuOpen]);
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-[#1e2125] backdrop-blur-md z-50">
       <div className="mx-4 sm:mx-6 lg:mx-[80px] px-4 sm:px-6 lg:px-8">
@@ -56,6 +67,29 @@ const Header = () => {
               priority
             />
           </Link>
+          
+          {/* Hamburger Menu Button */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden ml-auto p-2"
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              />
+            </svg>
+          </button>
+
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 ml-auto">
             {menuItems.map((item) => (
               <div key={item.title} className="relative group">
@@ -115,6 +149,80 @@ const Header = () => {
               </div>
             ))}
           </nav>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="absolute top-full left-0 right-0 bg-[#1e2125] md:hidden min-h-[calc(100vh-5rem)]">
+              <nav className="flex flex-col divide-y divide-gray-700">
+                {menuItems.map((item) => (
+                  <div key={item.title} className="py-3 px-6">
+                    {item.external ? (
+                      <a
+                        href={item.href}
+                        className="text-white hover:text-[#38b1df] transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.title}
+                      </a>
+                    ) : item.items ? (
+                      <div className="space-y-3">
+                        <button 
+                          className="flex items-center justify-between w-full text-white hover:text-[#38b1df] transition-colors"
+                          onClick={() => {
+                            setOpenDropdown(openDropdown === item.title ? '' : item.title);
+                          }}
+                        >
+                          <span>{item.title}</span>
+                          <svg
+                            className={`w-4 h-4 text-[#38b1df] transition-transform ${
+                              openDropdown === item.title ? 'rotate-90' : ''
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </button>
+                        {openDropdown === item.title && (
+                          <div className="pl-4 space-y-3">
+                            {item.items.map((subItem) => (
+                              <Link
+                                key={subItem.title}
+                                href={subItem.href}
+                                className="block text-gray-400 hover:text-[#38b1df] transition-colors"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {subItem.title}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className={`block transition-colors ${
+                          item.title === 'Contact'
+                            ? 'inline-block border-2 border-[#38b1df] rounded-full px-8 py-2 text-white hover:bg-[#38b1df] hover:text-white text-center mt-2'
+                            : 'text-white hover:text-[#38b1df]'
+                        }`}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </nav>
+            </div>
+          )}
         </div>
       </div>
     </header>

@@ -52,6 +52,7 @@ export interface Benefit {
 export interface BenefitsSection {
   title: string;
   items: Benefit[];
+  subtitle: string;
 }
 
 // Page specific content

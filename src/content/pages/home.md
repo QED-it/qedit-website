@@ -2,7 +2,7 @@
 hero:
   title: "Securing Digital Assets, Privacy and Compliance at Scale"
   subtitle: "Add security, privacy and scale to your blockchain infrastructure using Zero-Knowledge-Proofs and applied cryptography."
-  image: "/images/hero.png"
+  image: "/images/hero.svg"
 
 features:
   header:
@@ -67,6 +67,7 @@ media:
 
 benefits:
   title: "How We Help Companies"
+  subtitle: "QEDIT is transforming the way businesses interact, making risk-free data collaboration possible and profitable. We help companies:"
   items:
     - title: "Overcome trust barriers"
       description: "Securely engage with other companies while protecting sensitive business information and your competitive edge"

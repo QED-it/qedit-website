@@ -52,7 +52,7 @@ export default function FAQAccordion({ questions }: FAQAccordionProps) {
           
           <div 
             className={`transition-all duration-200 overflow-hidden ${
-              openQuestions.has(index) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+              openQuestions.has(index) ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
             <div className="pb-6">

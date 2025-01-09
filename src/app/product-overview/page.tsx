@@ -70,14 +70,15 @@ export default function ProductOverview() {
             </Link>
           </div>
         </div>
-        <div className="absolute bottom-0 right-0">
+        <div className="relative md:absolute bottom-0 right-0 pointer-events-none mt-0 md:mt-0 flex justify-end w-full md:w-auto">
           <Image
             src="/images/layout/stripes-01.png"
             alt="Decorative stripes"
-            width={300}
-            height={300}
-            style={{ width: 'auto', height: 'auto' }}
-            className="object-contain"
+            width={600}
+            height={600}
+            style={{ width: '100%', height: 'auto' }}
+            className="object-contain w-full md:w-auto"
+            sizes="(max-width: 768px) 100vw, 600px"
             priority
           />
         </div>

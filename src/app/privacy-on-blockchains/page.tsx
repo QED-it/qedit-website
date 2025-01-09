@@ -51,7 +51,7 @@ export default function PrivacyOnBlockchains() {
   return (
     <div className="bg-white relative">
       {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-12 pb-16">
         <div className="max-w-4xl">
           <h1 className="text-4xl font-semibold text-gray-900 mb-6">
             {pageData.hero.title}

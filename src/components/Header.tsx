@@ -56,14 +56,14 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-[#1e2125] backdrop-blur-md z-50">
       <div className="mx-4 sm:mx-6 lg:mx-[80px] px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-20">
+        <div className="flex items-center h-20 md:h-32">
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/images/qedit-logo-white.svg"
               alt="QEDIT Logo"
               width={120}
               height={40}
-              className="w-28 h-auto"
+              className="w-28 md:w-36 h-auto"
               priority
             />
           </Link>
@@ -96,7 +96,7 @@ const Header = () => {
                 {item.external ? (
                   <a
                     href={item.href}
-                    className="text-white hover:text-[#38b1df] transition-colors"
+                    className="text-white hover:text-[#38b1df] transition-colors text-xl"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -104,7 +104,7 @@ const Header = () => {
                   </a>
                 ) : item.items ? (
                   <>
-                    <button className="text-white hover:text-[#38b1df] transition-colors inline-flex items-center">
+                    <button className="text-white hover:text-[#38b1df] transition-colors inline-flex items-center text-xl">
                       {item.title}
                       <svg
                         className="ml-1 w-4 h-4 text-[#38b1df]"
@@ -126,7 +126,7 @@ const Header = () => {
                           <Link
                             key={subItem.title}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-white hover:text-[#38b1df] hover:bg-[#2a2e33]"
+                            className="block px-4 py-2 text-xl text-white hover:text-[#38b1df] hover:bg-[#2a2e33]"
                           >
                             {subItem.title}
                           </Link>
@@ -137,7 +137,7 @@ const Header = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`transition-colors ${
+                    className={`transition-colors text-xl ${
                       item.title === 'Contact' 
                         ? 'border-2 border-[#38b1df] rounded-full px-6 py-2 text-white hover:bg-[#38b1df] hover:text-white'
                         : 'text-white hover:text-[#38b1df]'
@@ -159,7 +159,7 @@ const Header = () => {
                     {item.external ? (
                       <a
                         href={item.href}
-                        className="text-white hover:text-[#38b1df] transition-colors"
+                        className="text-white hover:text-[#38b1df] transition-colors text-xl"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -168,7 +168,7 @@ const Header = () => {
                     ) : item.items ? (
                       <div className="space-y-3">
                         <button 
-                          className="flex items-center justify-between w-full text-white hover:text-[#38b1df] transition-colors"
+                          className="flex items-center justify-between w-full text-white hover:text-[#38b1df] transition-colors text-xl"
                           onClick={() => {
                             setOpenDropdown(openDropdown === item.title ? '' : item.title);
                           }}
@@ -196,7 +196,7 @@ const Header = () => {
                               <Link
                                 key={subItem.title}
                                 href={subItem.href}
-                                className="block text-gray-400 hover:text-[#38b1df] transition-colors"
+                                className="block text-gray-400 hover:text-[#38b1df] transition-colors text-xl"
                                 onClick={() => setIsMenuOpen(false)}
                               >
                                 {subItem.title}
@@ -208,7 +208,7 @@ const Header = () => {
                     ) : (
                       <Link
                         href={item.href}
-                        className={`block transition-colors ${
+                        className={`block transition-colors text-xl ${
                           item.title === 'Contact'
                             ? 'inline-block border-2 border-[#38b1df] rounded-full px-8 py-2 text-white hover:bg-[#38b1df] hover:text-white text-center mt-2'
                             : 'text-white hover:text-[#38b1df]'

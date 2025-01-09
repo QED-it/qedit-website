@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={redHatText.className}>
         <Header />
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen pt-20 md:pt-32">
           {children}
         </main>
         <Footer />

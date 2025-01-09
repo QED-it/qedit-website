@@ -25,7 +25,7 @@ export default function Home() {
                 <p className="text-xl text-gray-600 mt-6">{pageData.hero.description}</p>
               )}
             </div>
-            <div className="w-full h-[400px] md:h-[500px] lg:h-[800px] relative md:absolute md:right-0 md:top-20 md:w-2/3">
+            <div className="w-full h-[400px] md:h-[500px] lg:h-[800px] relative md:absolute md:right-0 md:top-32 md:w-2/3">
               <Image
                 src={pageData.hero.image || "/images/hero.svg"}
                 alt="QEDIT Technology Illustration"

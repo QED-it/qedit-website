@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           <div className="col-span-1 flex items-center justify-center md:items-start md:justify-start w-full">
             <Image
-              src="/images/qedit-logo-white.svg"
+              src="/images/logos/qedit-logo-white.svg"
               alt="QEDIT Logo"
               width={100}
               height={35}

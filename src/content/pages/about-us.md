@@ -94,11 +94,11 @@ partners:
   title: "Our Partners"
   partners:
     - name: "VMware"
-      logo: "/images/partners/vmware-logo.png"
+      logo: "/images/logos/vmware-logo.png"
     - name: "RGAX"
-      logo: "/images/partners/rgax-logo.png"
+      logo: "/images/logos/rgax-logo.png"
     - name: "Ant Group"
-      logo: "/images/partners/ant-group-logo.svg"
+      logo: "/images/logos/ant-group-logo.svg"
     - name: "Galois"
-      logo: "/images/partners/galois-logo.png"
+      logo: "/images/logos/galois-logo.png"
 --- 

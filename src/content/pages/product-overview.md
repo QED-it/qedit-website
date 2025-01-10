@@ -52,11 +52,11 @@ testimonials:
   items:
     - quote: "[enables] previously unimaginable opportunities"
       author: "The World Economic Forum"
-      image: "/images/testimonials/world-economic-forum-logo.png"
+      image: "/images/logos/world-economic-forum-logo.png"
       link: "https://www.omersventures.com/news/alternative-asset-classes-are-growing-up/"
     - quote: "crucial for the next stages of the data economy"
       author: "The European Commission"
-      image: "/images/testimonials/european-commission-logo.png"
+      image: "/images/logos/european-commission-logo.png"
       link: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A52020DC0066"
     - quote: "eliminate(s) the collection of personal data"
       author: "US Senator Kirsten Gillibrand"

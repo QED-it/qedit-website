@@ -59,7 +59,7 @@ const Header = () => {
         <div className="flex items-center h-20 md:h-32">
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/images/qedit-logo-white.svg"
+              src="/images/logos/qedit-logo-white.svg"
               alt="QEDIT Logo"
               width={120}
               height={40}

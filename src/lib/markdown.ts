@@ -11,13 +11,13 @@ export function getMarkdownData<T>(subFolder: string, fileName: string): { data:
     return { data: data as T, content };
 }
 
-export function getMarkdownFiles<T>(subFolder: string): Array<{ fileName: string; data: T }> {
+export function getMarkdownFiles<T>(subFolder: string): Array<{ fileName: string; data: T; content: string }> {
     const directoryPath = path.join(contentDirectory, subFolder);
     const fileNames = fs.readdirSync(directoryPath);
     return fileNames.map((fileName) => {
         const filePath = path.join(directoryPath, fileName);
         const fileContents = fs.readFileSync(filePath, 'utf8');
-        const { data } = matter(fileContents);
-        return { fileName, data: data as T };
+        const { data, content } = matter(fileContents);
+        return { fileName, data: data as T, content };
     });
 }

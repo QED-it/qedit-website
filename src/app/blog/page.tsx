@@ -51,7 +51,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           {currentItems.map(({ data, slug }, index) => (
             <Link
               key={index}
-              href={`/blog/${slug}`}
+              href={`/${slug}`}
               className="group h-full"
             >
               <div className="bg-white rounded-lg shadow-sm border border-gray-300 overflow-hidden hover:shadow-md transition-shadow h-full flex flex-col">

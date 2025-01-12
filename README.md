@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QEDIT Website
+
+This is the official website for QEDIT, a company specializing in Zero-Knowledge-Proofs (ZKP) and privacy-enhancing technology solutions for enterprises. The website is built using Next.js 15 with TypeScript and Tailwind CSS.
+
+## Overview
+
+QEDIT provides privacy-enhancing technology solutions that enable secure data collaborations and business analytics. The website showcases QEDIT's expertise in:
+
+- Zero-Knowledge Proofs (ZKP)
+- Privacy-Enhancing Technology (PET)
+- Blockchain Privacy Solutions
+- Central Bank Digital Currency (CBDC)
+- Asset Transfer Systems
+
+## Technology Stack
+
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Content**: Markdown with gray-matter
+- **Markdown Processing**: marked
+- **Font**: Red Hat Text
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
+```
+3. Run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js app directory
+├── components/            # Reusable React components
+├── content/              # Markdown content files
+│   ├── blog/            # Blog posts
+│   ├── pages/           # Static page content
+│   └── press-releases/  # Press releases
+├── lib/                 # Utility functions
+└── types/               # TypeScript type definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Content Management
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The website uses Markdown files for content management. Content is organized into several categories:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Pages**: Static page content in `src/content/pages/`
+- **Blog Posts**: Blog articles in `src/content/blog/`
+- **Press Releases**: News and press releases in `src/content/press-releases/`
 
-## Learn More
+Each Markdown file includes frontmatter for metadata and content organization.
 
-To learn more about Next.js, take a look at the following resources:
+## Development Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Turbopack**: Enabled for faster development experience
+- **TypeScript**: Strict type checking enabled
+- **Responsive Design**: Mobile-first approach using Tailwind CSS
+- **Image Optimization**: Next.js Image component with automatic optimization
+- **SEO**: Built-in metadata optimization
+- **Content Processing**: Markdown processing with gray-matter and marked
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The site is configured for deployment on Vercel. For deployment details, refer to the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Environment Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Create a `.env.local` file in the root directory with the following variables:
+```bash
+# Required environment variables
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+
+# Optional environment variables
+NEXT_PUBLIC_GA_ID=  # Google Analytics ID
+```
+
+## Browser Support
+
+The website supports the following browsers:
+- Chrome (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- Edge (latest 2 versions)
+
+## Testing
+
+Run the test suite:
+```bash
+npm run test
+```
+
+Run tests in watch mode during development:
+```bash
+npm run test:watch
+```
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+Proprietary - All rights reserved by QEDIT.
+
+## Contact
+
+For more information about QEDIT, visit [qed-it.com](https://qed-it.com) or reach out through the contact form on the website.

@@ -31,7 +31,7 @@ teamMembers:
     bio: "An expert in the design and implementation of enterprise-class security-related software. Responsible for privacy-preserving protocol development and its secure implementation."
     image: "/images/team/pablo-kogan.png"
     socialLinks:
-      linkedin: "https://www.linkedin.com/in/pablo-kogan-830b97111/"
+      linkedin: "https://www.linkedin.com/in/pablo-k-830b97111/"
 
   - name: "Constance Beguier"
     role: "Cryptography Research Engineer"

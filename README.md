@@ -79,7 +79,8 @@ Create a `.env.local` file in the root directory with the following variables:
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
 # Optional environment variables
-NEXT_PUBLIC_GA_ID=  # Google Analytics ID
+NEXT_PUBLIC_GA_ID=YOUR_GOOGLE_ANALYTICS_ID
+NEXT_PUBLIC_WEB3FORMS_KEY=YOUR_WEB3FORMS_API_KEY 
 ```
 
 ## Browser Support

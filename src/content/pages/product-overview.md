@@ -24,12 +24,12 @@ future:
   title: "Ready for the future"
   quote: "By 2025, 50% of large organizations will adopt privacy-enhancing computation for processing data in untrusted environments and multiparty data analytics use cases."
   source: "Gartner Strategic Planning Assumption"
-  image: "/images/gartner-logo.png"
+  image: "/images/logos/gartner-logo.png"
 
 certification:
   title: "ISO Certification"
   description: "QEDIT is compliant with ISO 27001 and employs scalable, data encryption technology and privacy enhancing tools to offer a cost-effective SaaS solution that guarantees secure data analytics."
-  image: "/images/iso-certified.png"
+  image: "/images/logos/iso-certified.png"
 
 howItWorks:
   title: "How it Works"

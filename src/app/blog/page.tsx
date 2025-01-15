@@ -26,7 +26,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   // Use Promise.resolve to properly await the searchParams
   const params = await Promise.resolve(searchParams);
   const currentPage = Number(params?.page) || 1;
-  const itemsPerPage = 12;
+  const itemsPerPage = 9;
   
   // Get and sort the blog posts
   const blogPosts = getMarkdownFiles<BlogPost>('blog')

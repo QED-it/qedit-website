@@ -71,7 +71,7 @@ export default async function BlogPostPage({
               href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(fullUrl)}&text=${encodeURIComponent(currentPost.data.title)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-[#1DA1F2] transition-colors mt-5"
+              className="text-[#38b1df] hover:text-black transition-colors mt-5"
             >
               <span className="sr-only">X (Twitter)</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -82,7 +82,7 @@ export default async function BlogPostPage({
               href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(fullUrl)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-[#4267B2] transition-colors"
+              className="text-[#38b1df] hover:text-[#4267B2] transition-colors"
             >
               <span className="sr-only">Facebook</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -93,7 +93,7 @@ export default async function BlogPostPage({
               href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(fullUrl)}&title=${encodeURIComponent(currentPost.data.title)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-[#0077B5] transition-colors"
+              className="text-[#38b1df] hover:text-[#0077B5] transition-colors"
             >
               <span className="sr-only">LinkedIn</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -106,7 +106,13 @@ export default async function BlogPostPage({
         {/* Main Content */}
         <article className="col-span-12 md:col-span-8">
           <div className="prose prose-lg max-w-none">
-            <h1 className="text-4xl font-semibold text-gray-900 mb-4">{currentPost.data.title}</h1>
+            <Link 
+              href="/blog" 
+              className="inline-flex items-center text-gray-900 hover:text-[#38b1df] transition-colors mb-6"
+            >
+              <span className="mr-1">←</span> Back to Blog
+            </Link>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">{currentPost.data.title}</h1>
             <div className="flex items-center text-gray-600 mb-8">
               <span>{formatDate(currentPost.data.date)}</span>
               <span className="mx-2">•</span>
@@ -131,18 +137,21 @@ export default async function BlogPostPage({
         <aside className="col-span-12 md:col-span-3">
           <div className='md:pl-5'>
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Latest Posts</h2>
-            <div className="space-y-6">
+            <div className="space-y-6 divide-y divide-gray-200">
               {latestPosts.map((post, index) => (
                 <Link
                   key={index}
                   href={`/${post.fileName.replace(/\.md$/, '')}`}
-                  className="block group"
+                  className="block group pt-6 first:pt-0"
                 >
                   <h3 className="text-lg font-medium text-gray-900 group-hover:text-[#38b1df] transition-colors">
                     {post.data.title}
                   </h3>
                   <p className="text-sm text-gray-600 mt-1">
                     {formatDate(post.data.date)}
+                  </p>
+                  <p className="mt-2 flex items-center text-gray-900 group-hover:text-[#38b1df] transition-colors">
+                    Read More <span className="ml-1">→</span>
                   </p>
                 </Link>
               ))}

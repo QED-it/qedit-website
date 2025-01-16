@@ -1,0 +1,37 @@
+---
+title: "Community Drives Adoption, Part II: The Case for ZKP Standardization"
+date: "2019-10-15"
+author: "Jonathan Rouach"
+excerpt: "Our previous post, Standards Save Lives, looked at why we need an industry standard for zero-knowledge proof (ZKP) cryptography. Establishing a proper framework for ZKP adoption is a nontrivial task — it requires broad participation from various stakeholder communities."
+image: "/images/blog/zkproof-amsterdam-2019.jpg"
+---
+
+Our previous post, [Standards Save Lives](https://medium.com/qed-it/standards-save-lives-b26b5a36f662), looked at why we need an industry standard for zero-knowledge proof (ZKP) cryptography. Establishing a proper framework for ZKP adoption is a nontrivial task — it requires broad participation from various stakeholder communities. That's why, in light of the [upcoming ZKProof European community workshop](https://www.eventbrite.com/e/zkproof-community-event-amsterdam19-tickets-68989889617) co-organized by Deloitte and QEDIT, we're looking to widen involvement in the ZKP standardization process.
+
+An inclusive, community-oriented approach, such as the one embraced at the [ACS Workshop](https://www.youtube.com/playlist?list=PLeeS-3Ml-rppVt0HL2CziljGocohCH62A) earlier this summer, is important because it ensures that a fair representation of interests are taken into account, and that a broad range of expert opinions inform the vetting and scrutinizing of new ideas and proposals. This is the optimal path to a robust, high-quality zero-knowledge proof standard with the best prospects for market acceptance.
+
+## Learning From History: The Pitfalls of Top-Down Standardization
+
+The "Crypto Wars" of the 1990s serve as a valuable reminder of why any discussion around new cryptographic standards should involve multiple stakeholders. If the US government had gotten its way, the exporting of cryptographic technologies might still be illegal, and the [clipper chip](https://www.nytimes.com/1994/06/12/magazine/battle-of-the-clipper-chip.html) would have been a standard component in our communication devices. The Internet, as we know it today, would be a much scarier place.
+
+On the other side of the "Crypto War," the cypherpunk movement, together with privacy activists and civil liberties organizations, advocated for the adoption of [PGP encryption](https://en.wikipedia.org/wiki/Pretty_Good_Privacy). Many of the concerns these communities raised were echoed at the [annual RSA conferences](https://en.wikipedia.org/wiki/RSA_Conference) which, over the course of the decade, brought together computer scientists and individuals from industry to challenge the US government's agenda. Public key cryptography and [RSA encryption](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) eventually won out against the wishes of the NSA, and was adopted by leading companies like Apple, AT&T and Microsoft.
+
+### Breakthrough Technology Merits Cohesive Effort
+
+[ZKProof.org](https://zkproof.org/) is an open academic initiative for zero-knowledge proof standardization, spearheaded by QEDIT scientific advisors Professor [Shafi Goldwasser](https://people.csail.mit.edu/shafi/) (ZKP co-inventor) and Professor [Eran Tromer](https://www.tau.ac.il/~tromer/) (ZKP pioneer), along with QEDIT co-founder and Chief Scientist Professor [Aviv Zohar](https://www.avivz.net/). Under the guidance of QEDIT's Lead Cryptographer, [Daniel Benarroch](https://www.linkedin.com/in/daniel-benarroch-guenun-19419264/), the organization hosts annual conferences for top-tier cryptographers and practitioners from around the globe. It is actively developing a trust ecosystem for ZKP that is facilitating industry usage, and helping to raise market awareness about ZKPs as a cryptographically-secure framework.
+
+With broad support from leading companies and standardization bodies like the National Institute of Standards and Technology ([NIST](https://www.nist.gov/)), ZKProof.org is an increasingly important forum for shaping best-practice ZKP implementations.
+
+The success of ZKProof.org is underpinned by two core principles with which QEDIT are fully in tune:
+
+* **An inclusive community based on expertise** — ZKProof.org is actively committed to working with all members of academia, industry, and government that recognize the potential of ZKP cryptography to help reclaim online privacy. In addition to welcoming NIST, ZKProof.org workshops are attended by renowned cryptographers from leading academic institutions like [MIT](http://www.mit.edu/), [UC Berkeley](https://www.berkeley.edu/), [Stanford](https://www.stanford.edu/), [Weizmann Institute](https://www.weizmann.ac.il/pages/), [Technion](https://www.technion.ac.il/en/home-2/) and [The Hebrew University](https://new.huji.ac.il/en), as well as enterprise titans like [IBM](https://www.ibm.com/il-en), [Microsoft](https://www.microsoft.com/en-us/), [Google](https://about.google/intl/en_il/), [VISA Research](https://usa.visa.com/about-visa/visa-research.html), [JPMorgan](http://www.jpmorgan.com/), [ING](https://www.ing.com/Home.htm), [EY](https://www.ey.com/en_gl) and [Deloitte](https://www2.deloitte.com/us/en.html). ZKProof.org also proudly engages a broad scope of blockchain and cryptocurrency projects that include [R3](https://www.r3.com/), the [Ethereum Foundation](https://ethereum.foundation/), [Zcash](https://z.cash/), [Beam](https://www.beam.mw/) and more. By bringing together architects of different families of zero-knowledge schemes, ZKProof.org is facilitating the development of flexible infrastructure to accommodate a range of ZKP constructions.
+
+* **Ongoing participation from community members** — ZKProof.org has an active [community forum](https://community.zkproof.org/) and [twitter following](https://twitter.com/zkproof) to keep participants up-to-date about relevant news and events. Forum members are invited to attend conferences, join relevant working groups and make contributions to [The ZKProof Community Reference document](https://github.com/zkpstandard/zkreference/), a technical specification for developers and practitioners that helps them build trusted, ZKP privacy solutions for real world use. ZKProof.org also welcomes open-source initiatives like [zkInterface](https://github.com/QED-it/zkinterface), a tool developed by QEDIT to facilitate interoperability among ZKP schemes.
+
+## Join Us On the Journey
+
+Deloitte and QEDIT are proud co-sponsors of the first-ever [ZKproof Community Event in Europe](https://www.eventbrite.com/e/zkproof-community-event-amsterdam19-tickets-68989889617), scheduled to take place in Amsterdam on October 28–29th. The workshop will include talks, presentations and tutorials on the latest achievements in the field, as well as discussions on practical applications of zero-knowledge proof cryptography, theoretical advances, developer tools and global standardization.
+
+If your institution or organization is keen to have a voice in standardizing ZKP cryptography to facilitate broader use and adoption in the enterprise world, [**check out the community event agenda and register now to confirm your ticket**](https://www.eventbrite.com/e/zkproof-community-event-amsterdam19-tickets-68989889617). Space is limited so sign up soon!
+
+[Visit our website to learn more about QEDIT and our privacy-enhancing technology based on ZKP cryptography](https://www.qed-it.com/). 

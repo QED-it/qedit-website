@@ -91,4 +91,18 @@ body {
     padding: 0.2em 0.4em;
     border-radius: 0.25em;
   }
+
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid #38b1df;
+    margin: 1.5em 0;
+    padding: 0.5em 0 0.5em 1em;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    font-style: italic;
+  }
+
+  blockquote p {
+    margin: 0;
+  }
 }

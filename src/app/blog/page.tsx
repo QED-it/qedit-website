@@ -45,13 +45,32 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-4xl font-semibold text-gray-900 mb-12 text-center md:text-left">Blog</h1>
+        <h1 className="text-4xl font-semibold text-gray-900 mb-8 text-center md:text-left">Blog</h1>
+        
+        {/* Top Pagination */}
+        {totalPages > 1 && (
+          <div className="mb-8 flex justify-center space-x-2">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <Link
+                key={page}
+                href={`/blog?page=${page}`}
+                className={`px-4 py-2 rounded-md ${
+                  currentPage === page
+                    ? 'bg-[#38b1df] text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {page}
+              </Link>
+            ))}
+          </div>
+        )}
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {currentItems.map(({ data, slug }, index) => (
             <Link
               key={index}
-              href={`/${slug}`}
+              href={`/${slug}?page=${currentPage}`}
               className="group h-full"
             >
               <div className="bg-white rounded-lg shadow-sm border border-gray-300 overflow-hidden hover:shadow-md transition-shadow h-full flex flex-col">
@@ -90,7 +109,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           ))}
         </div>
 
-        {/* Pagination */}
+        {/* Bottom Pagination (existing) */}
         {totalPages > 1 && (
           <div className="mt-12 flex justify-center space-x-2">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (

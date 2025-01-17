@@ -24,11 +24,13 @@ export async function generateStaticParams() {
 
 export default async function BlogPostPage({
   params,
+  searchParams,
 }: {
   params: { slug: string };
+  searchParams: { page?: string };
 }) {
-  // Properly resolve the slug parameter at the start
   const { slug } = await params;
+  const { page } = await searchParams;
 
   // Get current blog post
   const posts = getMarkdownFiles<BlogPost>('blog');
@@ -107,7 +109,7 @@ export default async function BlogPostPage({
         <article className="col-span-12 md:col-span-8">
           <div className="prose prose-lg max-w-none">
             <Link 
-              href="/blog" 
+              href={page ? `/blog?page=${page}` : "/blog"}
               className="inline-flex items-center text-gray-900 hover:text-[#38b1df] transition-colors mb-6"
             >
               <span className="mr-1">←</span> Back to Blog

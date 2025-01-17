@@ -1,7 +1,7 @@
 ---
 title: "Bringing Validation to Zero Knowledge Proof"
 date: "2019-11-25"
-author: "Brett Schor"
+authors: ["Brett Schor"]
 excerpt: "Zero-Knowledge Proofs (ZKPs) received a show of support from leading data privacy advocates and European regulators meeting in Málaga, Spain, for Convergence – The Global Blockchain Congress 2019 from November 11-13, 2019."
 image: "/images/blog/convergence-2019.jpg"
 ---

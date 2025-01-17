@@ -1,7 +1,7 @@
 ---
 title: "How Privacy Enhancing Technology Can Close the Gap in Trade Financing"
 date: "2019-11-19"
-author: "Ori Wallenstein"
+authors: ["Ori Wallenstein"]
 excerpt: "The Supply Chain Finance (SCF) market has experienced tremendous growth over the past decade, and is currently estimated at $475 billion of annual traded volume."
 image: "/images/blog/tradeshift-partnership.jpg"
 ---

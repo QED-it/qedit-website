@@ -1,7 +1,7 @@
 ---
 title: "International Women's Day 2020: Q&A with Samantha Stein"
 date: "2020-03-08"
-author: "Brett Schor"
+authors: ["Brett Schor"]
 excerpt: "This International Women's Day, QEDIT's Chief Strategy Officer Samantha Stein shares her thoughts on powerful role models, changing how we think as a society, and the importance of creating a more inclusive technology sector."
 image: "/images/blog/international-womens-day-2020.jpg"
 ---

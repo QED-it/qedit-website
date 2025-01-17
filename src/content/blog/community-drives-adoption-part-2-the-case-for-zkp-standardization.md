@@ -1,7 +1,7 @@
 ---
 title: "Community Drives Adoption, Part II: The Case for ZKP Standardization"
 date: "2019-10-15"
-author: "Jonathan Rouach"
+authors: ["Jonathan Rouach"]
 excerpt: "Our previous post, Standards Save Lives, looked at why we need an industry standard for zero-knowledge proof (ZKP) cryptography. Establishing a proper framework for ZKP adoption is a nontrivial task — it requires broad participation from various stakeholder communities."
 image: "/images/blog/zkproof-amsterdam-2019.jpg"
 ---

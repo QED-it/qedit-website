@@ -1,7 +1,7 @@
 ---
 title: "How to Contain the Spread of Contact Tracing Data"
 date: "2020-04-16"
-author: "Brett Schor"
+authors: ["Brett Schor"]
 excerpt: "In these frightening and uncertain times, with health care systems and hundreds of thousands of lives at stake, governments and public health officials around the globe are pursuing unprecedented legislative action to slow the spread of Covid-19."
 image: "/images/blog/contact-tracing-data.jpg"
 ---

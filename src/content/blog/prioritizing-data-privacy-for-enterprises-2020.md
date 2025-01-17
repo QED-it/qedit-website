@@ -1,7 +1,7 @@
 ---
 title: "Prioritizing Data Privacy for Enterprises 2020"
 date: "2019-12-23"
-author: "Brett Schor"
+authors: ["Brett Schor"]
 excerpt: "As the dawn of a new decade approaches, QEDIT CEO Jonathan Rouach gives his thoughts on the status of the data privacy landscape, and what we can expect in 2020."
 image: "/images/blog/data-privacy-2020.jpg"
 ---

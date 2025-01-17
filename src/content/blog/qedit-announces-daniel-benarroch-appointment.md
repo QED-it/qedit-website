@@ -1,7 +1,7 @@
 ---
 title: "QEDIT Announces Appointment of Daniel Benarroch as Director of Research"
 date: "2020-07-27"
-author: "Brett Schor"
+authors: ["Brett Schor"]
 excerpt: "QEDIT, a Privacy-Enhancing Technology (PET) provider, is delighted to announce the appointment of Daniel Benarroch to the role of Director of Research."
 image: "/images/blog/daniel-benarroch-appointment.jpg"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "How Companies Can Leverage Their Data in The Compliance Era"
 date: "2020-02-25"
-author: "Shiri Lemel"
+authors: ["Shiri Lemel"]
 excerpt: "The spotlight on user privacy has never shone brighter, but Privacy-Enhancing Technology ensures that cross-organizational collaboration and data monetization are still viable options for enterprises, writes Shiri Lemel, VP Business Development of QEDIT"
 image: "/images/blog/data-compliance-era.jpg"
 ---

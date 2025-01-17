@@ -1,7 +1,7 @@
 ---
 title: "Year in review: 3 key lessons for post-pandemic success"
 date: "2020-12-15"
-author: "Shiri Lemel"
+authors: ["Shiri Lemel"]
 excerpt: "2020 was anything but business as usual. The onset of a once in a lifetime pandemic fundamentally changed the fabric of life for the global population, and placed an immense strain on the enterprise community."
 image: "/images/blog/2020-year-review.jpg"
 ---

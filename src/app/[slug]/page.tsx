@@ -8,7 +8,7 @@ import { marked } from 'marked';
 interface BlogPost {
   title: string;
   date: string;
-  author: string;
+  authors: string[];
   excerpt: string;
   content: string;
   image: string;
@@ -116,7 +116,11 @@ export default async function BlogPostPage({
             <div className="flex items-center text-gray-600 mb-8">
               <span>{formatDate(currentPost.data.date)}</span>
               <span className="mx-2">•</span>
-              <span>{currentPost.data.author}</span>
+              <span>
+                {currentPost.data.authors.length > 1
+                  ? currentPost.data.authors.slice(0, -1).join(', ') + ' and ' + currentPost.data.authors.slice(-1)
+                  : currentPost.data.authors[0]}
+              </span>
             </div>
             <div 
               className="markdown-content"

@@ -1,7 +1,7 @@
 ---
 title: "Collaborate with Confidence: Top Tips for Evaluating a Data Collaboration Platform"
 date: "2020-10-22"
-author: "Ori Wallenstein"
+authors: ["Ori Wallenstein"]
 excerpt: "Companies operating in today's highly competitive global and online markets are increasingly compelled to find innovative ways to leverage their business relationships for monetary and strategic gain."
 image: "/images/blog/data-collaboration-platform-evaluating.jpg"
 ---

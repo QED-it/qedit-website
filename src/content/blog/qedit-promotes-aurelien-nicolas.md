@@ -1,7 +1,7 @@
 ---
 title: "QEDIT Promotes Aurélien Nicolas to Head of Protocol Engineering"
 date: "2020-08-04"
-author: "Brett Schor"
+authors: ["Brett Schor"]
 excerpt: "QEDIT, an innovator in the field of privacy-centric data collaboration, is pleased to announce the internal promotion of Aurel Nicolas to Head of Protocol Engineering."
 image: "/images/blog/aurelien-nicolas-promotion.jpg"
 ---

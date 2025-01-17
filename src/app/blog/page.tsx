@@ -6,7 +6,7 @@ import { formatDate } from '@/lib/utils';
 interface BlogPost {
   title: string;
   date: string;
-  author: string;
+  authors: string[];
   excerpt: string;
   image: string;
   priority: boolean;
@@ -70,7 +70,13 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                     {data.title}
                   </h2>
                   <p className="text-sm text-gray-500 mb-4">
-                    {formatDate(data.date)} by {data.author}
+                    {formatDate(data.date)} by {
+                      Array.isArray(data.authors) 
+                        ? data.authors.length > 1
+                          ? data.authors.slice(0, -1).join(', ') + ' and ' + data.authors.slice(-1)
+                          : data.authors[0]
+                        : data.authors
+                    }
                   </p>
                   <p className="text-gray-600 flex-1">
                     {data.excerpt}

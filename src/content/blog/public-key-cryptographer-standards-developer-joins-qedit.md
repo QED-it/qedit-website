@@ -1,7 +1,7 @@
 ---
 title: "Public-Key Cryptographer Standards Developer Joins QEDIT"
 date: "2020-01-16"
-author: "QEDIT"
+authors: ["QEDIT"]
 excerpt: "QEDIT, a Privacy-Enhancing Technology provider, has announced the appointment of Dr. Burt Kaliski to its Scientific Advisory Board."
 image: "/images/blog/burt-kaliski-appointment.jpg"
 ---

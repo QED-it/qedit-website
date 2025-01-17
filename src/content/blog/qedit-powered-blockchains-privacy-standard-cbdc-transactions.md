@@ -1,7 +1,7 @@
 --- 
 title: "QEDIT-Powered Blockchains as Privacy Standard for CBDC Transactions"
 date: "2020-05-27"
-author: "Ori Wallenstein"
+authors: ["Ori Wallenstein"]
 excerpt: "The viability of Central Bank Digital Currencies hinges on privacy-enabled, immutable trust in transaction integrity"
 image: "/images/blog/Set-Standards-Blog-Post-1.jpg"
 ---

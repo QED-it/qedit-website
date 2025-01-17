@@ -1,7 +1,7 @@
 ---
 title: "ZKP experts shared their knowledge at the 5th ZKProof Workshop"
 date: "2022-11-22"
-author: "Jonathan Rouach"
+authors: ["Jonathan Rouach"]
 excerpt: "The 2022 edition of ZKProof Workshop brought together over 100 participants from around the world to discuss the latest developments in Zero-Knowledge Proofs."
 image: "/images/blog/5th-zkproof-workshop.png"
 slug: "5th-zkproof-workshop"

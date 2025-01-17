@@ -1,7 +1,7 @@
 ---
 title: "5 Ways That Data Collaboration Can Grow Your Business"
 date: "2020-07-07"
-author: "Ori Wallenstein"
+authors: ["Ori Wallenstein"]
 excerpt: "Data collaboration between enterprises is essential for sustainable growth in the digital era, especially for companies that routinely rely on big data to inform business practices but have exhausted their internal data silos."
 image: "/images/blog/data-collaboration.jpg"
 ---

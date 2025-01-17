@@ -1,7 +1,7 @@
 ---
 title: "QEDIT Appoints Samantha Rose Stein as Chief Strategy Officer"
 date: "2020-02-02"
-author: "QEDIT"
+authors: ["QEDIT"]
 excerpt: "QEDIT, a Privacy-Enhancing Technology (PET) provider, appointed Samantha Rose Stein to the role of Chief Strategy Officer."
 image: "/images/blog/samantha-stein-appointment.jpg"
 ---

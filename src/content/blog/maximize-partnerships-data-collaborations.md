@@ -1,7 +1,7 @@
 ---
 title: "Maximize Your Partnerships with Data-Driven Collaborations"
 date: "2020-11-05"
-author: "David Hayat"
+authors: ["David Hayat"]
 excerpt: "In today's highly competitive and mobilized digital economy, data is the centerpiece of a successful growth strategy for enterprises."
 image: "/images/blog/maximize-partnerships-header.png"
 ---

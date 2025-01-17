@@ -1,7 +1,7 @@
 ---
 title: "How Insurance Industry Can Benefit from Secure Data Collaboration"
 date: "2021-02-04"
-author: "Marta De Stradis"
+authors: ["Marta De Stradis"]
 excerpt: "As the insurtech space matures, insurance companies are increasingly keen to explore data-driven AI and machine learning technologies to mitigate risk and drive ROI. However, these solutions come with limitations..."
 image: "/images/blog/3-ways-the-insurance-industry-can-benefit-from-secure-data-collaboration.png"
 slug: "3-ways-the-insurance-industry-can-benefit-from-secure-data-collaboration"

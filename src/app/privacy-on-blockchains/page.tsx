@@ -117,7 +117,7 @@ export default function PrivacyOnBlockchains() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-white">
+      {/* <div className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-semibold text-gray-900 mb-8 max-w-3xl mx-auto">
             {pageData.cta.title}
@@ -129,10 +129,10 @@ export default function PrivacyOnBlockchains() {
             {pageData.cta.buttonText}
           </Link>
         </div>
-      </div>
+      </div> */}
 
       {/* Supply Chain Use Case Section */}
-      <div className="bg-gray-50">
+      <div className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-4xl">
             <h2 className="text-3xl font-semibold text-gray-900 mb-8">
@@ -143,32 +143,6 @@ export default function PrivacyOnBlockchains() {
             </p>
             <div className="space-y-8">
               {pageData.useCase.steps.map((step, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white p-6 rounded-lg shadow-sm border border-gray-100"
-                >
-                  <p className="text-gray-600">
-                    {step}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Insurance Use Case Section */}
-      <div className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="max-w-4xl">
-            <h2 className="text-3xl font-semibold text-gray-900 mb-8">
-              {pageData.insuranceCase.title}
-            </h2>
-            <p className="text-lg text-gray-600 mb-12">
-              {pageData.insuranceCase.description}
-            </p>
-            <div className="space-y-8">
-              {pageData.insuranceCase.steps.map((step, index) => (
                 <div 
                   key={index} 
                   className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100"
@@ -183,18 +157,18 @@ export default function PrivacyOnBlockchains() {
         </div>
       </div>
 
-      {/* Stock Exchange Use Case Section */}
+      {/* Insurance Use Case Section */}
       <div className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-4xl">
             <h2 className="text-3xl font-semibold text-gray-900 mb-8">
-              {pageData.stockExchangeCase.title}
+              {pageData.insuranceCase.title}
             </h2>
             <p className="text-lg text-gray-600 mb-12">
-              {pageData.stockExchangeCase.description}
+              {pageData.insuranceCase.description}
             </p>
             <div className="space-y-8">
-              {pageData.stockExchangeCase.steps.map((step, index) => (
+              {pageData.insuranceCase.steps.map((step, index) => (
                 <div 
                   key={index} 
                   className="bg-white p-6 rounded-lg shadow-sm border border-gray-100"
@@ -209,8 +183,34 @@ export default function PrivacyOnBlockchains() {
         </div>
       </div>
 
+      {/* Stock Exchange Use Case Section */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-4xl">
+            <h2 className="text-3xl font-semibold text-gray-900 mb-8">
+              {pageData.stockExchangeCase.title}
+            </h2>
+            <p className="text-lg text-gray-600 mb-12">
+              {pageData.stockExchangeCase.description}
+            </p>
+            <div className="space-y-8">
+              {pageData.stockExchangeCase.steps.map((step, index) => (
+                <div 
+                  key={index} 
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100"
+                >
+                  <p className="text-gray-600">
+                    {step}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Add the decorative stripes at the end */}
-      <div className="bg-gray-50 relative md:absolute bottom-0 right-0 pointer-events-none mt-0 md:mt-0 flex justify-end w-full md:w-auto">
+      <div className="bg-white relative md:absolute bottom-0 right-0 pointer-events-none mt-0 md:mt-0 flex justify-end w-full md:w-auto">
         <Image
           src="/images/layout/stripes-01.png"
           alt="Decorative stripes"

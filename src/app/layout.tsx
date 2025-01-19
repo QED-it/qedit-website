@@ -2,6 +2,7 @@ import { Red_Hat_Text } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import './globals.css';
+import CookieConsentBanner from '@/components/CookieConsent';
 
 const redHatText = Red_Hat_Text({ 
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieConsentBanner />
       </body>
     </html>
   );

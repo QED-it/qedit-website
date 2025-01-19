@@ -10,8 +10,8 @@ interface FAQContent {
   }>;
 }
 
-export default function FAQ() {
-  const { data: pageData } = getMarkdownData<FAQContent>('pages', 'faq.md');
+export default function FAQExcelGoogleSheets() {
+  const { data: pageData } = getMarkdownData<FAQContent>('pages', 'faq-excel-google-sheets.md');
 
   return (
     <div className="min-h-screen bg-white relative">
@@ -31,7 +31,7 @@ export default function FAQ() {
           height={600}
           style={{ width: '100%', height: 'auto', maxWidth: '600px' }}
           className="object-contain w-full md:w-auto"
-          sizes="(max-width: 768px) 100vw, 400px"
+          sizes="(max-width: 768px) 100vw, 600px"
           priority={false}
         />
       </div>

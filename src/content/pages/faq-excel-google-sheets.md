@@ -1,0 +1,33 @@
+---
+title: "Excel & Google Sheets FAQ"
+questions:
+  - question: "What is QEDIT for Spreadsheets?"
+    answer: "QEDIT for Spreadsheets is a privacy-enhanced data comparison tool that enables your company to gain business-critical, cross-organizational insights at the click of a button. The add-on lets you and your partners compare secure hashes of confidential lists to identify matches and inform business decisions. Designed for ease of use and seamless integration with Excel online (Office 365), QEDIT facilitates real-time, data-driven collaboration with members of your ecosystem to help you accelerate business growth without compromising your company's privacy."
+
+  - question: "What are some use cases for QEDIT for Spreadsheets?"
+    answer: "Revealing overlapping data, without sharing sensitive information, can provide value to businesses in a variety of contexts and use cases. Let's consider, for example, two startups that enter into a partnership to develop a joint service or product. Privacy policies preclude the companies from sharing their customer email lists so they each decide to launch separate marketing campaigns to announce their new offering. In order to avoid sending similar advertisements to overlapping clients, the companies need a way to compare non-confidential data (derived from private customer lists), identify matches and filter out duplicates.<br><br>Other use cases include:<br><br>● <strong style=\"color: #38b1de\">M&A Exploration:</strong> Two competing companies that are considering a merger could compare data and identify potential synergies by discovering overlapping customers, suppliers and distributors.<br><br>● <strong style=\"color: #38b1de\">Fraud Detection:</strong> Trade companies with the ability to cross-reference their data against supplier or client blacklists could avoid relationships with companies that have a history of fraudulent activity. Similarly, financial institutions could compare data to identify cases where the same asset is declared as collateral on multiple loan applications.<br><br>● <strong style=\"color: #38b1de\">Information Walls:</strong> Business units within large organizations that adhere to strict interdepartmental privacy policies could compare information, coordinate client engagement and flag conflicting data."
+
+  - question: "How can I stop other participants from finding matches against my data once a project has ended?"
+    answer: "To remove your data and prevent others from using your list for comparative purposes, open the QEDIT add-on in Excel or Google Sheets. From the main menu, click Find Matches and enter the relevant Project Name and Sheet that includes the list you wish to remove. However, instead of selecting the column that contains your list, choose a different column with empty cells. When you click the <strong style=\"color: #38b1de\">Find Matches</strong> button at the bottom of the window, other participants will automatically make all new comparisons against the newly specified column, effectively terminating their use of your list."
+
+  - question: "How does QEDIT protect my data?"
+    answer: "QEDIT for Spreadsheets employs robust privacy-enhancing technology based on secure multi-party computation to ensure that you remain the sole owner of your information. With QEDIT, raw, sensitive data never leaves your computer or server. When a new project is created and a list is compiled for third party comparisons, the values in each cell are locally hashed using SHA-512 before being mapped to a point on an elliptic curve. This result cannot be computationally inverted to reveal the original data; however to provide an additional layer of security from brute force attacks, all hashed data is encrypted using a one-time random 256-bit salt that is not stored in any location. After hashes have been uploaded to the QEDIT cloud for processing, they are further encrypted with key shares to form a new hash that is used for matching purposes."
+
+  - question: "Can other participants see my data?"
+    answer: "No. Participants who you've invited to join your project can see when matches of specific cells are found, but they are never able to access the raw data in your list. Once a project has terminated, it's possible to prevent further comparisons from being made against your data. For more information, see <i>How can I stop other participants from finding matches against my data once a project has ended?</i>"
+
+  - question: "Can QEDIT view my data?"
+    answer: "No. QEDIT does not have access to your raw data, or the ability to invert or brute force attack hashes of your data."
+
+  - question: "Is QEDIT for Spreadsheets GDPR-compliant?"
+    answer: "When using QEDIT for Spreadsheets, your private data is never shared with QEDIT or any third parties, including the participants in your comparison group. However, insights acquired from comparisons with other sources could infringe on data privacy requirements if the comparisons are based on lists that include personally identifiable information (PII). For further clarification, please consult with your legal team. Future versions of QEDIT for Spreadsheets will incorporate functionality to ensure that any insights derived from comparisons are GDPR-compliant."
+
+  - question: "In multi-party comparison groups, can I determine which participant had matching data when matches are found?"
+    answer: "Currently, no. Future versions of QEDIT for Spreadsheets will include configurable settings regarding the reported match results."
+
+  - question: "Can I create a comparison project that identifies matches for two columns in a spreadsheet (ie. customer names and phone numbers)?"
+    answer: "Yes. In order to identify matches from two columns in a spreadsheet, concatenate the data from each column and consolidate it into a new column. From the main menu, click <strong style=\"color: #38b1de\">Find Matches</strong> and select the new column with the concatenated data. Note that all group participants must concatenate the same data and use an identical formatting style."
+
+  - question: "Who is QEDIT?"
+    answer: "As a World Economic Forum Technology Pioneer, QEDIT is a globally-recognized market leader in the field of data privacy. Founded by an esteemed team of entrepreneurs, researchers, and developers, QEDIT enables enterprises to engage in cross-organizational data collaboration through the use of advanced Privacy-Enhancing Technology (PET). Our solutions help companies accelerate growth and achieve business objectives, while preserving full ownership over confidential information and upholding compliance with privacy regulations."
+--- 

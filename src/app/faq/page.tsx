@@ -28,10 +28,10 @@ export default function FAQ() {
           src="/images/layout/stripes-02.png"
           alt="Decorative stripes"
           width={600}
-          height={600}
-          style={{ width: '100%', height: 'auto', maxWidth: '600px' }}
+          height={300}
+          // style={{ width: '100%', height: 'auto', maxWidth: '600px' }}
           className="object-contain w-full md:w-auto"
-          sizes="(max-width: 768px) 100vw, 400px"
+          sizes="(max-width: 768px) 100vw, 600px"
           priority={false}
         />
       </div>

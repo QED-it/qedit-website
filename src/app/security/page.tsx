@@ -33,7 +33,7 @@ export default function Security() {
           <div className="mb-12 flex justify-start">
             <div className="relative w-48 h-48">
               <Image
-                src="/images/iso-certified.png"
+                src="/images/logos/iso-certified.png"
                 alt="ISO 27001 Certification"
                 fill
                 className="object-contain"
@@ -102,8 +102,8 @@ export default function Security() {
           src="/images/layout/stripes-02.png"
           alt="Decorative stripes"
           width={600}
-          height={600}
-          style={{ width: '100%', height: 'auto' }}
+          height={300}
+          // style={{ width: '100%', height: 'auto' }}
           className="object-contain w-full md:w-auto"
           sizes="(max-width: 768px) 100vw, 600px"
           priority={false}

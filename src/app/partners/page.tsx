@@ -105,8 +105,8 @@ export default function Partners() {
           src="/images/layout/stripes-08.png"
           alt="Decorative wave"
           width={200}
-          height={200}
-          style={{ width: 'auto', height: 'auto', maxWidth: '200px' }}
+          height={374}
+          // style={{ width: 'auto', height: 'auto', maxWidth: '200px' }}
           className="object-contain w-[100px] md:w-[200px]"
           sizes="(max-width: 768px) 100px, 200px"
           priority={false}

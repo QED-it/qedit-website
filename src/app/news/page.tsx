@@ -38,6 +38,25 @@ export default async function NewsPage({ searchParams }: NewsPageProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl font-semibold text-gray-900 mb-12 text-center md:text-left">News</h1>
         
+        {/* Top Pagination */}
+        {totalPages > 1 && (
+          <div className="mb-8 flex justify-center space-x-2">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <Link
+                key={page}
+                href={`/news?page=${page}`}
+                className={`px-4 py-2 rounded-md ${
+                  currentPage === page
+                    ? 'bg-[#38b1df] text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {page}
+              </Link>
+            ))}
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {currentItems.map(({ data }, index) => (
             <a
@@ -76,25 +95,6 @@ export default async function NewsPage({ searchParams }: NewsPageProps) {
             </a>
           ))}
         </div>
-
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="mt-12 flex justify-center space-x-2">
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <Link
-                key={page}
-                href={`/news?page=${page}`}
-                className={`px-4 py-2 rounded-md ${
-                  currentPage === page
-                    ? 'bg-[#38b1df] text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                {page}
-              </Link>
-            ))}
-          </div>
-        )}
       </div>
     </div>
   );

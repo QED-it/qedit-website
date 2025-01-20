@@ -60,11 +60,11 @@ export default function QeditForSpreadsheets() {
             <Image
               src="/images/spreadsheets/hero-spreadsheet.png"
               alt="QEDIT Spreadsheet Interface"
-              width={800}
+              width={819}
               height={600}
-              style={{ width: 'auto', height: '100%' }}
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto', maxWidth: '819px' }}
+              className="object-contain w-full h-full"
+              sizes="(max-width: 768px) 100vw, 819px"
               priority
             />
           </div>
@@ -83,10 +83,13 @@ export default function QeditForSpreadsheets() {
             </div>
             <div className="max-w-6xl mx-auto relative" style={{ paddingBottom: '56.25%' }}>
               <iframe
-                src="https://www.youtube.com/embed/eXdWCpbhqZ4"
+                src="https://www.youtube-nocookie.com/embed/eXdWCpbhqZ4?enablejsapi=1&origin=window.location.origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="rounded-lg shadow-lg absolute top-0 left-0 w-full h-full"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="QEDIT for Spreadsheets Demo"
               ></iframe>
             </div>
           </div>
@@ -164,8 +167,7 @@ export default function QeditForSpreadsheets() {
           src="/images/layout/stripes-02.png"
           alt="Decorative stripes"
           width={600}
-          height={600}
-          style={{ width: 'auto', height: 'auto', maxWidth: '600px' }}
+          height={300}
           className="object-contain w-full md:w-[600px]"
           sizes="(max-width: 768px) 100vw, 600px"
           priority={false}

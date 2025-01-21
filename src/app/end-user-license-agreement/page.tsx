@@ -23,13 +23,48 @@ export default function EndUserLicenseAgreement() {
   });
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <article className="prose prose-lg max-w-none">
-        <div 
-          className="markdown-content text-lg"
-          dangerouslySetInnerHTML={{ __html: processedContent }} 
-        />
-      </article>
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "End User License Agreement - QEDIT",
+            "url": "https://qed-it.com/end-user-license-agreement/",
+            "dateModified": "2020-06-15T10:35:18+00:00",
+          })
+        }}
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <article className="prose prose-lg max-w-none">
+          <div 
+            className="markdown-content text-lg"
+            dangerouslySetInnerHTML={{ __html: processedContent }} 
+          />
+        </article>
+      </div>
+    </>
   );
-} 
+}
+
+export const metadata = {
+  title: 'End User License Agreement - QEDIT',
+  alternates: {
+    canonical: 'https://qed-it.com/end-user-license-agreement/',
+  },
+  openGraph: {
+    title: 'End User License Agreement - QEDIT',
+    url: 'https://qed-it.com/end-user-license-agreement/',
+    locale: 'en_US',
+    type: 'article',
+    siteName: 'QEDIT',
+    modifiedTime: '2020-06-15T10:35:18+00:00',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+  other: {
+    'article:modified_time': '2020-06-15T10:35:18+00:00',
+  }
+}; 

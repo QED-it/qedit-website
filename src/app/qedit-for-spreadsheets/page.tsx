@@ -35,6 +35,19 @@ export default function QeditForSpreadsheets() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "QEDIT for Spreadsheets - QEDIT",
+            "description": "Mitigate risk and gain a competitive edge by comparing sensitive lists with other organizations in your ecosystem to reveal overlapping data.",
+            "url": "https://qed-it.com/qedit-for-spreadsheets/",
+            "dateModified": "2020-06-22T08:09:01+00:00"
+          })
+        }}
+      />
       <div className="space-y-24">
         {/* Hero Section */}
         <div className="bg-[#1e2125] relative overflow-hidden h-[600px]">
@@ -175,4 +188,27 @@ export default function QeditForSpreadsheets() {
       </div>
     </>
   );
-} 
+}
+
+export const metadata = {
+  title: 'QEDIT for Spreadsheets - QEDIT',
+  description: 'Mitigate risk and gain a competitive edge by comparing sensitive lists with other organizations in your ecosystem to reveal overlapping data.',
+  alternates: {
+    canonical: 'https://qed-it.com/qedit-for-spreadsheets/',
+  },
+  openGraph: {
+    title: 'QEDIT for Spreadsheets - QEDIT',
+    description: 'Mitigate risk and gain a competitive edge by comparing sensitive lists with other organizations in your ecosystem to reveal overlapping data.',
+    url: 'https://qed-it.com/qedit-for-spreadsheets/',
+    locale: 'en_US',
+    type: 'article',
+    siteName: 'QEDIT',
+    modifiedTime: '2020-06-22T08:09:01+00:00',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+  other: {
+    'article:modified_time': '2020-06-22T08:09:01+00:00',
+  }
+}; 

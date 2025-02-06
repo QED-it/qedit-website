@@ -12,20 +12,8 @@ interface BlogPost {
   priority: boolean;
 }
 
-interface BlogPostWithSlug {
-  fileName: string;
-  data: BlogPost;
-  slug: string;
-}
-
-interface BlogPageProps {
-  searchParams: { page?: string };
-}
-
-export default async function BlogPage({ searchParams }: BlogPageProps) {
-  // Use Promise.resolve to properly await the searchParams
-  const params = await Promise.resolve(searchParams);
-  const currentPage = Number(params?.page) || 1;
+export default function BlogPage() {
+  const currentPage = 1;
   const itemsPerPage = 9;
   
   // Get and sort the blog posts
@@ -84,7 +72,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             {currentItems.map(({ data, slug }, index) => (
               <Link
                 key={index}
-                href={`/${slug}?page=${currentPage}`}
+                href={`/${slug}`}
                 className="group h-full"
               >
                 <div className="bg-white rounded-lg shadow-sm border border-gray-300 overflow-hidden hover:shadow-md transition-shadow h-full flex flex-col">

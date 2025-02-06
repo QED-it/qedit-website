@@ -9,7 +9,13 @@ interface DPAContent {
 }
 
 export default function DataProcessingAgreement() {
-  const { data: pageData, content } = getMarkdownData<DPAContent>('pages', 'data-processing-agreement.md');
+  const { content } = getMarkdownData<DPAContent>('pages', 'data-processing-agreement.md');
+  
+  // Add null check for content
+  if (!content) {
+    console.error('No content found in data-processing-agreement.md');
+    return <div>Content not found</div>;
+  }
 
   // Process the content using marked
   const renderer = new marked.Renderer();
@@ -48,7 +54,7 @@ export default function DataProcessingAgreement() {
         <article className="prose prose-lg max-w-none">
           <div 
             className="markdown-content text-lg"
-            dangerouslySetInnerHTML={{ __html: processedContent }} 
+            dangerouslySetInnerHTML={{ __html: processedContent }}
           />
         </article>
       </div>

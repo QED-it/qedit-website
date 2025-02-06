@@ -44,7 +44,7 @@ export default function TestimonialsCarousel({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-2">
               <blockquote className="text-3xl font-semibold mb-6">
-              <span>"</span>{items[currentSlide].quote}<span>"</span>
+              <span>&quot;</span>{items[currentSlide].quote}<span>&quot;</span>
               </blockquote>
               <p className="text-gray-600 text-lg">
                 {items[currentSlide].author}

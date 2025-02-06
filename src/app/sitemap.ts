@@ -3,6 +3,8 @@ import { getMarkdownFiles } from '@/lib/markdown'
 import fs from 'fs'
 import path from 'path'
 
+export const dynamic = 'force-static'
+
 interface BlogPost {
   date: string;
   priority?: boolean;

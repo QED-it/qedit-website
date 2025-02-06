@@ -8,7 +8,7 @@ interface LicenseContent {
 }
 
 export default function EndUserLicenseAgreement() {
-  const { data: pageData, content } = getMarkdownData<LicenseContent>('pages', 'end-user-license-agreement.md');
+  const { content } = getMarkdownData<LicenseContent>('pages', 'end-user-license-agreement.md');
 
   // Process the content using marked
   const renderer = new marked.Renderer();

@@ -13,14 +13,8 @@ interface PressRelease {
   priority: boolean;
 }
 
-interface NewsPageProps {
-  searchParams: { page?: string };
-}
-
-export default async function NewsPage({ searchParams }: NewsPageProps) {
-  // Use Promise.resolve to properly await the searchParams
-  const params = await Promise.resolve(searchParams);
-  const currentPage = Number(params?.page) || 1;
+export default function NewsPage() {
+  const currentPage = 1;
   const itemsPerPage = 12;
   
   // Get and sort the press releases

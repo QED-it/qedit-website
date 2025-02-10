@@ -4,6 +4,34 @@ date: "2019-09-04"
 authors: ["Brett Schor"]
 excerpt: "On the heels of a successful integration with the VMware blockchain stack, QEDIT has just returned from the VMworld 2019 Conference in San Francisco where we launched a new educational tool to highlight the benefits of privacy for VMware enterprise blockchain customers."
 image: "/images/blog/vmworld-conference.jpg"
+slug: "qedits-privacy-solution-for-supply-chains-showcased-at-vmworld-conference-in-san-francisco"
+tags: ["VMware", "Supply Chain", "Privacy", "Blockchain", "Conference", "Enterprise"]
+seo:
+  metaTitle: "Supply Chains using QEDIT's Privacy Solution | QEDIT"
+  metaDescription: "We launched a new educational tool showing the benefits of privacy for VMware enterprise blockchain customers the VMworld Conference in San Francisco."
+  canonical: "https://qed-it.com/qedits-privacy-solution-for-supply-chains-showcased-at-vmworld-conference-in-san-francisco/"
+  ogTitle: "Supply Chains using QEDIT's Privacy Solution | QEDIT"
+  ogDescription: "We launched a new educational tool showing the benefits of privacy for VMware enterprise blockchain customers the VMworld Conference in San Francisco."
+  publishedTime: "2019-09-04T20:12:24+00:00"
+  modifiedTime: "2021-05-11T12:42:38+00:00"
+  author: "Brett Schor"
+  readingTime: "2 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/qedits-privacy-solution-for-supply-chains-showcased-at-vmworld-conference-in-san-francisco/#article",
+        "author": {
+          "name": "Brett Schor"
+        },
+        "headline": "QEDIT's Privacy Solution for Supply Chains Showcased at VMworld Conference",
+        "datePublished": "2019-09-04T20:12:24+00:00",
+        "dateModified": "2021-05-11T12:42:38+00:00",
+        "wordCount": 467
+      }
+    ]
+  }
 ---
 
 ## Qedit attended VMworld 2019 conference in San Francisco

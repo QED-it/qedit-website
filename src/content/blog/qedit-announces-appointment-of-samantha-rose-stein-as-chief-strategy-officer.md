@@ -4,6 +4,34 @@ date: "2020-02-02"
 authors: ["QEDIT"]
 excerpt: "QEDIT, a Privacy-Enhancing Technology (PET) provider, appointed Samantha Rose Stein to the role of Chief Strategy Officer."
 image: "/images/blog/samantha-stein-appointment.jpg"
+slug: "qedit-announces-appointment-of-samantha-rose-stein-as-chief-strategy-officer"
+tags: ["Team", "Leadership", "Announcement", "Strategy", "Privacy Technology"]
+seo:
+  metaTitle: "QEDIT appoints new Chief Strategy Officer"
+  metaDescription: "QEDIT appoints new Chief Strategy Officer- Samantha Rose Stein. Learn more about the appointment of Samantha Rose Stein to QEDIT's executive team. Click >>>"
+  canonical: "https://qed-it.com/qedit-announces-appointment-of-samantha-rose-stein-as-chief-strategy-officer/"
+  ogTitle: "QEDIT appoints new Chief Strategy Officer"
+  ogDescription: "QEDIT appoints new Chief Strategy Officer- Samantha Rose Stein. Learn more about the appointment of Samantha Rose Stein to QEDIT's executive team. Click >>>"
+  publishedTime: "2020-02-02T08:26:45+00:00"
+  modifiedTime: "2021-05-16T05:40:40+00:00"
+  author: "QEDIT"
+  readingTime: "3 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/qedit-announces-appointment-of-samantha-rose-stein-as-chief-strategy-officer/#article",
+        "author": {
+          "name": "QEDIT"
+        },
+        "headline": "QEDIT Appoints Samantha Rose Stein as Chief Strategy Officer",
+        "datePublished": "2020-02-02T08:26:45+00:00",
+        "dateModified": "2021-05-16T05:40:40+00:00",
+        "wordCount": 591
+      }
+    ]
+  }
 ---
 
 ## Tel Aviv, Israel — February 2, 2020

@@ -1,9 +1,41 @@
 ---
-title: "The birth of the ZKProof Community"
+title: "The Birth of the ZKProof Community"
 date: "2019-06-20"
 authors: ["Jonathan Rouach", "Daniel Benarroch"]
 excerpt: "Zero Knowledge Proofs are real and in production, and ZCash are battle testing the first zkSNARK implementation, but the use of ZKP is expanding beyond cryptocurrency, to Enterprise: QED-it, IBM, Stratumn, R3 and more. The question we keep asking is why should clients trust a vendor?"
 image: "/images/blog/zkproof-workshop.jpg"
+slug: "the-birth-of-the-zkproof-community"
+tags: ["ZKProof", "Community", "Zero-Knowledge Proofs", "Standardization", "Enterprise", "Cryptocurrency"]
+seo:
+  metaTitle: "The birth of the ZKProof Community- Read Now | QEDIT"
+  metaDescription: "The use of ZKP (Zero Knowledge Proof) is expanding beyond cryptocurrency, to Enterprise. Here's news of a new ZKProof community on its first workshop. Read >>>"
+  canonical: "https://qed-it.com/the-birth-of-the-zkproof-community/"
+  ogTitle: "The birth of the ZKProof Community- Read Now | QEDIT"
+  ogDescription: "The use of ZKP (Zero Knowledge Proof) is expanding beyond cryptocurrency, to Enterprise. Here's news of a new ZKProof community on its first workshop. Read >>>"
+  publishedTime: "2019-06-20T14:35:14+00:00"
+  modifiedTime: "2021-05-09T09:30:24+00:00"
+  author: "Jonathan Rouach"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/the-birth-of-the-zkproof-community/#article",
+        "author": {
+          "name": "Jonathan Rouach"
+        },
+        "headline": "The birth of the ZKProof Community",
+        "datePublished": "2019-06-20T14:35:14+00:00",
+        "dateModified": "2021-05-09T09:30:24+00:00",
+        "wordCount": 768,
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://cdn-images-1.medium.com/max/1000/0*BTME1S9giHYxMD6X"
+        }
+      }
+    ]
+  }
 ---
 
 ## ZKPs

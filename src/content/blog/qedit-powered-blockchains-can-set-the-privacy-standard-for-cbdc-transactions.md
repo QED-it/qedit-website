@@ -1,9 +1,42 @@
---- 
+---
 title: "QEDIT-Powered Blockchains as Privacy Standard for CBDC Transactions"
 date: "2020-05-27"
 authors: ["Ori Wallenstein"]
 excerpt: "The viability of Central Bank Digital Currencies hinges on privacy-enabled, immutable trust in transaction integrity"
 image: "/images/blog/Set-Standards-Blog-Post-1.jpg"
+slug: "qedit-powered-blockchains-can-set-the-privacy-standard-for-cbdc-transactions"
+tags: ["CBDC", "Blockchain", "Privacy", "Zero-Knowledge Proofs", "Digital Currency"]
+seo:
+  metaTitle: "Setting the Privacy Standard for CBDC Transactions | QEDIT"
+  metaDescription: "VP Product Ori Wallenstein discusses how a QEDIT-powered, Zero-Knowledge blockchain can set the privacy standard for CBDC transactions"
+  canonical: "https://qed-it.com/qedit-powered-blockchains-can-set-the-privacy-standard-for-cbdc-transactions/"
+  ogTitle: "Setting the Privacy Standard for CBDC Transactions | QEDIT"
+  ogDescription: "VP Product Ori Wallenstein discusses how a QEDIT-powered, Zero-Knowledge blockchain can set the privacy standard for CBDC transactions"
+  ogImage: "http://qed-it.com/wp-content/uploads/2020/05/Set-Standards-Blog-Post-v2-300x169.jpg"
+  publishedTime: "2020-05-27T13:01:25+00:00"
+  modifiedTime: "2021-05-11T12:26:51+00:00"
+  author: "Ori Wallenstein"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/qedit-powered-blockchains-can-set-the-privacy-standard-for-cbdc-transactions/#article",
+        "author": {
+          "name": "Ori Wallenstein"
+        },
+        "headline": "QEDIT-Powered Blockchains as Privacy Standard for CBDC Transactions",
+        "datePublished": "2020-05-27T13:01:25+00:00",
+        "dateModified": "2021-05-11T12:26:51+00:00",
+        "wordCount": 814,
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://qed-it.com/wp-content/uploads/2020/05/Set-Standards-Blog-Post-v2-300x169.jpg"
+        }
+      }
+    ]
+  }
 ---
 
 ## *The viability of Central Bank Digital Currencies hinges on privacy-enabled, immutable trust in transaction integrity*

@@ -2,8 +2,36 @@
 title: "How Companies Can Leverage Their Data in The Compliance Era"
 date: "2020-02-25"
 authors: ["Shiri Lemel"]
-excerpt: "The spotlight on user privacy has never shone brighter, but Privacy-Enhancing Technology ensures that cross-organizational collaboration and data monetization are still viable options for enterprises, writes Shiri Lemel, VP Business Development of QEDIT"
+excerpt: "The spotlight on user privacy has never shone brighter, but Privacy-Enhancing Technology ensures that cross-organizational collaboration and data monetization are still viable options for enterprises."
 image: "/images/blog/data-compliance-era.jpg"
+slug: "how-companies-can-leverage-their-data-in-the-compliance-era"
+tags: ["Data Privacy", "Compliance", "GDPR", "CCPA", "Enterprise", "PET"]
+seo:
+  metaTitle: "How companies can leverage their data in the compliance era"
+  metaDescription: "Learn how companies can apply privacy-enhancing technology to achieve business objectives while upholding compliance with new data privacy regulations >>>"
+  canonical: "https://qed-it.com/how-companies-can-leverage-their-data-in-the-compliance-era/"
+  ogTitle: "How companies can leverage their data in the compliance era"
+  ogDescription: "Learn how companies can apply privacy-enhancing technology to achieve business objectives while upholding compliance with new data privacy regulations >>>"
+  publishedTime: "2020-02-25T13:27:24+00:00"
+  modifiedTime: "2021-05-09T10:24:16+00:00"
+  author: "Shiri Lemel"
+  readingTime: "3 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/how-companies-can-leverage-their-data-in-the-compliance-era/#article",
+        "author": {
+          "name": "Shiri Lemel"
+        },
+        "headline": "How Companies Can Leverage Their Data in The Compliance Era",
+        "datePublished": "2020-02-25T13:27:24+00:00",
+        "dateModified": "2021-05-09T10:24:16+00:00",
+        "wordCount": 683
+      }
+    ]
+  }
 ---
 
 ## GDPR legistlation & data protection

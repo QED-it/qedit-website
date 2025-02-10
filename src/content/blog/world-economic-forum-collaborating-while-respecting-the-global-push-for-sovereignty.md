@@ -4,6 +4,34 @@ date: "2019-01-30"
 authors: ["Ruben Arnold", "Jonathan Rouach"]
 excerpt: "In the context of rising nationalist trends, we need to reinforce tools for trust and collaboration – according to the cofounders of the Israeli startup QED-it. During the World Economic Forum annual event, held last week of January in Davos, the question of cooperation is crucial for governments and enterprises."
 image: "/images/blog/davos-collaboration.jpg"
+slug: "world-economic-forum-collaborating-while-respecting-the-global-push-for-sovereignty"
+tags: ["World Economic Forum", "Sovereignty", "Zero-Knowledge Proofs", "Collaboration", "Privacy", "Davos"]
+seo:
+  metaTitle: "Collaborating While Respecting The Global Push for Sovereignty"
+  metaDescription: "QEDIT presented new data collaboration systems & use-cases based on Zero Knowledge Proof cryptography, which can preserve sovereignty over private data. Info >>>"
+  canonical: "https://qed-it.com/world-economic-forum-collaborating-while-respecting-the-global-push-for-sovereignty/"
+  ogTitle: "Collaborating While Respecting The Global Push for Sovereignty"
+  ogDescription: "QEDIT presented new data collaboration systems & use-cases based on Zero Knowledge Proof cryptography, which can preserve sovereignty over private data. Info >>>"
+  publishedTime: "2019-01-30T21:09:07+00:00"
+  modifiedTime: "2021-05-16T05:36:06+00:00"
+  author: "Jonathan Rouach"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/world-economic-forum-collaborating-while-respecting-the-global-push-for-sovereignty/#article",
+        "author": {
+          "name": "Jonathan Rouach"
+        },
+        "headline": "Collaborating While Respecting Global Push for Sovereignty",
+        "datePublished": "2019-01-30T21:09:07+00:00",
+        "dateModified": "2021-05-16T05:36:06+00:00",
+        "wordCount": 740
+      }
+    ]
+  }
 ---
 
 ## Tools for trust and collaboration

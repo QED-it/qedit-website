@@ -4,6 +4,34 @@ date: "2017-12-11"
 authors: ["Nicholas de Chalonge"]
 excerpt: "Jonathan Rouach, CEO and co-founder of QEDIT, is very proud to announce that Prof. Shafi Goldwasser has become part of the QEDIT adventure by joining its Scientific Advisory Board. Prof. Shafi Goldwasser is co-creator of Zero-Knowledge Proof cryptography, the basis of QEDIT's technology, Zero-Knowledge Blockchain."
 image: "/images/blog/shafi-goldwasser.png"
+slug: "professor-shaffi-goldwasser-joins-qedit-scientific-advisory-board"
+tags: ["Team", "Advisory Board", "Zero-Knowledge Proofs", "Cryptography", "Announcement"]
+seo:
+  metaTitle: "Prof. Shafi Goldwasser joins QEDIT Scientific Advisory Board | QEDIT"
+  metaDescription: "QEDIT is proud to announce that professor Shafi Goldwasser joins QEDIT Scientific Advisory Board. Want more info about Prof. Shafi? Click Here >>>"
+  canonical: "https://qed-it.com/professor-shaffi-goldwasser-joins-qedit-scientific-advisory-board/"
+  ogTitle: "Prof. Shafi Goldwasser joins QEDIT Scientific Advisory Board | QEDIT"
+  ogDescription: "QEDIT is proud to announce that professor Shafi Goldwasser joins QEDIT Scientific Advisory Board. Want more info about Prof. Shafi? Click Here >>>"
+  publishedTime: "2017-12-11T10:55:32+00:00"
+  modifiedTime: "2021-03-18T06:09:19+00:00"
+  author: "Nicholas de Chalonge"
+  readingTime: "2 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/professor-shaffi-goldwasser-joins-qedit-scientific-advisory-board/#article",
+        "author": {
+          "name": "Nicholas de Chalonge"
+        },
+        "headline": "Professor Shafi Goldwasser joins QEDIT Scientific Advisory Board",
+        "datePublished": "2017-12-11T10:55:32+00:00",
+        "dateModified": "2021-03-18T06:09:19+00:00",
+        "wordCount": 304
+      }
+    ]
+  }
 ---
 
 ## Qedit News

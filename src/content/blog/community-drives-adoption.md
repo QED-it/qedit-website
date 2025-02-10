@@ -4,6 +4,34 @@ date: "2019-10-15"
 authors: ["Jonathan Rouach"]
 excerpt: "Our previous post, Standards Save Lives, looked at why we need an industry standard for zero-knowledge proof (ZKP) cryptography. Establishing a proper framework for ZKP adoption is a nontrivial task — it requires broad participation from various stakeholder communities."
 image: "/images/blog/zkproof-amsterdam-2019.jpg"
+slug: "community-drives-adoption"
+tags: ["Zero-Knowledge Proofs", "Standardization", "Community", "ZKProof", "Cryptography"]
+seo:
+  metaTitle: "Community Drives Adoption: The Case for ZKP Standardization"
+  metaDescription: "Establishing an industry standard for zero-knowledge proof (ZKP) cryptography requires broad involvement from various stakeholder communities."
+  canonical: "https://qed-it.com/community-drives-adoption/"
+  ogTitle: "Community Drives Adoption: The Case for ZKP Standardization"
+  ogDescription: "Establishing an industry standard for zero-knowledge proof (ZKP) cryptography requires broad involvement from various stakeholder communities."
+  publishedTime: "2019-10-15T12:36:01+00:00"
+  modifiedTime: "2021-04-22T13:39:51+00:00"
+  author: "Jonathan Rouach"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/community-drives-adoption/#article",
+        "author": {
+          "name": "Jonathan Rouach"
+        },
+        "headline": "Community Drives Adoption, Part II: The Case for ZKP Standardization",
+        "datePublished": "2019-10-15T12:36:01+00:00",
+        "dateModified": "2021-04-22T13:39:51+00:00",
+        "wordCount": 795
+      }
+    ]
+  }
 ---
 
 Our previous post, [Standards Save Lives](https://medium.com/qed-it/standards-save-lives-b26b5a36f662), looked at why we need an industry standard for zero-knowledge proof (ZKP) cryptography. Establishing a proper framework for ZKP adoption is a nontrivial task — it requires broad participation from various stakeholder communities. That's why, in light of the [upcoming ZKProof European community workshop](https://www.eventbrite.com/e/zkproof-community-event-amsterdam19-tickets-68989889617) co-organized by Deloitte and QEDIT, we're looking to widen involvement in the ZKP standardization process.

@@ -4,6 +4,39 @@ date: "2020-10-22"
 authors: ["Ori Wallenstein"]
 excerpt: "Companies operating in today's highly competitive global and online markets are increasingly compelled to find innovative ways to leverage their business relationships for monetary and strategic gain."
 image: "/images/blog/data-collaboration-platform-evaluating.jpg"
+slug: "collaborate-with-confidence-top-tips-for-evaluating-a-data-collaboration-platform"
+tags: ["Data Collaboration", "Security", "Privacy", "Enterprise", "Technology"]
+seo:
+  metaTitle: "Top Tips for Evaluating a Data Collaboration Platform | QEDIT"
+  metaDescription: "Leveraging 2nd party data to drive growth is no trivial task. Check out our tips for choosing the optimal data collaboration platform."
+  canonical: "https://qed-it.com/collaborate-with-confidence-top-tips-for-evaluating-a-data-collaboration-platform/"
+  ogTitle: "Top Tips for Evaluating a Data Collaboration Platform | QEDIT"
+  ogDescription: "Leveraging 2nd party data to drive growth is no trivial task. Check out our tips for choosing the optimal data collaboration platform."
+  ogImage: "https://www.qed-it.com/wp-content/uploads/2020/10/Dashboard-v2-1024x722.png"
+  publishedTime: "2020-10-22T09:21:24+00:00"
+  modifiedTime: "2021-05-11T12:17:42+00:00"
+  author: "Ori Wallenstein"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/collaborate-with-confidence-top-tips-for-evaluating-a-data-collaboration-platform/#article",
+        "author": {
+          "name": "Ori Wallenstein"
+        },
+        "headline": "Collaborate Confidently:Tips for Evaluating a Data Collaboration Platform",
+        "datePublished": "2020-10-22T09:21:24+00:00",
+        "dateModified": "2021-05-11T12:17:42+00:00",
+        "wordCount": 895,
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.qed-it.com/wp-content/uploads/2020/10/Dashboard-v2-1024x722.png"
+        }
+      }
+    ]
+  }
 ---
 
 Companies operating in today's highly competitive global and online markets are increasingly compelled to find innovative ways to leverage their business relationships for monetary and strategic gain. To achieve success, enterprises now need to continuously enrich siloed data with actionable, domain-specific, and up-to-date information from trusted partners in their network.

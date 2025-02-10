@@ -5,7 +5,37 @@ authors: ["Daniel Benarroch"]
 excerpt: "The exchange of data is intrinsic to business processes, allowing partners to share value, information and assets among many others. Untrusting partners, however, tend to use trusted third parties to manage the data and certify its validity on both ends of the process. In this post we are going to focus on how we can use modern cryptographic techniques to solve this centuries old problem of how to get rid of trusted third parties for business processes."
 image: "/images/blog/trustless-computing-diagram.png"
 slug: "trustless-computing-on-private-data"
-tags: ["Cryptography", "Privacy", "Zero Knowledge Proofs", "Blockchain"]
+tags: ["Cryptography", "Privacy", "Zero Knowledge Proofs", "Blockchain", "Trusted Computing", "Business Process"]
+seo:
+  metaTitle: "Trustless Computing on Private Data | QEDIT"
+  metaDescription: "More on how to use modern cryptographic techniques to solve the problem of how to get rid of trusted third parties for business processes and private data."
+  canonical: "https://qed-it.com/trustless-computing-on-private-data/"
+  ogTitle: "Trustless Computing on Private Data | QEDIT"
+  ogDescription: "More on how to use modern cryptographic techniques to solve the problem of how to get rid of trusted third parties for business processes and private data."
+  publishedTime: "2017-06-08T09:40:41+00:00"
+  modifiedTime: "2021-05-09T09:50:19+00:00"
+  author: "Daniel Benarroch"
+  readingTime: "12 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/trustless-computing-on-private-data/#article",
+        "author": {
+          "name": "Daniel Benarroch"
+        },
+        "headline": "Trustless Computing on Private Data",
+        "datePublished": "2017-06-08T09:40:41+00:00",
+        "dateModified": "2021-05-09T09:50:19+00:00",
+        "wordCount": 2571,
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.qed-it.com/wp-content/uploads/2017/06/Tech-post-DIAGRAMS-e1496913214138-300x181.png"
+        }
+      }
+    ]
+  }
 ---
 
 ## The exchange of data & private data protection

@@ -2,6 +2,7 @@ import { getMarkdownFiles } from '@/lib/markdown';
 import Image from 'next/image';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
+import { notFound } from 'next/navigation';
 
 interface PressRelease {
   title: string;
@@ -13,14 +14,37 @@ interface PressRelease {
   priority: boolean;
 }
 
-export default function NewsPage() {
-  const itemsPerPage = 12;
+export async function generateStaticParams() {
+  const releases = getMarkdownFiles<PressRelease>('press-releases');
+  const totalPages = Math.ceil(releases.length / 12);
   
+  return Array.from({ length: totalPages - 1 }, (_, i) => ({
+    page: String(i + 2)
+  }));
+}
+
+interface PageProps {
+  params: Promise<{ page: string }>;
+}
+
+export default async function NewsPaginatedPage({ params }: PageProps) {
+  const { page } = await params;
+  const pageNumber = parseInt(page);
+  const itemsPerPage = 12;
+
   const pressReleases = getMarkdownFiles<PressRelease>('press-releases')
     .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
   const totalPages = Math.ceil(pressReleases.length / itemsPerPage);
-  const currentItems = pressReleases.slice(0, itemsPerPage);
+
+  if (pageNumber < 2 || pageNumber > totalPages) {
+    notFound();
+  }
+
+  const currentItems = pressReleases.slice(
+    (pageNumber - 1) * itemsPerPage,
+    pageNumber * itemsPerPage
+  );
 
   return (
     <>
@@ -32,7 +56,7 @@ export default function NewsPage() {
             "@type": "WebPage",
             "name": "Read the Latest news & updates on data privacy challenges",
             "description": "Qedit News. Get the latest news about Qedit Privacy Enhancing Technology. Data Collaboration Tools, and the New Data Economy",
-            "url": "https://qed-it.com/news/",
+            "url": `https://qed-it.com/news/page/${pageNumber}/`,
             "dateModified": "2021-05-09T10:19:38+00:00"
           })
         }}
@@ -42,25 +66,27 @@ export default function NewsPage() {
           <h1 className="text-4xl font-semibold text-gray-900 mb-12 text-center md:text-left">News</h1>
           
           {/* Top Pagination */}
-          {totalPages > 1 && (
-            <div className="mb-8 flex justify-center space-x-2">
+          <div className="mb-8 flex justify-center space-x-2">
+            <Link
+              href="/news"
+              className="px-4 py-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200"
+            >
+              1
+            </Link>
+            {Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map((page) => (
               <Link
-                href="/news"
-                className="px-4 py-2 rounded-md bg-[#38b1df] text-white"
+                key={page}
+                href={`/news/page/${page}`}
+                className={`px-4 py-2 rounded-md ${
+                  pageNumber === page
+                    ? 'bg-[#38b1df] text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
               >
-                1
+                {page}
               </Link>
-              {Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map((page) => (
-                <Link
-                  key={page}
-                  href={`/news/page/${page}`}
-                  className="px-4 py-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200"
-                >
-                  {page}
-                </Link>
-              ))}
-            </div>
-          )}
+            ))}
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {currentItems.map(({ data }, index) => (
@@ -102,50 +128,29 @@ export default function NewsPage() {
           </div>
 
           {/* Bottom Pagination */}
-          {totalPages > 1 && (
-            <div className="mt-8 flex justify-center space-x-2">
+          <div className="mt-8 flex justify-center space-x-2">
+            <Link
+              href="/news"
+              className="px-4 py-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200"
+            >
+              1
+            </Link>
+            {Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map((page) => (
               <Link
-                href="/news"
-                className="px-4 py-2 rounded-md bg-[#38b1df] text-white"
+                key={page}
+                href={`/news/page/${page}`}
+                className={`px-4 py-2 rounded-md ${
+                  pageNumber === page
+                    ? 'bg-[#38b1df] text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
               >
-                1
+                {page}
               </Link>
-              {Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map((page) => (
-                <Link
-                  key={page}
-                  href={`/news/page/${page}`}
-                  className="px-4 py-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200"
-                >
-                  {page}
-                </Link>
-              ))}
-            </div>
-          )}
+            ))}
+          </div>
         </div>
       </div>
     </>
   );
-}
-
-export const metadata = {
-  title: 'Read the Latest news & updates on data privacy challenges',
-  description: 'Qedit News. Get the latest news about Qedit Privacy Enhancing Technology. Data Collaboration Tools, and the New Data Economy',
-  alternates: {
-    canonical: 'https://qed-it.com/news/',
-  },
-  openGraph: {
-    title: 'Read the Latest news & updates on data privacy challenges',
-    description: 'Qedit News. Get the latest news about Qedit Privacy Enhancing Technology. Data Collaboration Tools, and the New Data Economy',
-    url: 'https://qed-it.com/news/',
-    locale: 'en_US',
-    type: 'article',
-    siteName: 'QEDIT',
-    modifiedTime: '2021-05-09T10:19:38+00:00',
-  },
-  twitter: {
-    card: 'summary_large_image',
-  },
-  other: {
-    'article:modified_time': '2021-05-09T10:19:38+00:00',
-  }
-}; 
+} 

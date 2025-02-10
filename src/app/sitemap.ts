@@ -52,6 +52,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPosts = getMarkdownFiles<BlogPost>('blog')
   const pressReleases = getMarkdownFiles<PressRelease>('press-releases')
 
+  // Calculate total pages for blog and news
+  const blogItemsPerPage = 9;
+  const newsItemsPerPage = 12;
+  const totalBlogPages = Math.ceil(blogPosts.length / blogItemsPerPage);
+  const totalNewsPages = Math.ceil(pressReleases.length / newsItemsPerPage);
+  
+  // Generate blog pagination URLs
+  const blogPaginationUrls = Array.from({ length: totalBlogPages - 1 }, (_, i) => ({
+    url: `${baseUrl}/blog/page/${i + 2}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
+
+  // Generate news pagination URLs
+  const newsPaginationUrls = Array.from({ length: totalNewsPages - 1 }, (_, i) => ({
+    url: `${baseUrl}/news/page/${i + 2}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
+
   return [
     // Dynamic app routes
     ...appRoutes.map((route) => ({
@@ -60,6 +82,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly' as const,
       priority: route === '/' ? 1 : 0.8,
     })),
+
+    // Blog pagination pages
+    ...blogPaginationUrls,
+
+    // News pagination pages
+    ...newsPaginationUrls,
 
     // Blog posts
     ...blogPosts.map((post) => ({

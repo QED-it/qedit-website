@@ -3,6 +3,38 @@ import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
 import { notFound } from 'next/navigation';
 import { marked } from 'marked';
+import { Metadata } from 'next';
+
+interface Schema {
+  "@context": string;
+  "@type": string;
+  name: string;
+  description: string;
+  url: string;
+  dateModified: string;
+  datePublished?: string;
+  headline?: string;
+  author?: {
+    "@type": string;
+    name: string;
+  };
+  publisher?: {
+    "@type": string;
+    name: string;
+    logo?: {
+      "@type": string;
+      url: string;
+    };
+  };
+  image?: {
+    "@type": string;
+    url: string;
+  };
+  mainEntityOfPage?: {
+    "@type": string;
+    "@id": string;
+  };
+}
 
 interface BlogPost {
   title: string;
@@ -12,6 +44,19 @@ interface BlogPost {
   content: string;
   image: string;
   priority: boolean;
+  seo?: {
+    metaTitle: string;
+    metaDescription: string;
+    canonical: string;
+    ogTitle: string;
+    ogDescription: string;
+    publishedTime: string;
+    modifiedTime: string;
+    author: string;
+    readingTime: string;
+    schema: Schema;
+    ogImage?: string;
+  };
 }
 
 export async function generateStaticParams() {
@@ -163,4 +208,63 @@ export default async function BlogPostPage({ params }: PageProps) {
       </div>
     </div>
   );
+}
+
+type Params = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { slug } = await params;
+  
+  const post = getMarkdownFiles<BlogPost>('blog')
+    .find(post => post.fileName.replace(/\.md$/, '') === slug);
+
+  if (!post) return {};
+
+  // Default metadata if no SEO data is present
+  const defaultMetadata: Metadata = {
+    title: post.data.title,
+    description: post.data.excerpt,
+    authors: post.data.authors.map(author => ({ name: author })),
+    openGraph: {
+      title: post.data.title,
+      description: post.data.excerpt,
+      type: 'article',
+      authors: post.data.authors,
+    },
+    twitter: {
+      card: 'summary_large_image',
+    }
+  };
+
+  // Return default metadata if no SEO data exists
+  if (!post.data.seo) return defaultMetadata;
+
+  const { seo } = post.data;
+
+  return {
+    title: seo.metaTitle,
+    description: seo.metaDescription,
+    authors: [{ name: seo.author }],
+    openGraph: {
+      title: seo.ogTitle,
+      description: seo.ogDescription,
+      type: 'article',
+      publishedTime: seo.publishedTime,
+      modifiedTime: seo.modifiedTime,
+      authors: [seo.author],
+      images: seo.ogImage ? [seo.ogImage] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: seo.ogTitle,
+      description: seo.ogDescription,
+    },
+    alternates: {
+      canonical: seo.canonical,
+    }
+  };
 } 

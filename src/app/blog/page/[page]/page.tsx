@@ -2,64 +2,35 @@ import { getMarkdownFiles } from '@/lib/markdown';
 import Image from 'next/image';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
-
-interface Schema {
-  "@context": string;
-  "@type": string;
-  name: string;
-  description: string;
-  url: string;
-  dateModified: string;
-  datePublished?: string;
-  headline?: string;
-  author?: {
-    "@type": string;
-    name: string;
-  };
-  publisher?: {
-    "@type": string;
-    name: string;
-    logo?: {
-      "@type": string;
-      url: string;
-    };
-  };
-  image?: {
-    "@type": string;
-    url: string;
-  };
-  mainEntityOfPage?: {
-    "@type": string;
-    "@id": string;
-  };
-}
+import { notFound } from 'next/navigation';
 
 interface BlogPost {
   title: string;
   date: string;
   authors: string[];
   excerpt: string;
-  content: string;
   image: string;
   priority: boolean;
-  seo?: {
-    metaTitle: string;
-    metaDescription: string;
-    canonical: string;
-    ogTitle: string;
-    ogDescription: string;
-    publishedTime: string;
-    modifiedTime: string;
-    author: string;
-    readingTime: string;
-    schema: Schema;
-    ogImage?: string;
-  };
 }
 
-export default function BlogPage() {
-  const itemsPerPage = 9;
+export async function generateStaticParams() {
+  const posts = getMarkdownFiles<BlogPost>('blog');
+  const totalPages = Math.ceil(posts.length / 9);
   
+  return Array.from({ length: totalPages - 1 }, (_, i) => ({
+    page: String(i + 2)
+  }));
+}
+
+interface PageProps {
+  params: Promise<{ page: string }>;
+}
+
+export default async function BlogPaginatedPage({ params }: PageProps) {
+  const { page } = await params;
+  const pageNumber = parseInt(page);
+  const itemsPerPage = 9;
+
   const blogPosts = getMarkdownFiles<BlogPost>('blog')
     .map(post => ({
       ...post,
@@ -68,7 +39,15 @@ export default function BlogPage() {
     .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
   const totalPages = Math.ceil(blogPosts.length / itemsPerPage);
-  const currentItems = blogPosts.slice(0, itemsPerPage);
+
+  if (pageNumber < 2 || pageNumber > totalPages) {
+    notFound();
+  }
+
+  const currentItems = blogPosts.slice(
+    (pageNumber - 1) * itemsPerPage,
+    pageNumber * itemsPerPage
+  );
 
   return (
     <>
@@ -79,8 +58,8 @@ export default function BlogPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "QEDIT's Blog: Learn more about Privacy Enhancing Technology",
-            "description": "Want info about Privacy Enhancing Technology and how it can help your company leverage data? Enter our blog and Read our professional Blog Posts. Click >>>",
-            "url": "https://qed-it.com/blog/",
+            "description": "Want info about Privacy Enhancing Technology and how it can help your company leverage data? Enter our blog and Read our professional Blog Posts.",
+            "url": `https://qed-it.com/blog/page/${pageNumber}/`,
             "dateModified": "2021-04-20T13:43:10+00:00"
           })
         }}
@@ -90,25 +69,27 @@ export default function BlogPage() {
           <h1 className="text-4xl font-semibold text-gray-900 mb-8 text-center md:text-left">Blog</h1>
           
           {/* Top Pagination */}
-          {totalPages > 1 && (
-            <div className="mb-8 flex justify-center space-x-2">
+          <div className="mb-8 flex justify-center space-x-2">
+            <Link
+              href="/blog"
+              className="px-4 py-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200"
+            >
+              1
+            </Link>
+            {Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map((page) => (
               <Link
-                href="/blog"
-                className="px-4 py-2 rounded-md bg-[#38b1df] text-white"
+                key={page}
+                href={`/blog/page/${page}`}
+                className={`px-4 py-2 rounded-md ${
+                  pageNumber === page
+                    ? 'bg-[#38b1df] text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
               >
-                1
+                {page}
               </Link>
-              {Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map((page) => (
-                <Link
-                  key={page}
-                  href={`/blog/page/${page}`}
-                  className="px-4 py-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200"
-                >
-                  {page}
-                </Link>
-              ))}
-            </div>
-          )}
+            ))}
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {currentItems.map(({ data, slug }, index) => (
@@ -154,51 +135,30 @@ export default function BlogPage() {
           </div>
 
           {/* Bottom Pagination */}
-          {totalPages > 1 && (
-            <div className="mt-8 flex justify-center space-x-2">
+          <div className="mt-8 flex justify-center space-x-2">
+            <Link
+              href="/blog"
+              className="px-4 py-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200"
+            >
+              1
+            </Link>
+            {Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map((page) => (
               <Link
-                href="/blog"
-                className="px-4 py-2 rounded-md bg-[#38b1df] text-white"
+                key={page}
+                href={`/blog/page/${page}`}
+                className={`px-4 py-2 rounded-md ${
+                  pageNumber === page
+                    ? 'bg-[#38b1df] text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
               >
-                1
+                {page}
               </Link>
-              {Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map((page) => (
-                <Link
-                  key={page}
-                  href={`/blog/page/${page}`}
-                  className="px-4 py-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200"
-                >
-                  {page}
-                </Link>
-              ))}
-            </div>
-          )}
+            ))}
+          </div>
 
         </div>
       </div>
     </>
   );
 }
-
-export const metadata = {
-  title: "QEDIT's Blog: Learn more about Privacy Enhancing Technology",
-  description: 'Want info about Privacy Enhancing Technology and how it can help your company leverage data? Enter our blog and Read our professional Blog Posts.',
-  alternates: {
-    canonical: 'https://qed-it.com/blog/',
-  },
-  openGraph: {
-    title: "QEDIT's Blog: Learn more about Privacy Enhancing Technology",
-    description: 'Want info about Privacy Enhancing Technology and how it can help your company leverage data? Enter our blog and Read our professional Blog Posts.',
-    url: 'https://qed-it.com/blog/',
-    locale: 'en_US',
-    type: 'article',
-    siteName: 'QEDIT',
-    modifiedTime: '2021-04-20T13:43:10+00:00',
-  },
-  twitter: {
-    card: 'summary_large_image',
-  },
-  other: {
-    'article:modified_time': '2021-04-20T13:43:10+00:00',
-  }
-}; 

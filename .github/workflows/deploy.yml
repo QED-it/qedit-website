@@ -1,8 +1,8 @@
-name: Deploy to GitHub Pages (Staging)
+name: Deploy to GitHub Pages (Prod)
 
 on:
   push:
-    branches: [staging]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -32,7 +32,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          NEXT_PUBLIC_SITE_URL: https://staging.qed-it.com
+          NEXT_PUBLIC_SITE_URL: https://qed-it.com
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

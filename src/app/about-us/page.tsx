@@ -48,7 +48,7 @@ export default function AboutUs() {
           })
         }}
       />
-      <div className="min-h-screen bg-white py-16 pb-16 md:pb-32 relative">
+      <div className="min-h-screen bg-white py-16 pb-52 md:pb-32 relative">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 sm:p-12">
             <h1 className="text-4xl font-semibold text-center md:text-left text-gray-900 mb-16">{pageData.title}</h1>
@@ -222,14 +222,13 @@ export default function AboutUs() {
         </div>
 
         {/* Decorative stripes */}
-        <div className="relative md:absolute bottom-0 right-0 pointer-events-none mt-0 md:mt-0 flex justify-end w-full md:w-auto -mb-16 md:mb-0">
+        <div className="absolute bottom-0 right-0 pointer-events-none flex justify-end w-full">
           <Image
             src="/images/layout/stripes-02.png"
             alt="Decorative stripes"
             width={600}
             height={300}
-            // style={{ width: '100%', height: 'auto' }}
-            className="object-contain w-full md:w-auto"
+            className="w-full h-auto md:w-[600px]"
             sizes="(max-width: 768px) 100vw, 600px"
             priority={false}
           />

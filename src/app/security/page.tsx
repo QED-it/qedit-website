@@ -36,7 +36,7 @@ export default function Security() {
           })
         }}
       />
-      <div className="min-h-screen bg-white relative pb-0 md:pb-32">
+      <div className="min-h-screen bg-white relative pb-32 md:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-4xl">
             <h1 className="text-4xl font-semibold text-gray-900 mb-12">
@@ -111,14 +111,13 @@ export default function Security() {
         </div>
 
         {/* Decorative stripes */}
-        <div className="relative md:absolute bottom-0 right-0 pointer-events-none mt-0 md:mt-0 flex justify-end w-full md:w-auto">
+        <div className="absolute bottom-0 right-0 pointer-events-none flex justify-end w-full">
           <Image
             src="/images/layout/stripes-02.png"
             alt="Decorative stripes"
             width={600}
             height={300}
-            // style={{ width: '100%', height: 'auto' }}
-            className="object-contain w-full md:w-auto"
+            className="w-full h-auto md:w-[600px]"
             sizes="(max-width: 768px) 100vw, 600px"
             priority={false}
           />

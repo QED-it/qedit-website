@@ -1,9 +1,37 @@
 ---
 title: "How to Contain the Spread of Contact Tracing Data"
 date: "2020-04-16"
-authors: ["Brett Schor"]
-excerpt: "In these frightening and uncertain times, with health care systems and hundreds of thousands of lives at stake, governments and public health officials around the globe are pursuing unprecedented legislative action to slow the spread of Covid-19."
+authors: ["Ori Wallenstein"]
+excerpt: "As governments and health organizations worldwide race to contain the spread of COVID-19, privacy advocates are sounding the alarm about the long-term implications of contact tracing."
 image: "/images/blog/contact-tracing-data.jpg"
+slug: "how-to-contain-the-spread-of-contact-tracing-data"
+tags: ["Privacy", "Healthcare", "Contact Tracing", "Data Protection", "COVID-19"]
+seo:
+  metaTitle: "How to Contain the Spread of Contact Tracing Data | QEDIT"
+  metaDescription: "QEDIT commentary on how Privacy-Enhancing Technology can play a role in protecting health records & tracing data in the aftermath of a pandemic."
+  canonical: "https://qed-it.com/how-to-contain-the-spread-of-contact-tracing-data/"
+  ogTitle: "How to Contain the Spread of Contact Tracing Data | QEDIT"
+  ogDescription: "QEDIT commentary on how Privacy-Enhancing Technology can play a role in protecting health records & tracing data in the aftermath of a pandemic."
+  publishedTime: "2020-04-16T06:07:08+00:00"
+  modifiedTime: "2021-05-16T05:12:30+00:00"
+  author: "Ori Wallenstein"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/how-to-contain-the-spread-of-contact-tracing-data/#article",
+        "author": {
+          "name": "Ori Wallenstein"
+        },
+        "headline": "How to Contain the Spread of Contact Tracing Data",
+        "datePublished": "2020-04-16T06:07:08+00:00",
+        "dateModified": "2021-05-16T05:12:30+00:00",
+        "wordCount": 806
+      }
+    ]
+  }
 ---
 
 In these frightening and uncertain times, with health care systems and hundreds of thousands of lives at stake, governments and public health officials around the globe are pursuing unprecedented [legislative action](https://www.bbc.com/news/uk-politics-52004116) to slow the spread of Covid-19. In a frantic effort to address the many challenges posed by the pandemic, they are unfortunately ceding ground from a data privacy perspective, giving rise to a new threat by relentlessly collecting private data and mobilizing every resource at their disposal, including the [private sector](https://www.cnbc.com/2020/03/19/facebook-google-could-share-smartphone-data-to-fight-coronavirus.html), to help "flatten the curve."  

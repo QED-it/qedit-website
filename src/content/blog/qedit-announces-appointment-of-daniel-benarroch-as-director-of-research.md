@@ -4,6 +4,34 @@ date: "2020-07-27"
 authors: ["Brett Schor"]
 excerpt: "QEDIT, a Privacy-Enhancing Technology (PET) provider, is delighted to announce the appointment of Daniel Benarroch to the role of Director of Research."
 image: "/images/blog/daniel-benarroch-appointment.jpg"
+slug: "qedit-announces-appointment-of-daniel-benarroch-as-director-of-research"
+tags: ["Team", "Research", "Announcement", "ZKP", "Cryptography"]
+seo:
+  metaTitle: "Meet QEDIT's New Director of Research | QEDIT"
+  metaDescription: "Learn more about Daniel Benarroch's contributions to the technology that powers QEDIT's privacy solutions and his recent promotion to Director of Research."
+  canonical: "https://qed-it.com/qedit-announces-appointment-of-daniel-benarroch-as-director-of-research/"
+  ogTitle: "Meet QEDIT's New Director of Research | QEDIT"
+  ogDescription: "Learn more about Daniel Benarroch's contributions to the technology that powers QEDIT's privacy solutions and his recent promotion to Director of Research."
+  publishedTime: "2020-07-27T12:08:49+00:00"
+  modifiedTime: "2021-03-11T06:46:40+00:00"
+  author: "Brett Schor"
+  readingTime: "2 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/qedit-announces-appointment-of-daniel-benarroch-as-director-of-research/#article",
+        "author": {
+          "name": "Brett Schor"
+        },
+        "headline": "QEDIT Announces Appointment of Daniel Benarroch as Director of Research",
+        "datePublished": "2020-07-27T12:08:49+00:00",
+        "dateModified": "2021-03-11T06:46:40+00:00",
+        "wordCount": 474
+      }
+    ]
+  }
 ---
 
 ## Tel Aviv, Israel – July 27, 2020

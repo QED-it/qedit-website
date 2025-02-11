@@ -1,6 +1,7 @@
 'use client';
 
 import CookieConsent from 'react-cookie-consent';
+import Link from 'next/link';
 
 export default function CookieConsentBanner() {
   return (
@@ -48,13 +49,10 @@ export default function CookieConsentBanner() {
       }}
     >
       This website uses cookies to enhance your browsing experience. 
-      By clicking "Accept", you consent to our use of cookies. See our{' '}
-      <a 
-        href="/privacy-policy" 
-        style={{ color: '#38b1df' }}
-      >
+      By clicking &quot;Accept&quot;, you consent to our use of cookies. See our{' '}
+      <Link href="/privacy-policy/" className="text-blue-500 hover:text-blue-700">
         Privacy Policy
-      </a>{' '}
+      </Link>{' '}
       to learn more.
     </CookieConsent>
   );

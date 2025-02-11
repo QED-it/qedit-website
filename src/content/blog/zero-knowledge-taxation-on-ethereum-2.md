@@ -4,6 +4,34 @@ date: "2018-06-25"
 authors: ["Kobi Gurkan"]
 excerpt: "At QEDIT, we have a mission to provide privacy preserving systems for the enterprise. For the last two years, we've worked on many projects, developing complex SNARK circuits and higher level protocols to tackle different use-cases – asset management, supply chain, real-time risk assessment, predictive maintenance, credit scoring and more."
 image: "/images/blog/zk-taxation-diagram.png"
+slug: "zero-knowledge-taxation-on-ethereum-2"
+tags: ["Zero-Knowledge Proofs", "Ethereum", "Taxation", "Deloitte", "Privacy", "Enterprise"]
+seo:
+  metaTitle: "Zero-Knowledge Taxation on Ethereum | QEDIT"
+  metaDescription: "Project where Deloitte utilized the QEdit SDK to deploy a Zero-Knowledge Blockchain for their chosen use-case — new french tax rules presented in 2018"
+  canonical: "https://qed-it.com/zero-knowledge-taxation-on-ethereum-2/"
+  ogTitle: "Zero-Knowledge Taxation on Ethereum | QEDIT"
+  ogDescription: "Project where Deloitte utilized the QEdit SDK to deploy a Zero-Knowledge Blockchain for their chosen use-case — new french tax rules presented in 2018"
+  publishedTime: "2018-06-25T21:35:26+00:00"
+  modifiedTime: "2021-04-22T14:01:41+00:00"
+  author: "Kobi Gurkan"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/zero-knowledge-taxation-on-ethereum-2/#article",
+        "author": {
+          "name": "Kobi Gurkan"
+        },
+        "headline": "Zero-Knowledge Taxation on Ethereum",
+        "datePublished": "2018-06-25T21:35:26+00:00",
+        "dateModified": "2021-04-22T14:01:41+00:00",
+        "wordCount": 734
+      }
+    ]
+  }
 ---
 
 At QED‐it, we have a mission to provide privacy preserving systems for the enterprise. For the last two years, we've worked on many projects, developing complex SNARK circuits and higher level protocols to tackle different use-cases — asset management, supply chain, real-time risk assessment, predictive maintenance, credit scoring and more.

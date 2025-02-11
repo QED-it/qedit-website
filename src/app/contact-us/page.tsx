@@ -24,7 +24,7 @@ export default function ContactUs() {
               Contact Us
             </h1>
             <p className="text-xl text-gray-600 mb-12">
-              Have a question or want to learn more about our solutions? We'd love to hear from you.
+              Have a question or want to learn more about our solutions? We&apos;d love to hear from you.
             </p>
 
             <ContactForm key={Date.now()} /> {/* Add key to prevent re-rendering */}

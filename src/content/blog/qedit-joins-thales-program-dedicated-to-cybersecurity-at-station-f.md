@@ -4,6 +4,34 @@ date: "2017-10-17"
 authors: ["Nicholas de Chalonge"]
 excerpt: "QEDIT's CEO Jonathan Rouach is happy to announce that Thales has selected QEDIT to join the CyberSecurity program at Station F (Paris), the world's largest start-up campus."
 image: "/images/blog/thales-program.jpg"
+slug: "qedit-joins-thales-program-dedicated-to-cybersecurity-at-station-f"
+tags: ["Thales", "Cybersecurity", "Station F", "Partnership", "Startup", "Paris"]
+seo:
+  metaTitle: "QEDIT Joins Thales Program Dedicated to Cybersecurity"
+  metaDescription: "QEDIT, acknowledged for the Zero-Knowledge Blockchain has been selected by Thales to join the CyberSecurity program at Station F (Paris), world's largest start-up campus"
+  canonical: "https://qed-it.com/qedit-joins-thales-program-dedicated-to-cybersecurity-at-station-f/"
+  ogTitle: "QEDIT Joins Thales Program Dedicated to Cybersecurity"
+  ogDescription: "QEDIT, acknowledged for the Zero-Knowledge Blockchain has been selected by Thales to join the CyberSecurity program at Station F (Paris), world's largest start-up campus"
+  publishedTime: "2017-10-17T11:52:02+00:00"
+  modifiedTime: "2021-04-22T13:51:04+00:00"
+  author: "Nicholas de Chalonge"
+  readingTime: "1 minute"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/qedit-joins-thales-program-dedicated-to-cybersecurity-at-station-f/#article",
+        "author": {
+          "name": "Nicholas de Chalonge"
+        },
+        "headline": "QEDIT Joins Thales Program Dedicated to Cybersecurity at Station F",
+        "datePublished": "2017-10-17T11:52:02+00:00",
+        "dateModified": "2021-04-22T13:51:04+00:00",
+        "wordCount": 211
+      }
+    ]
+  }
 ---
 
 ## QEDIT joins the CyberSecurity program at Station F

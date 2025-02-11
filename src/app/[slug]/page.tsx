@@ -1,9 +1,40 @@
 import { getMarkdownFiles } from '@/lib/markdown';
-import Image from 'next/image';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
 import { notFound } from 'next/navigation';
 import { marked } from 'marked';
+import { Metadata } from 'next';
+
+interface Schema {
+  "@context": string;
+  "@type": string;
+  name: string;
+  description: string;
+  url: string;
+  dateModified: string;
+  datePublished?: string;
+  headline?: string;
+  author?: {
+    "@type": string;
+    name: string;
+  };
+  publisher?: {
+    "@type": string;
+    name: string;
+    logo?: {
+      "@type": string;
+      url: string;
+    };
+  };
+  image?: {
+    "@type": string;
+    url: string;
+  };
+  mainEntityOfPage?: {
+    "@type": string;
+    "@id": string;
+  };
+}
 
 interface BlogPost {
   title: string;
@@ -13,6 +44,19 @@ interface BlogPost {
   content: string;
   image: string;
   priority: boolean;
+  seo?: {
+    metaTitle: string;
+    metaDescription: string;
+    canonical: string;
+    ogTitle: string;
+    ogDescription: string;
+    publishedTime: string;
+    modifiedTime: string;
+    author: string;
+    readingTime: string;
+    schema: Schema;
+    ogImage?: string;
+  };
 }
 
 export async function generateStaticParams() {
@@ -22,20 +66,17 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlogPostPage({
-  params,
-  searchParams,
-}: {
-  params: { slug: string };
-  searchParams: { page?: string };
-}) {
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
-  const { page } = await searchParams;
 
   // Get current blog post
   const posts = getMarkdownFiles<BlogPost>('blog');
   const currentPost = posts.find(
-    post => post.fileName.replace(/\.md$/, '') === slug  // Use resolved slug
+    post => post.fileName.replace(/\.md$/, '') === slug
   );
 
   if (!currentPost) {
@@ -56,12 +97,12 @@ export default async function BlogPostPage({
 
   // Get latest 5 posts for sidebar
   const latestPosts = posts
-    .filter(post => post.fileName.replace(/\.md$/, '') !== slug)  // Use resolved slug
+    .filter(post => post.fileName.replace(/\.md$/, '') !== slug)
     .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
     .slice(0, 5);
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || '';
-  const fullUrl = `${siteUrl}/${slug}`;  // Use resolved slug
+  const fullUrl = `${siteUrl}/${slug}`;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -109,7 +150,7 @@ export default async function BlogPostPage({
         <article className="col-span-12 md:col-span-8">
           <div className="prose prose-lg max-w-none">
             <Link 
-              href={page ? `/blog?page=${page}` : "/blog"}
+              href="/blog"
               className="inline-flex items-center text-gray-900 hover:text-[#38b1df] transition-colors mb-6"
             >
               <span className="mr-1">←</span> Back to Blog
@@ -167,4 +208,63 @@ export default async function BlogPostPage({
       </div>
     </div>
   );
+}
+
+type Params = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { slug } = await params;
+  
+  const post = getMarkdownFiles<BlogPost>('blog')
+    .find(post => post.fileName.replace(/\.md$/, '') === slug);
+
+  if (!post) return {};
+
+  // Default metadata if no SEO data is present
+  const defaultMetadata: Metadata = {
+    title: post.data.title,
+    description: post.data.excerpt,
+    authors: post.data.authors.map(author => ({ name: author })),
+    openGraph: {
+      title: post.data.title,
+      description: post.data.excerpt,
+      type: 'article',
+      authors: post.data.authors,
+    },
+    twitter: {
+      card: 'summary_large_image',
+    }
+  };
+
+  // Return default metadata if no SEO data exists
+  if (!post.data.seo) return defaultMetadata;
+
+  const { seo } = post.data;
+
+  return {
+    title: seo.metaTitle,
+    description: seo.metaDescription,
+    authors: [{ name: seo.author }],
+    openGraph: {
+      title: seo.ogTitle,
+      description: seo.ogDescription,
+      type: 'article',
+      publishedTime: seo.publishedTime,
+      modifiedTime: seo.modifiedTime,
+      authors: [seo.author],
+      images: seo.ogImage ? [seo.ogImage] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: seo.ogTitle,
+      description: seo.ogDescription,
+    },
+    alternates: {
+      canonical: seo.canonical,
+    }
+  };
 } 

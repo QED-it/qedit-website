@@ -6,6 +6,32 @@ excerpt: "The 2022 edition of ZKProof Workshop brought together over 100 partici
 image: "/images/blog/5th-zkproof-workshop.png"
 slug: "5th-zkproof-workshop"
 tags: ["ZKP", "Workshop", "Event", "Cryptography"]
+seo:
+  metaTitle: "The 5th Zero-Knowledge Proof Workshop"
+  metaDescription: "Learn how ZKP are being standardized by industry leader"
+  canonical: "https://qed-it.com/5th-zkproof-workshop/"
+  ogTitle: "The 5th Zero-Knowledge Proof Workshop"
+  ogDescription: "Learn how ZKP are being standardized by industry leader"
+  publishedTime: "2022-11-22T13:07:15+00:00"
+  modifiedTime: "2022-11-28T11:51:20+00:00"
+  author: "Jon Rouach"
+  readingTime: "2 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/5th-zkproof-workshop/#article",
+        "author": {
+          "name": "Jon Rouach"
+        },
+        "headline": "ZKP experts shared their knowledge at the 5th ZKProof Workshop",
+        "datePublished": "2022-11-22T13:07:15+00:00",
+        "dateModified": "2022-11-28T11:51:20+00:00",
+        "wordCount": 377
+      }
+    ]
+  }
 ---
 
 The 2022 edition of [ZKProof Workshop](https://zkproof.org/events/workshop5/) just ended, and I loved every bit of it!

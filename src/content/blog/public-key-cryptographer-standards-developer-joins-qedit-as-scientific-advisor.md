@@ -4,6 +4,34 @@ date: "2020-01-16"
 authors: ["QEDIT"]
 excerpt: "QEDIT, a Privacy-Enhancing Technology provider, has announced the appointment of Dr. Burt Kaliski to its Scientific Advisory Board."
 image: "/images/blog/burt-kaliski-appointment.jpg"
+slug: "public-key-cryptographer-standards-developer-joins-qedit-as-scientific-advisor"
+tags: ["Team", "Cryptography", "Advisory Board", "PKCS", "Announcement"]
+seo:
+  metaTitle: "Dr. Burt Kaliski Public Key Cryptographer joins QEDIT"
+  metaDescription: "Dr. Burt Kaliski Public Key Cryptographer joins QEDIT. Learn more about Dr. Burt Kaliski's appointment as a new Scientific Advisor to QEDIT. Click Here >>>"
+  canonical: "https://qed-it.com/public-key-cryptographer-standards-developer-joins-qedit-as-scientific-advisor/"
+  ogTitle: "Dr. Burt Kaliski Public Key Cryptographer joins QEDIT"
+  ogDescription: "Dr. Burt Kaliski Public Key Cryptographer joins QEDIT. Learn more about Dr. Burt Kaliski's appointment as a new Scientific Advisor to QEDIT. Click Here >>>"
+  publishedTime: "2020-01-16T14:22:52+00:00"
+  modifiedTime: "2021-05-11T12:53:23+00:00"
+  author: "QEDIT"
+  readingTime: "2 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/public-key-cryptographer-standards-developer-joins-qedit-as-scientific-advisor/#article",
+        "author": {
+          "name": "QEDIT"
+        },
+        "headline": "Public-Key Cryptographer Standards Developer Joins QEDIT",
+        "datePublished": "2020-01-16T14:22:52+00:00",
+        "dateModified": "2021-05-11T12:53:23+00:00",
+        "wordCount": 474
+      }
+    ]
+  }
 ---
 
 **Tel Aviv, Israel – January 16, 2020**

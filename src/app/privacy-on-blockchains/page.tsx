@@ -1,5 +1,4 @@
 import { getMarkdownData } from '@/lib/markdown';
-import Link from 'next/link';
 import Image from 'next/image';
 
 interface PrivacyPageContent {

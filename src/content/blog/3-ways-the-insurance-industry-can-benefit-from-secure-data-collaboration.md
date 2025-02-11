@@ -6,6 +6,32 @@ excerpt: "As the insurtech space matures, insurance companies are increasingly k
 image: "/images/blog/3-ways-the-insurance-industry-can-benefit-from-secure-data-collaboration.png"
 slug: "3-ways-the-insurance-industry-can-benefit-from-secure-data-collaboration"
 tags: ["Insurance", "Data Collaboration", "PET", "Privacy", "Security"]
+seo:
+  metaTitle: "How insurance industry can benefit from secure data collaboration"
+  metaDescription: "Learn how QEDIT is helping insurers to acquire actionable insights, mitigate risk and drive ROI in a privacy-compliant, collaborative setting."
+  canonical: "https://qed-it.com/3-ways-the-insurance-industry-can-benefit-from-secure-data-collaboration/"
+  ogTitle: "How insurance industry can benefit from secure data collaboration"
+  ogDescription: "Learn how QEDIT is helping insurers to acquire actionable insights, mitigate risk and drive ROI in a privacy-compliant, collaborative setting."
+  publishedTime: "2021-02-04T06:18:21+00:00"
+  modifiedTime: "2021-05-11T12:20:40+00:00"
+  author: "Marta De Stradis"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/3-ways-the-insurance-industry-can-benefit-from-secure-data-collaboration/#article",
+        "author": {
+          "name": "Marta De Stradis"
+        },
+        "headline": "How Insurance Industry Can Benefit from Secure Data Collaboration",
+        "datePublished": "2021-02-04T06:18:21+00:00",
+        "dateModified": "2021-05-11T12:20:40+00:00",
+        "wordCount": 736
+      }
+    ]
+  }
 ---
 
 As the insurtech space matures, insurance companies are increasingly keen to explore data-driven AI and machine learning technologies to mitigate risk and drive ROI. However, these solutions come with limitations....exclusive reliance on proprietary data in a siloed business environment impairs your view of the bigger picture, particularly when it comes to detecting fraud and developing new channels for business growth.

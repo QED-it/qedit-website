@@ -4,6 +4,34 @@ date: "2020-08-04"
 authors: ["Brett Schor"]
 excerpt: "QEDIT, an innovator in the field of privacy-centric data collaboration, is pleased to announce the internal promotion of Aurel Nicolas to Head of Protocol Engineering."
 image: "/images/blog/aurelien-nicolas-promotion.jpg"
+slug: "qedit-promotes-aurelien-nicolas-to-head-of-protocol-engineering"
+tags: ["Team", "Protocol Engineering", "ZKP", "Announcement"]
+seo:
+  metaTitle: "Meet QEDIT's New Head of Protocol Engineering | QEDIT"
+  metaDescription: "Learn about Aurélien Nicolas' leadership in engineering solutions to facilitate secure data collaboration and ZKP standardization."
+  canonical: "https://qed-it.com/qedit-promotes-aurelien-nicolas-to-head-of-protocol-engineering/"
+  ogTitle: "Meet QEDIT's New Head of Protocol Engineering | QEDIT"
+  ogDescription: "Learn about Aurélien Nicolas' leadership in engineering solutions to facilitate secure data collaboration and ZKP standardization."
+  publishedTime: "2020-08-04T12:32:42+00:00"
+  modifiedTime: "2021-03-11T07:06:55+00:00"
+  author: "Brett Schor"
+  readingTime: "3 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/qedit-promotes-aurelien-nicolas-to-head-of-protocol-engineering/#article",
+        "author": {
+          "name": "Brett Schor"
+        },
+        "headline": "QEDIT Promotes Aurélien Nicolas to Head of Protocol Engineering",
+        "datePublished": "2020-08-04T12:32:42+00:00",
+        "dateModified": "2021-03-11T07:06:55+00:00",
+        "wordCount": 520
+      }
+    ]
+  }
 ---
 
 ## Tel Aviv, Israel – August 4, 2020

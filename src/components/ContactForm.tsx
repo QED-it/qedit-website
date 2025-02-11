@@ -64,7 +64,7 @@ export default function ContactForm() {
       setFormState({
         isSubmitting: false,
         isSubmitted: false,
-        error: 'There was a problem submitting your form. Please try again.'
+        error: `There was a problem submitting your form: ${error instanceof Error ? error.message : 'Please try again.'}`
       });
     }
   };
@@ -73,7 +73,7 @@ export default function ContactForm() {
     return (
       <div className="bg-green-50 p-6 rounded-lg">
         <h3 className="text-green-800 text-xl font-semibold mb-2">Thank you for your message!</h3>
-        <p className="text-green-700">We'll get back to you as soon as possible.</p>
+        <p className="text-green-700">We&apos;ll get back to you as soon as possible.</p>
       </div>
     );
   }

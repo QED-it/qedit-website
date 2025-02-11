@@ -4,6 +4,34 @@ date: "2019-11-19"
 authors: ["Ori Wallenstein"]
 excerpt: "The Supply Chain Finance (SCF) market has experienced tremendous growth over the past decade, and is currently estimated at $475 billion of annual traded volume."
 image: "/images/blog/tradeshift-partnership.jpg"
+slug: "how-privacy-enhancing-technology-can-close-the-gap-in-trade-financing"
+tags: ["Trade Finance", "Supply Chain", "Privacy Technology", "Blockchain", "Partnership"]
+seo:
+  metaTitle: "How Privacy Enhancing Technology Can Close Gaps in Financing"
+  metaDescription: "See How Privacy Enhancing Technology Can Close Gaps in Financing & help increasing revenue channels for financiers while using PET. Read here >>>"
+  canonical: "https://qed-it.com/how-privacy-enhancing-technology-can-close-the-gap-in-trade-financing/"
+  ogTitle: "How Privacy Enhancing Technology Can Close Gaps in Financing"
+  ogDescription: "See How Privacy Enhancing Technology Can Close Gaps in Financing & help increasing revenue channels for financiers while using PET. Read here >>>"
+  publishedTime: "2019-11-19T10:14:04+00:00"
+  modifiedTime: "2021-03-18T05:56:40+00:00"
+  author: "Ori Wallenstein"
+  readingTime: "2 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/how-privacy-enhancing-technology-can-close-the-gap-in-trade-financing/#article",
+        "author": {
+          "name": "Ori Wallenstein"
+        },
+        "headline": "How Privacy Enhancing Technology Can Close the Gap in Trade Financing",
+        "datePublished": "2019-11-19T10:14:04+00:00",
+        "dateModified": "2021-03-18T05:56:40+00:00",
+        "wordCount": 471
+      }
+    ]
+  }
 ---
 
 ## *QEDIT and Tradeshift Offer New Marketplace for Financiers With An Innovative Mindset*

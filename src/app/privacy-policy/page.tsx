@@ -8,7 +8,7 @@ interface PrivacyContent {
 }
 
 export default function PrivacyPolicy() {
-  const { data: pageData, content } = getMarkdownData<PrivacyContent>('pages', 'privacy-policy.md');
+  const { content } = getMarkdownData<PrivacyContent>('pages', 'privacy-policy.md');
 
   // Process the content using marked
   const renderer = new marked.Renderer();

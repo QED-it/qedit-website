@@ -4,6 +4,38 @@ date: "2017-12-20"
 authors: ["Aviv Zohar"]
 excerpt: "How Alice, Bob, and Charlie used Zero-Knowledge and Blockchains to launch The Global Sudoku Revolution. This post is inspired by two great papers that make zero-knowledge proofs accessible to a wide audience: [1] How to Explain Zero Knowledge Protocols to Your Children (Quisquater et. al.), [2] Cryptographic and Physical Zero-Knowledge Proof Systems for Solutions of Sudoku Puzzles (Gradwohl et. al.)."
 image: "/images/blog/zk-machine.png"
+slug: "2017-12-20-the-incredible-machine"
+tags: ["Zero-Knowledge Proofs", "Sudoku", "Blockchain", "Cryptography", "Interactive Proofs", "zk-SNIPM"]
+seo:
+  metaTitle: "How Zero-Knowledge Machine solved Global Sudoku | QEDIT"
+  metaDescription: "How Alice, Bob, and Charlie used Zero-Knowledge and Blockchains to launch The Global Sudoku Revolution. Read how Zero-Knowledge Machine solved Sudoku with our Tech >>>"
+  canonical: "https://qed-it.com/2017-12-20-the-incredible-machine/"
+  ogTitle: "How Zero-Knowledge Machine solved Global Sudoku | QEDIT"
+  ogDescription: "How Alice, Bob, and Charlie used Zero-Knowledge and Blockchains to launch The Global Sudoku Revolution. Read how Zero-Knowledge Machine solved Sudoku with our Tech >>>"
+  publishedTime: "2017-12-20T14:17:39+00:00"
+  modifiedTime: "2021-04-22T06:24:18+00:00"
+  author: "Aviv Zohar"
+  readingTime: "10 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/2017-12-20-the-incredible-machine/#article",
+        "author": {
+          "name": "Aviv Zohar"
+        },
+        "headline": "The Incredible Machine",
+        "datePublished": "2017-12-20T14:17:39+00:00",
+        "dateModified": "2021-04-22T06:24:18+00:00",
+        "wordCount": 2043,
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.qed-it.com/wp-content/uploads/2017/12/Picture4-1-300x227.png"
+        }
+      }
+    ]
+  }
 ---
 
 How Alice, Bob, and Charlie used Zero-Knowledge and Blockchains to launch The Global Sudoku Revolution.

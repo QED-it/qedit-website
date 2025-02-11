@@ -33,7 +33,7 @@ export default function Home() {
                   href="/contact-us"
                   className="inline-block border-2 border-[#38b1df] text-[#38b1df] px-8 py-3 mt-6 rounded-full text-lg font-normal hover:bg-[#38b1df] hover:text-white transition-all"
                 >
-                  I'm interested, tell me more
+                  I&apos;m interested, tell me more
                 </Link>
                 {pageData.hero.description && (
                   <p className="text-xl text-gray-600 mt-6">{pageData.hero.description}</p>

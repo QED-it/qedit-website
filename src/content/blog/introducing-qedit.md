@@ -5,7 +5,33 @@ authors: ["Jonathan Rouach", "Ruben Arnold", "Aviv Zohar"]
 excerpt: "Blockchain emerged as a new industry in the past 3 years, with bold promises: replace intermediaries with technology solutions, lower the complexity of systems to collaborate among competitors."
 image: "/images/blog/introducing-qedit.jpg"
 slug: "introducing-qedit"
-tags: ["Blockchain", "Zero Knowledge Proofs", "Technology", "Cryptography"]
+tags: ["Blockchain", "Zero Knowledge Proofs", "Technology", "Cryptography", "Company", "Announcement"]
+seo:
+  metaTitle: "Blockchain Technology & Experts In Cryptography | QEDIT"
+  metaDescription: "Introduction to Qedit - A platform for confidentiality on blockchain, using the principle of self-auditing, enabled by zero-knowledge proofs. Read More >>>"
+  canonical: "https://qed-it.com/introducing-qedit/"
+  ogTitle: "Blockchain Technology & Experts In Cryptography | QEDIT"
+  ogDescription: "Introduction to Qedit - A platform for confidentiality on blockchain, using the principle of self-auditing, enabled by zero-knowledge proofs. Read More >>>"
+  publishedTime: "2017-04-03T09:38:18+00:00"
+  modifiedTime: "2021-05-16T05:55:00+00:00"
+  author: "Jonathan Rouach"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/introducing-qedit/#article",
+        "author": {
+          "name": "Jonathan Rouach"
+        },
+        "headline": "Introducing QEDIT",
+        "datePublished": "2017-04-03T09:38:18+00:00",
+        "dateModified": "2021-05-16T05:55:00+00:00",
+        "wordCount": 869
+      }
+    ]
+  }
 ---
 
 ## Blockchain technology & solutions

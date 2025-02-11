@@ -170,7 +170,7 @@ export default function ProductOverview() {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">{pageData.future.title}</h2>
                 <blockquote className="text-xl font-light text-gray-700 mb-4">
-                  "{pageData.future.quote}"
+                  &quot;{pageData.future.quote}&quot;
                 </blockquote>
                 <p className="text-gray-500 italic">-{pageData.future.source}</p>
               </div>

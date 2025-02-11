@@ -4,6 +4,39 @@ date: "2020-11-05"
 authors: ["David Hayat"]
 excerpt: "In today's highly competitive and mobilized digital economy, data is the centerpiece of a successful growth strategy for enterprises."
 image: "/images/blog/maximize-partnerships-header.png"
+slug: "maximize-the-impact-of-your-partnerships-with-data-driven-collaborations"
+tags: ["Partnerships", "Data Collaboration", "Business Growth", "Data Privacy"]
+seo:
+  metaTitle: "Maximize Impact of Partnerships with Data-Driven Collaborations"
+  metaDescription: "Learn how secure data-Driven collaborations can help you strengthen your partnership network, unlock new customer insights, and drive joint ROI"
+  canonical: "https://qed-it.com/maximize-the-impact-of-your-partnerships-with-data-driven-collaborations/"
+  ogTitle: "Maximize Impact of Partnerships with Data-Driven Collaborations"
+  ogDescription: "Learn how secure data-Driven collaborations can help you strengthen your partnership network, unlock new customer insights, and drive joint ROI"
+  ogImage: "http://qed-it.com/wp-content/uploads/2020/11/7_Reveal-overlapping-customers-01-300x300.png"
+  publishedTime: "2020-11-05T16:49:19+00:00"
+  modifiedTime: "2021-05-11T12:11:48+00:00"
+  author: "David Hayat"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/maximize-the-impact-of-your-partnerships-with-data-driven-collaborations/#article",
+        "author": {
+          "name": "David Hayat"
+        },
+        "headline": "Maximize Your Partnerships with Data-Driven Collaborations",
+        "datePublished": "2020-11-05T16:49:19+00:00",
+        "dateModified": "2021-05-11T12:11:48+00:00",
+        "wordCount": 735,
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://qed-it.com/wp-content/uploads/2020/11/7_Reveal-overlapping-customers-01-300x300.png"
+        }
+      }
+    ]
+  }
 ---
 
 In today's highly competitive and mobilized digital economy, data is the centerpiece of a successful growth strategy for enterprises.

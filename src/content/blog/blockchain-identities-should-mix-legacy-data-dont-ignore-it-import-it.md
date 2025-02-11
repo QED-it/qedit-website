@@ -1,9 +1,37 @@
 ---
-title: "Blockchain identities should mix legacy data-don't ignore it, import it"
+title: "Blockchain Identities Should Mix Legacy Data-Don't Ignore It, Import It"
 date: "2017-08-01"
 authors: ["Jonathan Rouach"]
 excerpt: "We've met many blockchain teams, all working hard to deliver \"phase one\", an exploration into the blockchain technology. It's the best way to get a feel and understand the technology trade-offs. Can these consensus machines become the main rails of communication for their industry?"
 image: "/images/blog/legacy-data.jpg"
+slug: "blockchain-identities-should-mix-legacy-data-dont-ignore-it-import-it"
+tags: ["Blockchain", "Legacy Systems", "Digital Identity", "Zero-Knowledge Proofs", "Data Migration", "Enterprise"]
+seo:
+  metaTitle: "Blockchain identity should mix legacy data- don't ignore it"
+  metaDescription: "To move from experimentation to deployment of blockchains, industries need to import facts about identities from legacy systems. Import it, don't ignore it"
+  canonical: "https://qed-it.com/blockchain-identities-should-mix-legacy-data-dont-ignore-it-import-it/"
+  ogTitle: "Blockchain identity should mix legacy data- don't ignore it"
+  ogDescription: "To move from experimentation to deployment of blockchains, industries need to import facts about identities from legacy systems. Import it, don't ignore it"
+  publishedTime: "2017-08-01T14:08:32+00:00"
+  modifiedTime: "2021-05-16T05:48:30+00:00"
+  author: "Jonathan Rouach"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/blockchain-identities-should-mix-legacy-data-dont-ignore-it-import-it/#article",
+        "author": {
+          "name": "Jonathan Rouach"
+        },
+        "headline": "Blockchain identities should mix legacy data-don't ignore it, import it",
+        "datePublished": "2017-08-01T14:08:32+00:00",
+        "dateModified": "2021-05-16T05:48:30+00:00",
+        "wordCount": 758
+      }
+    ]
+  }
 ---
 
 ## Blockchain teams and phase 1 in blockchain technology

@@ -4,6 +4,34 @@ date: "2019-07-29"
 authors: ["Jonathan Rouach", "Brett Schor"]
 excerpt: "We often take them for granted, but in many cases, standards save lives. We know, it sounds a little melodramatic but think about your travel history for a moment — when was the last time you boarded a plane and bothered to read the emergency flight safety instructions?"
 image: "/images/blog/standards-save-lives.jpg"
+slug: "standards-save-lives-the"
+tags: ["Zero-Knowledge Proofs", "Standardization", "ZKProof", "Privacy", "Security"]
+seo:
+  metaTitle: "ZKP Standardization-Standards that Save Lives | QEDIT"
+  metaDescription: "Learn now how ZKP Standardization-Became Standards that Really Save Lives.Read all about our Zero-knowledge proof (ZKP) cryptography Here. Click Now >>>"
+  canonical: "https://qed-it.com/standards-save-lives-the/"
+  ogTitle: "ZKP Standardization-Standards that Save Lives | QEDIT"
+  ogDescription: "Learn now how ZKP Standardization-Became Standards that Really Save Lives.Read all about our Zero-knowledge proof (ZKP) cryptography Here. Click Now >>>"
+  publishedTime: "2019-07-29T20:34:25+00:00"
+  modifiedTime: "2021-04-22T06:58:11+00:00"
+  author: "Jonathan Rouach"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/standards-save-lives-the/#article",
+        "author": {
+          "name": "Jonathan Rouach"
+        },
+        "headline": "Standards Save Lives Part I: The Case for ZKP Standardization",
+        "datePublished": "2019-07-29T20:34:25+00:00",
+        "dateModified": "2021-04-22T06:58:11+00:00",
+        "wordCount": 727
+      }
+    ]
+  }
 ---
 
 ## How Standards Save Lives

@@ -4,6 +4,41 @@ date: "2020-12-15"
 authors: ["Shiri Lemel"]
 excerpt: "2020 was anything but business as usual. The onset of a once in a lifetime pandemic fundamentally changed the fabric of life for the global population, and placed an immense strain on the enterprise community."
 image: "/images/blog/2020-year-review.jpg"
+slug: "year-in-review-3-key-lessons-for-post-pandemic-success"
+tags: ["Business", "COVID-19", "Digital Transformation", "Data Privacy"]
+seo:
+  metaTitle: "Year in Review: 3 key lessons for post-pandemic success | QEDIT"
+  metaDescription: "QEDIT's VP Business Development, Shiri Lemel, reflects on 2020, and outlines how companies can establish a competitive edge in the post-pandemic era."
+  canonical: "https://qed-it.com/year-in-review-3-key-lessons-for-post-pandemic-success/"
+  ogTitle: "Year in Review: 3 key lessons for post-pandemic success | QEDIT"
+  ogDescription: "QEDIT's VP Business Development, Shiri Lemel, reflects on 2020, and outlines how companies can establish a competitive edge in the post-pandemic era."
+  ogImage: "https://qed-it.com/wp-content/uploads/2020/12/14_Improve-KPIs-01small-300x300.png"
+  publishedTime: "2020-12-15T13:12:25+00:00"
+  modifiedTime: "2021-03-11T06:24:44+00:00"
+  author: "Shiri Lemel"
+  readingTime: "6 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/year-in-review-3-key-lessons-for-post-pandemic-success/#article",
+        "author": {
+          "name": "Shiri Lemel"
+        },
+        "headline": "Year in review: 3 key lessons for post-pandemic success",
+        "datePublished": "2020-12-15T13:12:25+00:00",
+        "dateModified": "2021-03-11T06:24:44+00:00",
+        "wordCount": 1130,
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://qed-it.com/wp-content/uploads/2020/12/14_Improve-KPIs-01small.png",
+          "width": 500,
+          "height": 500
+        }
+      }
+    ]
+  }
 ---
 
 2020 was anything but business as usual. The onset of a once in a lifetime pandemic fundamentally changed the fabric of life for the global population, and placed an immense strain on the enterprise community.

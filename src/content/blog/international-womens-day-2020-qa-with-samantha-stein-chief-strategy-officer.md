@@ -4,6 +4,34 @@ date: "2020-03-08"
 authors: ["Brett Schor"]
 excerpt: "This International Women's Day, QEDIT's Chief Strategy Officer Samantha Stein shares her thoughts on powerful role models, changing how we think as a society, and the importance of creating a more inclusive technology sector."
 image: "/images/blog/international-womens-day-2020.jpg"
+slug: "international-womens-day-2020-qa-with-samantha-stein-chief-strategy-officer"
+tags: ["Team", "Diversity", "Women in Tech", "Leadership", "Interview"]
+seo:
+  metaTitle: "International Women's Day 2020: Q&A with Samantha Stein | QEDIT"
+  metaDescription: "QEDIT's Chief Strategy Officer Stein Samantha discusses data privacy as a human right, powerful role models, and diversity in the technology sector"
+  canonical: "https://qed-it.com/international-womens-day-2020-qa-with-samantha-stein-chief-strategy-officer/"
+  ogTitle: "International Women's Day 2020: Q&A with Samantha Stein | QEDIT"
+  ogDescription: "QEDIT's Chief Strategy Officer Stein Samantha discusses data privacy as a human right, powerful role models, and diversity in the technology sector"
+  publishedTime: "2020-03-08T12:28:35+00:00"
+  modifiedTime: "2021-05-11T12:30:27+00:00"
+  author: "Brett Schor"
+  readingTime: "3 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/international-womens-day-2020-qa-with-samantha-stein-chief-strategy-officer/#article",
+        "author": {
+          "name": "Brett Schor"
+        },
+        "headline": "International Women's Day 2020: Q&A with Samantha Stein",
+        "datePublished": "2020-03-08T12:28:35+00:00",
+        "dateModified": "2021-05-11T12:30:27+00:00",
+        "wordCount": 672
+      }
+    ]
+  }
 ---
 
 This International Women's Day, QEDIT's Chief Strategy Officer Samantha Stein shares her thoughts on powerful role models, changing how we think as a society, and the importance of creating a more inclusive technology sector.

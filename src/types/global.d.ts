@@ -2,8 +2,6 @@ interface Window {
   gtag: (
     command: 'consent' | 'config' | 'event',
     action: string,
-    params?: {
-      [key: string]: any;
-    }
+    params?: Record<string, string | number | boolean | null>
   ) => void;
 } 

@@ -4,6 +4,39 @@ date: "2020-07-07"
 authors: ["Ori Wallenstein"]
 excerpt: "Data collaboration between enterprises is essential for sustainable growth in the digital era, especially for companies that routinely rely on big data to inform business practices but have exhausted their internal data silos."
 image: "/images/blog/data-collaboration.jpg"
+slug: "5-ways-that-data-collaboration-can-grow-your-business"
+tags: ["Data Collaboration", "Business Growth", "Privacy Technology", "Enterprise"]
+seo:
+  metaTitle: "5 Ways That Data Collaboration Can Grow Your Business | QEDIT"
+  metaDescription: "Learn how Privacy-Enhancing Technology can enable secure data collaboration and help your business create new revenue and cost-saving opportunities."
+  canonical: "https://qed-it.com/5-ways-that-data-collaboration-can-grow-your-business/"
+  ogTitle: "5 Ways That Data Collaboration Can Grow Your Business | QEDIT"
+  ogDescription: "Learn how Privacy-Enhancing Technology can enable secure data collaboration and help your business create new revenue and cost-saving opportunities."
+  ogImage: "https://www.qed-it.com/wp-content/uploads/2020/07/WEF-chart-300x160.jpg"
+  publishedTime: "2020-07-07T12:15:47+00:00"
+  modifiedTime: "2021-03-11T06:03:03+00:00"
+  author: "Ori Wallenstein"
+  readingTime: "5 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/5-ways-that-data-collaboration-can-grow-your-business/#article",
+        "author": {
+          "name": "Ori Wallenstein"
+        },
+        "headline": "5 Ways That Data Collaboration Can Grow Your Business",
+        "datePublished": "2020-07-07T12:15:47+00:00",
+        "dateModified": "2021-03-11T06:03:03+00:00",
+        "wordCount": 936,
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.qed-it.com/wp-content/uploads/2020/07/WEF-chart-300x160.jpg"
+        }
+      }
+    ]
+  }
 ---
 
 Data collaboration between enterprises is essential for sustainable growth in the digital era, especially for companies that routinely rely on big data to inform business practices but have exhausted their internal data silos.

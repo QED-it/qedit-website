@@ -5,6 +5,34 @@ date: "2019-09-30"
 authors: ["Jonathan Rouach"]
 excerpt: "The transparent nature of blockchains is often presented as a virtue of Distributed Ledger Technology (DLT) – it allows all participants to independently verify that shared data and transactional details on a shared ledger are valid. In other words, transparency keeps everyone honest."
 image: "/images/blog/zkp-cryptography.png"
+slug: "zero-knowledge-proof-cryptography-a-gateway-to-enterprise-blockchain-adoption"
+tags: ["Zero-Knowledge Proofs", "Blockchain", "Enterprise", "Privacy", "DLT", "Adoption"]
+seo:
+  metaTitle: "Zero Knowledge Proof Cryptography & Enterprise Blockchain Adoption"
+  metaDescription: "Want to know how Zero Knowledge Proof Cryptography can help big Enterprise? We made An article on this subject icluding Gateway & tech adoption. Read Here >>>"
+  canonical: "https://qed-it.com/zero-knowledge-proof-cryptography-a-gateway-to-enterprise-blockchain-adoption/"
+  ogTitle: "Zero Knowledge Proof Cryptography & Enterprise Blockchain Adoption"
+  ogDescription: "Want to know how Zero Knowledge Proof Cryptography can help big Enterprise? We made An article on this subject icluding Gateway & tech adoption. Read Here >>>"
+  publishedTime: "2019-09-30T20:39:29+00:00"
+  modifiedTime: "2021-05-11T12:34:42+00:00"
+  author: "Jonathan Rouach"
+  readingTime: "3 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/zero-knowledge-proof-cryptography-a-gateway-to-enterprise-blockchain-adoption/#article",
+        "author": {
+          "name": "Jonathan Rouach"
+        },
+        "headline": "Zero Knowledge Proof Cryptography",
+        "datePublished": "2019-09-30T20:39:29+00:00",
+        "dateModified": "2021-05-11T12:34:42+00:00",
+        "wordCount": 623
+      }
+    ]
+  }
 ---
 
 ## Distributed Ledger Technology (DLT) & blockchains

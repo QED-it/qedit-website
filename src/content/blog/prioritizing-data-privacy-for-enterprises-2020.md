@@ -4,6 +4,34 @@ date: "2019-12-23"
 authors: ["Brett Schor"]
 excerpt: "As the dawn of a new decade approaches, QEDIT CEO Jonathan Rouach gives his thoughts on the status of the data privacy landscape, and what we can expect in 2020."
 image: "/images/blog/data-privacy-2020.jpg"
+slug: "prioritizing-data-privacy-for-enterprises-2020"
+tags: ["Data Privacy", "Enterprise", "2020 Trends", "GDPR", "Zero-Knowledge Proofs"]
+seo:
+  metaTitle: "Data Privacy for Enterprises Prioritization in 2020 | QEDIT"
+  metaDescription: "What do you envision as the major threats to data privacy for enterprises? Jonathan Rouach gives his thoughts on the status of the data privacy. Click >>>"
+  canonical: "https://qed-it.com/prioritizing-data-privacy-for-enterprises-2020/"
+  ogTitle: "Data Privacy for Enterprises Prioritization in 2020 | QEDIT"
+  ogDescription: "What do you envision as the major threats to data privacy for enterprises? Jonathan Rouach gives his thoughts on the status of the data privacy. Click >>>"
+  publishedTime: "2019-12-23T14:18:00+00:00"
+  modifiedTime: "2021-05-09T09:17:24+00:00"
+  author: "Brett Schor"
+  readingTime: "4 minutes"
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://qed-it.com/prioritizing-data-privacy-for-enterprises-2020/#article",
+        "author": {
+          "name": "Brett Schor"
+        },
+        "headline": "Prioritizing Data Privacy for Enterprises 2020",
+        "datePublished": "2019-12-23T14:18:00+00:00",
+        "dateModified": "2021-05-09T09:17:24+00:00",
+        "wordCount": 720
+      }
+    ]
+  }
 ---
 
 ## As the dawn of a new decade approaches, QEDIT CEO Jonathan Rouach gives his thoughts on the status of the data privacy landscape, and what we can expect in 2020.

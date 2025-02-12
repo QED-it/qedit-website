@@ -31,7 +31,7 @@ const Footer = () => {
           <div className="col-span-1 hidden md:block">
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
+              <li><Link href="/about-us" className="text-gray-400 hover:text-white">About</Link></li>
               <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
               <li><Link href="/partners" className="text-gray-400 hover:text-white">Partners</Link></li>
               <li><Link href="/security" className="text-gray-400 hover:text-white">Security</Link></li>

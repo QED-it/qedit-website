@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 interface FormData {
   name: string;
@@ -29,8 +30,23 @@ export default function ContactForm() {
     error: null
   });
 
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+
+  const handleCaptchaVerify = (token: string) => {
+    setCaptchaToken(token);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!captchaToken) {
+      setFormState({
+        ...formState,
+        error: 'Please complete the captcha verification'
+      });
+      return;
+    }
+
     setFormState({ ...formState, isSubmitting: true, error: null });
 
     try {
@@ -47,6 +63,7 @@ export default function ContactForm() {
         body: JSON.stringify({
           access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
           ...formData,
+          'h-captcha-response': captchaToken,
           from_name: 'QEDIT Contact Form',
           subject: `Sender: ${formData.name} from ${formData.company}`,
         })
@@ -145,6 +162,14 @@ export default function ContactForm() {
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#38b1df] focus:outline-none focus:ring-1 focus:ring-[#38b1df]"
+        />
+      </div>
+
+      <div className="flex justify-center">
+        <HCaptcha
+          sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+          onVerify={handleCaptchaVerify}
+          reCaptchaCompat={false}
         />
       </div>
 

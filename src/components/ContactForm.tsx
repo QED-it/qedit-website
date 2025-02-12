@@ -34,6 +34,10 @@ export default function ContactForm() {
     setFormState({ ...formState, isSubmitting: true, error: null });
 
     try {
+      if (!process.env.NEXT_PUBLIC_WEB3FORMS_KEY) {
+        throw new Error('Web3Forms API key is not configured');
+      }
+
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -43,10 +47,14 @@ export default function ContactForm() {
         body: JSON.stringify({
           access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
           ...formData,
-          from_name: 'QEDIT Website',
-          subject: `QEDIT Website Contact Form - ${formData.name} from ${formData.company}`,
+          from_name: 'QEDIT Contact Form',
+          subject: `Sender: ${formData.name} from ${formData.company}`,
         })
       });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
       const result = await response.json();
       

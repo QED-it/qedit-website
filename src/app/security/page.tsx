@@ -99,7 +99,7 @@ export default function Security() {
             {/* Certificate Link */}
             <div className="mt-12">
               <Link
-                href="/certificate.pdf"
+                href="/pdf/qedit-certificate.pdf"
                 className="inline-block border-2 border-[#38b1df] text-[#38b1df] px-8 py-3 rounded-full text-lg font-normal hover:bg-[#38b1df] hover:text-white transition-all"
                 target="_blank"
                 rel="noopener noreferrer"

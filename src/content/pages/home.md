@@ -1,7 +1,7 @@
 ---
 hero:
-  title: "Securing Digital Assets, Privacy and Compliance at Scale"
-  subtitle: "Add security, privacy and scale to your blockchain infrastructure using Zero-Knowledge-Proofs and applied cryptography."
+  title: "Stablecoins with Privacy and Compliance, using Zero-Knowledge Proofs"
+  subtitle: "Confidential for Users, Compliant for the Issuer."
   image: "/images/hero.svg"
 
 features:

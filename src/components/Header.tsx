@@ -14,18 +14,6 @@ const Header = () => {
       external: true
     },
     {
-      title: 'Product',
-      items: [
-        { title: 'Overview', href: '/product-overview' },
-        // { title: 'Asset Transfer', href: '/asset-transfer' },
-        // { title: 'Stable Coin', href: '/stable-coin' },
-        // { title: 'TLS Notary', href: '/tls-notary' },
-        { title: 'Privacy on Blockchains', href: '/privacy-on-blockchains' },
-        // { title: 'Custom Services', href: '/custom-services' },
-        { title: 'FAQ', href: '/faq' }
-      ]
-    },
-    {
       title: 'Company',
       items: [
         { title: 'About Us', href: '/about-us' },

@@ -16,6 +16,10 @@ interface AboutUsContent {
   title: string;
   teamMembers: TeamMember[];
   subtitle?: string;
+  groupImage: {
+    image: string;
+    alt: string;
+  };
   aboutUs: {
     title: string;
     description: string;
@@ -181,6 +185,7 @@ export default function AboutUs() {
           </div>
         </div>
 
+
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 mt-16">
           <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 sm:p-12">
             <h2 className="text-3xl font-semibold text-gray-900 mb-6">
@@ -201,11 +206,26 @@ export default function AboutUs() {
           </div>
         </div>
 
+        {/* Group Image Section */}
+        <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 sm:p-12">
+            <div className="relative w-full">
+              <Image
+                src={pageData.groupImage.image}
+                alt={pageData.groupImage.alt}
+                width={1200}
+                height={800}
+                className="w-full h-auto rounded-lg"
+                priority
+              />
+            </div>
+          </div>
+        </div>
         {/* Partners Section */}
         <div className="bg-white md:pb-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <h2 className="text-3xl font-normal text-center mb-12">{pageData.partners.title}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
               {pageData.partners.partners.map((partner, index) => (
                 <div key={index} className="relative h-12">
                   <Image

@@ -43,6 +43,12 @@ teamMembers:
     socialLinks:
       linkedin: "https://linkedin.com/in/constancemorel"
 
+  - name: "Oana Ciobotaru"
+    role: "Cryptographic Protocol Researcher"
+    bio: "Oana is a cryptography researcher and co-author of PLONK. She has a dual focus on both designing new cryptographic protocols and stress-testing them as an active security auditor."
+    image: "/images/team/oana-ciobotaru-2025.png"
+
+
   - name: "Vivek Arte"
     role: "Cryptography Engineer"
     bio: "Vivek is interested in cryptography, especially related to ZK and PSI. He holds an MS degree in Computer Science from UC San Diego and BTech and MTech degrees in Electrical Engineering from IIT Bombay."

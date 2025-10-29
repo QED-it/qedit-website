@@ -11,42 +11,34 @@ text: |
 openPositions:
   - title: "Cryptography Engineer"
     description: |
-      We are looking for an experienced cryptography engineer to join as a member of the core engineering team. As a Cryptography engineer, you will have an extensive impact over the product, the architecture, and the technology.
+      We are looking for a hands-on cryptography engineer or experienced software developer to join our core engineering team and work on privacy-first, next-generation blockchain technology. Our stack is primarily built in Rust (with some components in C++), and we use zero-knowledge proofs, elliptic curve cryptography, and other cutting-edge cryptographic techniques.
 
-      We work on a privacy-first next-gen blockchain, built in Rust with a C++ component. Technologies include zero-knowledge proofs, elliptic curve cryptography, advanced blockchain state management and other cutting-edge techniques.
+      <span style="color: #38b1df"><strong>Who you are</strong></span>
 
-      <span style="color: #38b1df"><strong>The perfect match:</strong></span>
-      We are looking for a talented, forward-thinking and ambitious cryptographer to help us research and develop cutting-edge cryptosystems. You should guide and provide direction and advice to junior members of the team. Your passion and expertise in cryptography will be used daily as you interact with software engineers and mathematicians, driving changes and building crypto related software.
+      You are either:
 
-      <span style="color: #38b1df"><strong>What you'll be doing:</strong></span>
-      - Be part in cutting-edge research in cryptography and blockchain technology
-      - Develop new protocols while studying and learning from existing ones. For instance, developing for the Zcash protocol heavily relies on cutting-edge zero-knowledge proofs research
-      - Work with the development team on implementing the research into our codebase
-      - Research in collaboration with external teams, possibly leading to partnerships
+      * An experienced software engineer (strong in Rust) with a deep interest in applied cryptography; or
+      * A security auditor/cryptography researcher experienced in reviewing and analyzing cryptographic implementations, even if your programming experience is lighter.
 
-      <span style="color: #38b1df"><strong>What we need to see:</strong></span>
-      - BSc, MSc or PhD degree in Computer Science or Mathematics with an emphasis on developing and implementing cryptographic protocols
-      - Experience contributing to research communities, including publishing papers
-      - Excellent written, communication and collaboration skills
+      <span style="color: #38b1df"><strong>What you’ll do</strong></span>
 
-      <span style="color: #38b1df"><strong>Ways to stand out from the crowd:</strong></span>
-      - You've implemented new cryptosystems and would feel comfortable overseeing others doing the same
-      - Experience with application of privacy-preserving cryptographic techniques to applications domains
-      - You have programming experience and proficiency in one or more of the following: Go, Rust, C, C++, Haskell, OCaml
-      - You've demonstrated the ability to design and execute on research agenda
-      - Blockchain enthusiasm and familiarity with use cases and applications based on it
+      * Contribute to the design and implementation of advanced cryptographic protocols.
+      * Work closely with researchers and engineers to translate theory into production-grade code.
+      * Take part in internal and external reviews of cryptographic primitives and implementations.
+      * Participate in collaborations with academic and industry partners.
 
-      <span style="color: #38b1df"><strong>We'll make a good team if:</strong></span>
-      - Agility is your motto and you're at ease with moving targets and changing environments
-      - Team player, you successfully and humbly contribute to group discussions and team effort
-      - Passionate about cryptography, software and blockchains, you enjoy thinking about and discussing technical challenges, design choices, and code style with your peers
-      - You have a solid understanding of agile methodology concepts
-      - Without using Google, you know what O.E.D means, possibly even 2 different meanings
+      <span style="color: #38b1df"><strong>What we’re looking for</strong></span>
 
-      <span style="color: #38b1df"><strong>Join QEDIT now!</strong></span>
-      - Sharp, motivated peers who can't wait to meet you 😃
-      - Competitive full-time compensation
-      - Work in an inclusive, nurturing team where you're valued as a person, not just as a worker
+      * Strong programming experience in Rust.
+      * Understanding of applied cryptography and familiarity with concepts like ZKPs, elliptic curves, and blockchain protocols.
+      * Curiosity and drive to learn new cryptographic tools and frameworks.
+      * Good communication and teamwork skills.
+
+      <span style="color: #38b1df"><strong>Bonus points</strong></span>
+
+      * Experience in auditing or verifying cryptographic codebases.
+      * Contributions to open-source cryptography or blockchain projects.
+      * Publications or participation in cryptography research communities.
 
 otherOpportunities:
   title: "You didn't find the ideal job position on our career page?"

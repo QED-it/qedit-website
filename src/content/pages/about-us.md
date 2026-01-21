@@ -76,7 +76,7 @@ teamMembers:
 
   - name: "Alexey Koren"
     role: "Cryptography Engineer"
-    bio: ""
+    bio: "Alexey is a cryptography engineer focused on privacy protocols. He holds an M.S. degree in information security and has experience building privacy, blockchain, and stablecoin applications from scratch."
     image: "/images/team/alexey-koren-2025.png"
 
   - name: "Arseni Kamla"

@@ -31,7 +31,7 @@ teamMembers:
 
   - name: "Pablo Kogan"
     role: "Director of Engineering"
-    bio: "An expert in the design and implementation of enterprise-class security-related software. Responsible for privacy-preserving protocol development and its secure implementation."
+    bio: "Expert in designing and implementing cryptographic and security‑related software, responsible for developing privacy‑preserving protocols and ensuring their secure implementation."
     image: "/images/team/pablo-kogan-2025.png"
     socialLinks:
       linkedin: "https://www.linkedin.com/in/pablo-k-830b97111/"

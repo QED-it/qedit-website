@@ -85,7 +85,7 @@ teamMembers:
     image: "/images/team/arseni-kamla-2025.png"
 
   - name: "Dmitry Demin"
-    role: "Software Engineer"
+    role: "Senior Software Engineer"
     bio: "Dmitry is a skilled software engineer and data scientist with expertise in various programming languages and technologies. He enjoys tackling interesting challenges and has a proven record of creating innovative products that deliver real-world benefits."
     image: "/images/team/dmitry-demin-2025.png"
 

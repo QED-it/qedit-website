@@ -121,18 +121,27 @@ export default function Home() {
         <div className="bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <h2 className="text-3xl font-normal text-center mb-12">{pageData.partners.title}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-              {pageData.partners.partners.map((partner, index) => (
-                <div key={index} className="relative h-12">
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-contain"
-                  />
-                </div>
-              ))}
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+              {pageData.partners.partners.map((partner, index) => {
+                const content = (
+                  <div className="relative h-12">
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 20vw"
+                      className="object-contain"
+                    />
+                  </div>
+                );
+                return partner.url ? (
+                  <a key={index} href={partner.url} target="_blank" rel="noopener noreferrer">
+                    {content}
+                  </a>
+                ) : (
+                  <div key={index}>{content}</div>
+                );
+              })}
             </div>
           </div>
         </div>

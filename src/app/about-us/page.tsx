@@ -25,6 +25,15 @@ interface AboutUsContent {
     description: string;
     subtitle?: string;
   };
+  sisterCompanies?: {
+    title: string;
+    companies: Array<{
+      name: string;
+      logo: string;
+      url: string;
+      description: string;
+    }>;
+  };
   partners: {
     title: string;
     partners: Array<{
@@ -197,11 +206,35 @@ export default function AboutUs() {
             </p>
             
             <div className="prose prose-lg max-w-4xl">
-              {pageData.aboutUs.description.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-gray-600 mb-6">
-                  {paragraph}
-                </p>
-              ))}
+              {pageData.aboutUs.description.split('\n\n').map((paragraph, index) => {
+                // Handle markdown links in description text
+                const parts = paragraph.split(/\[([^\]]+)\]\(([^)]+)\)/);
+                if (parts.length === 1) {
+                  return <p key={index} className="text-gray-600 mb-6">{paragraph}</p>;
+                }
+                return (
+                  <p key={index} className="text-gray-600 mb-6">
+                    {parts.map((part, i) => {
+                      if (i % 3 === 0) return part;
+                      if (i % 3 === 1) {
+                        const url = parts[i + 1];
+                        return (
+                          <a
+                            key={i}
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#38b1df] hover:underline"
+                          >
+                            {part}
+                          </a>
+                        );
+                      }
+                      return null;
+                    })}
+                  </p>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -221,6 +254,40 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
+        {/* Sister Companies Section */}
+        {pageData.sisterCompanies && (
+          <div className="bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+              <h2 className="text-3xl font-normal text-center mb-12">{pageData.sisterCompanies.title}</h2>
+              <div className="flex justify-center">
+                {pageData.sisterCompanies.companies.map((company, index) => (
+                  <a
+                    key={index}
+                    href={company.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center group"
+                  >
+                    <div className="relative w-20 h-20 mb-4">
+                      <Image
+                        src={company.logo}
+                        alt={company.name}
+                        fill
+                        sizes="80px"
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="text-lg font-semibold text-gray-900 group-hover:text-[#38b1df] transition-colors">
+                      {company.name}
+                    </span>
+                    <span className="text-sm text-gray-500 mt-1">{company.description}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Partners Section */}
         <div className="bg-white md:pb-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

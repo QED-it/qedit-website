@@ -36,6 +36,9 @@ partners:
       logo: "/images/logos/ant-group-logo.svg"
     - name: "Galois"
       logo: "/images/logos/galois-logo.png"
+    - name: "Financial Privacy Inc."
+      logo: "/images/logos/financial-privacy-inc-logo.png"
+      url: "https://financialprivacy.com"
 
 media:
   title: "As Seen In"

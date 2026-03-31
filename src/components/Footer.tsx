@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#1e2125] text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center md:justify-start mb-8">
+        <div className="flex justify-center md:justify-start mb-8 gap-8 items-center">
           <Image
             src="/images/logos/qedit-logo-white.svg"
             alt="QEDIT Logo"
@@ -16,6 +16,21 @@ const Footer = () => {
             className="w-24 h-auto"
             priority
           />
+          <a
+            href="https://financialprivacy.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity"
+          >
+            <Image
+              src="/images/logos/financial-privacy-inc-logo.png"
+              alt="Financial Privacy Inc."
+              width={28}
+              height={28}
+              className="w-7 h-7 object-contain"
+            />
+            <span className="text-sm text-gray-400">Financial Privacy Inc.</span>
+          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-4 md:mb-8">
@@ -63,30 +78,6 @@ const Footer = () => {
           </div>
         </div>
         
-        {/* Sister Companies */}
-        <div className="border-t border-gray-700 pt-8 mb-8">
-          <div className="flex flex-col md:flex-row items-center md:items-center gap-4">
-            <span className="text-sm text-gray-400">Sister Company</span>
-            <a
-              href="https://financialprivacy.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 group"
-            >
-              <Image
-                src="/images/logos/financial-privacy-inc-logo.png"
-                alt="Financial Privacy Inc."
-                width={32}
-                height={32}
-                className="w-8 h-8 object-contain"
-              />
-              <span className="text-gray-400 group-hover:text-white transition-colors text-sm font-medium">
-                Financial Privacy Inc.
-              </span>
-            </a>
-          </div>
-        </div>
-
         <div className="border-t border-[#38b1df] pt-8">
           <div className="flex flex-col md:flex-row md:justify-between items-center">
             <div className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 text-center md:text-left">

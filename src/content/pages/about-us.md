@@ -8,7 +8,7 @@ aboutUs:
 
     The company comprises industry experts and professionals with a passion for applied maths and is overseen by a Scientific Advisory Board that includes world-renowned cryptographers from leading academic institutions all over the globe.
 
-    QEDIT is leading the standardization of Zero-Knowledge Proofs through the ZKProof.org Workshops, and builds production-grade ZKP systems for blockchain. We are a growing startup and always on the lookout for phenomenal individuals who share our vision to reclaim privacy in the digital world.
+    QEDIT is leading the standardization of Zero-Knowledge Proofs through the ZKProof.org Workshops, and builds production-grade ZKP systems for blockchain. Together with [Financial Privacy Inc.](https://financialprivacy.com), we are bringing privacy-preserving technology to digital money. We are a growing startup and always on the lookout for phenomenal individuals who share our vision to reclaim privacy in the digital world.
 groupImage:
   image: "/images/team/group-2025-short.png"
   alt: "QEDIT Team Group Photo 2025"
@@ -102,6 +102,9 @@ teamMembers:
 partners:
   title: "Our Partners"
   partners:
+    - name: "Financial Privacy Inc."
+      logo: "/images/logos/financial-privacy-inc-logo.png"
+      url: "https://financialprivacy.com"
     - name: "Solana Foundation"
       logo: "/images/logos/solana-foundation-logo-sm.png"
     - name: "Ethereum Foundation"

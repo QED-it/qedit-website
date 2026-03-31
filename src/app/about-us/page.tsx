@@ -30,6 +30,7 @@ interface AboutUsContent {
     partners: Array<{
       name: string;
       logo: string;
+      url?: string;
     }>;
   };
 }
@@ -197,11 +198,35 @@ export default function AboutUs() {
             </p>
             
             <div className="prose prose-lg max-w-4xl">
-              {pageData.aboutUs.description.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-gray-600 mb-6">
-                  {paragraph}
-                </p>
-              ))}
+              {pageData.aboutUs.description.split('\n\n').map((paragraph, index) => {
+                // Handle markdown links in description text
+                const parts = paragraph.split(/\[([^\]]+)\]\(([^)]+)\)/);
+                if (parts.length === 1) {
+                  return <p key={index} className="text-gray-600 mb-6">{paragraph}</p>;
+                }
+                return (
+                  <p key={index} className="text-gray-600 mb-6">
+                    {parts.map((part, i) => {
+                      if (i % 3 === 0) return part;
+                      if (i % 3 === 1) {
+                        const url = parts[i + 1];
+                        return (
+                          <a
+                            key={i}
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#38b1df] hover:underline"
+                          >
+                            {part}
+                          </a>
+                        );
+                      }
+                      return null;
+                    })}
+                  </p>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -225,18 +250,25 @@ export default function AboutUs() {
         <div className="bg-white md:pb-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <h2 className="text-3xl font-normal text-center mb-12">{pageData.partners.title}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
-              {pageData.partners.partners.map((partner, index) => (
-                <div key={index} className="relative h-12">
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-contain"
-                  />
-                </div>
-              ))}
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
+              {pageData.partners.partners.map((partner, index) => {
+                const img = (
+                  <div className="relative h-12">
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 16vw"
+                      className="object-contain"
+                    />
+                  </div>
+                );
+                return partner.url ? (
+                  <a key={index} href={partner.url} target="_blank" rel="noopener noreferrer">{img}</a>
+                ) : (
+                  <div key={index}>{img}</div>
+                );
+              })}
             </div>
           </div>
         </div>

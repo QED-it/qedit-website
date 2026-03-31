@@ -25,6 +25,7 @@ export interface FeaturesSection {
 export interface Partner {
   name: string;
   logo: string;
+  url?: string;
 }
 
 export interface PartnersSection {

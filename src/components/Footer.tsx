@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#1e2125] text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center md:justify-start mb-8 gap-8 items-center">
+        <div className="flex justify-center md:justify-start mb-8">
           <Image
             src="/images/logos/qedit-logo-white.svg"
             alt="QEDIT Logo"
@@ -16,21 +16,6 @@ const Footer = () => {
             className="w-24 h-auto"
             priority
           />
-          <a
-            href="https://financialprivacy.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity"
-          >
-            <Image
-              src="/images/logos/financial-privacy-inc-logo.png"
-              alt="Financial Privacy Inc."
-              width={28}
-              height={28}
-              className="w-7 h-7 object-contain"
-            />
-            <span className="text-sm text-gray-400">Financial Privacy Inc.</span>
-          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-4 md:mb-8">

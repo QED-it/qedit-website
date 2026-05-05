@@ -30,6 +30,7 @@ interface AboutUsContent {
     partners: Array<{
       name: string;
       logo: string;
+      url?: string;
     }>;
   };
 }
@@ -228,13 +229,25 @@ export default function AboutUs() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
               {pageData.partners.partners.map((partner, index) => (
                 <div key={index} className="relative h-12">
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-contain"
-                  />
+                  {partner.url ? (
+                    <a href={partner.url} target="_blank" rel="noopener noreferrer" className="block relative h-full w-full">
+                      <Image
+                        src={partner.logo}
+                        alt={partner.name}
+                        fill
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        className="object-contain"
+                      />
+                    </a>
+                  ) : (
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                      className="object-contain"
+                    />
+                  )}
                 </div>
               ))}
             </div>

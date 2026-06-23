@@ -60,10 +60,16 @@ export default function Careers() {
               Open Positions
             </h2>
 
-            <FAQAccordion questions={pageData.openPositions.map(position => ({
-              question: position.title,
-              answer: position.description.replace(/\n/g, '<br />')
-            }))} />
+            {pageData.openPositions.length > 0 ? (
+              <FAQAccordion questions={pageData.openPositions.map(position => ({
+                question: position.title,
+                answer: position.description.replace(/\n/g, '<br />')
+              }))} />
+            ) : (
+              <p className="text-xl text-gray-600">
+                We don&apos;t have any open positions right now.
+              </p>
+            )}
           </div>
 
           {/* Other Opportunities Section */}

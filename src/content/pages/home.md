@@ -1,92 +1,98 @@
 ---
 hero:
-  title: "Securing Digital Assets at Scale using Zero-Knowledge Proofs"
-  subtitle: "Add security, privacy and scale to your blockchain infrastructure using Zero-Knowledge-Proofs and applied cryptography."
-  image: "/images/hero.svg"
+  title: "Securing Digital Assets at Scale with Applied Cryptography"
+  disciplines:
+    - "Zero-Knowledge Proofs"
+    - "Formal Verification"
+    - "Protocol Design"
+    - "Security Audits"
+  claim: "Deep cryptography engineering, from novel protocol design to machine-checked proofs."
+  primaryCta:
+    text: "Work with us"
+    href: "/contact-us"
+  secondaryCta:
+    text: "See our work"
+    href: "/work"
 
-features:
-  header:
-    title: "We specialize in ZKP engineering for distributed systems"
-    description: "QEDIT has been building Asset Transfer systems employing privacy both for public and private blockchains."
+trustedBy:
+  title: "Trusted by"
+  clients:
+    - name: "Solana Foundation"
+      logo: "/images/customers/solana.png"
+    - name: "Tachyon"
+      logo: "/images/customers/tachyon.png"
+    - name: "Electric Coin Company"
+      logo: "/images/customers/zcash.png"
+    - name: "DARPA"
+      logo: "/images/customers/darpa.png"
+
+capabilities:
+  title: "What we do"
+  subtitle: "We design, audit, and prove the cryptography behind systems that move real value."
   items:
-    - title: "Central Bank Digital Currency"
-      image: "/images/central-bank-digital-currency.png"
-      description: "Central Banks around the world are launching Digital Currency. The World Economic Forum has published a whitepaper on the design of CBDC. We were happy to co-author the chapter on adding privacy"
-      link: "https://www3.weforum.org/docs/WEF_Privacy_and_Confidentiality_Options_for_CBDCs_2021.pdf"
-      linkText: "Read More"
-    - title: "Shielded Asset for Blockchain"
-      image: "/images/shielded-asset-for-blockchain.png"
-      description: "QEDIT is currently developing the Zcash Shielded Assets capability, allowing for issuance and transfer of assets with Zero-Knowledge Proofs providing confidentiality."
-      link: "https://forum.zcashcommunity.com/t/a-proposal-for-shielded-assets-zsa-uda-for-defi-on-zcash/40520"
-      linkText: "Read More"
-    - title: "ZKP Standardization"
-      image: "/images/zkp-standardization.png"
-      description: "We provide an interoperability layer for different ZKP implementations. Tested at the DARPA SIEVE project, the zkInterface intermediary representation was born out of the ZKProof.org effort."
-      link: "https://qed-it.github.io/zkinterface-wasm-demo/"
-      linkText: "See WASM demo"
+    - title: "Security Audits"
+      description: "We find the bugs that matter in ZK circuits, proof systems, and cryptographic protocols, before they reach production."
+      link: "/work"
+      linkText: "See audit reports"
+    - title: "Protocol Design"
+      description: "We design cryptographic protocols from specification to implementation. We created Zcash Shielded Assets and the ZSA swap protocol."
+      link: "/zsa-hub"
+      linkText: "Explore the ZSA Hub"
+    - title: "Formal Verification"
+      description: "We prove cryptographic systems correct with machine-checked proofs in Lean. No critical edge case left to chance."
+      link: "/services/formal-verification"
+      linkText: "Learn more"
+    - title: "Research & Standardization"
+      description: "We co-founded the ZKProof standardization effort and publish work that moves the field forward."
+      link: "/research"
+      linkText: "Read our research"
 
-partners:
-  title: "Developed in Partnership with"
-  partners:
-    - name: "VMware"
-      logo: "/images/logos/vmware-logo.png"
-    - name: "RGAX"
-      logo: "/images/logos/rgax-logo.png"
-    - name: "Ant Group"
-      logo: "/images/logos/ant-group-logo.svg"
-    - name: "Galois"
-      logo: "/images/logos/galois-logo.png"
-
-media:
-  title: "As Seen In"
+work:
+  title: "Selected work"
+  subtitle: "A sample of the protocols we've designed, audited, and verified."
+  ctaText: "View all work"
+  ctaHref: "/work"
   items:
-    - name: "Nasdaq"
-      logo: "/images/logos/nasdaq-logo.png"
-      url: "https://www.nasdaq.com/articles/dont-lose-4-of-your-companys-global-turnover-due-to-gdpr-regulatory-negligence-2019-07-11"
-    - name: "Entrepreneur"
-      logo: "/images/logos/entrepreneur-logo.png"
-      url: "https://www.entrepreneur.com/article/337967"
-    - name: "Forbes"
-      logo: "/images/logos/forbes-logo.png"
-      url: "https://www.forbes.com/sites/rachelwolfson/2019/05/07/vmware-and-other-leading-enterprises-partner-with-blockchain-company-to-implement-data-privacy/#25114df26807"
-    - name: "TechCrunch"
-      logo: "/images/logos/techcrunch-logo.png"
-      url: "https://techcrunch.com/2017/12/04/israeli-serial-startup-stars-of-blockchain-tech-return-with-qedit-a-zero-knowledge-proof-diligence-tool/"
-    - name: "Yahoo Finance"
-      logo: "/images/logos/yahoo-finance-logo2.png"
-      url: "https://finance.yahoo.com/news/qedit-tradeshift-frontiers-partner-create-130000118.html"
-    - name: "The Cointelegraph"
-      logo: "/images/logos/cointelegraph-logo.png"
-      url: "https://cointelegraph.com/news/samsung-sds-to-use-zero-knowledge-proofs-on-business-blockchain"
-    - name: "Coindesk"
-      logo: "/images/logos/coindesk-logo.png"
-      url: "https://www.coindesk.com/markets/2019/10/29/deloitte-adds-privacy-tech-to-its-education-credentials-blockchain"
-    - name: "Financial Times"
-      logo: "/images/logos/financial-times-logo.png"
-      url: "https://markets.ft.com/data/announce/detail?dockey=600-202009161147PR_NEWS_USPRX____IO27297-1"
+    - title: "Token-2022 Confidential Transfer"
+      context: "Solana"
+      types: ["Audit"]
+      description: "Security audit of Solana's confidential token extension."
+      link: "/work/token-2022"
+    - title: "Ragu Proof-Carrying Data"
+      context: "Tachyon / Zcash"
+      types: ["Audit"]
+      description: "Audit of the PCD scheme behind Zcash's next-generation architecture."
+      link: "/work/ragu"
+    - title: "Sapling"
+      context: "Zcash"
+      types: ["Audit"]
+      description: "Audit of the Sapling shielded-transaction protocol."
+      link: "/work/sapling"
+    - title: "Zcash Shielded Assets"
+      context: "Zcash"
+      types: ["Design", "Implementation"]
+      description: "Designed the protocol bringing arbitrary assets to Zcash, plus a decentralized ZSA swap."
+      link: "/zsa-hub"
+    - title: "Digital Shekel"
+      context: "Bank of Israel"
+      types: ["Design"]
+      description: "Selected by the Bank of Israel to design privacy for its CBDC challenge."
+      link: "/work/digital-shekel"
+    - title: "Project Fromager"
+      context: "DARPA / Galois"
+      types: ["Research"]
+      description: "US government-funded research advancing zero-knowledge proofs under DARPA's SIEVE program."
+      link: "/work/darpa-sieve"
 
-benefits:
-  title: "How We Help Companies"
-  subtitle: "QEDIT is transforming the way businesses interact, making risk-free data collaboration possible and profitable. We help companies:"
-  items:
-    - title: "Overcome trust barriers"
-      description: "Securely engage with other companies while protecting sensitive business information and your competitive edge"
-      icon: "/images/overcome-trust-barriers.png"
-    - title: "Comply with regulations"
-      description: "Future-proof your collaborations and comply with tightening regulatory frameworks designed to protect consumer data"
-      icon: "/images/comply-with-regulations.png"
-    - title: "Manage security risks"
-      description: "Employ secure data transfer methods, maintain ownership over raw data and steer clear of leaks that could result in reputational and financial damage"
-      icon: "/images/manage-security-risks.png"
+zsaHub:
+  title: "The home of Zcash Shielded Assets"
+  description: "We designed ZSAs and the protocol that lets arbitrary assets move privately on Zcash. The ZSA Hub is the reference for the specs, the swap protocol, talks, and everything we're building next."
+  ctaText: "Enter the ZSA Hub"
+  ctaHref: "/zsa-hub"
+
+closing:
+  title: "Let's secure your protocol"
+  subtitle: "Talk to the team about an audit, a protocol design, or a formal-verification engagement."
+  ctaText: "Get in touch"
+  ctaHref: "/contact-us"
 ---
-
-QEDIT is transforming the way businesses interact, making risk-free data collaboration possible and profitable. We help companies:
-
-### Overcome trust barriers
-Securely engage with other companies while protecting sensitive business information and your competitive edge
-
-### Comply with regulations
-Future-proof your collaborations and comply with tightening regulatory frameworks designed to protect consumer data
-
-### Manage security risks
-Employ secure data transfer methods, maintain ownership over raw data and steer clear of leaks that could result in reputational and financial damage 

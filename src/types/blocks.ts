@@ -56,11 +56,86 @@ export interface BenefitsSection {
   subtitle: string;
 }
 
-// Page specific content
+// Home Page specific content
+
+export interface CtaLink {
+  text: string;
+  href: string;
+}
+
+export interface HeroContent {
+  title: string;
+  disciplines: string[];
+  claim: string;
+  primaryCta: CtaLink;
+  secondaryCta: CtaLink;
+}
+
+export interface TrustedByClient {
+  name: string;
+  logo: string;
+}
+
+export interface TrustedByContent {
+  title: string;
+  clients: TrustedByClient[];
+}
+
+export interface CapabilityItem {
+  title: string;
+  description: string;
+  link: string;
+  linkText: string;
+}
+
+export interface CapabilitiesContent {
+  title: string;
+  subtitle?: string;
+  items: CapabilityItem[];
+}
+
+export type WorkType =
+  | 'Audit'
+  | 'Design'
+  | 'Implementation'
+  | 'Formal Verification'
+  | 'Research';
+
+export interface WorkItem {
+  title: string;
+  context: string;
+  types: WorkType[];
+  description: string;
+  link: string;
+}
+
+export interface WorkContent {
+  title: string;
+  subtitle?: string;
+  ctaText: string;
+  ctaHref: string;
+  items: WorkItem[];
+}
+
+export interface ZsaHubContent {
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaHref: string;
+}
+
+export interface ClosingCtaContent {
+  title: string;
+  subtitle?: string;
+  ctaText: string;
+  ctaHref: string;
+}
+
 export interface HomePageContent {
-  hero: Hero;
-  features: FeaturesSection;
-  partners: PartnersSection;
-  benefits: BenefitsSection;
-  media: MediaSection;
-} 
+  hero: HeroContent;
+  trustedBy: TrustedByContent;
+  capabilities: CapabilitiesContent;
+  work: WorkContent;
+  zsaHub: ZsaHubContent;
+  closing: ClosingCtaContent;
+}

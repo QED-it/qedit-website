@@ -62,7 +62,7 @@ export default async function ServicePage({ params }: { params: Params }) {
             Our work
           </h2>
           {works.length === 0 ? (
-            <p className="text-gray-500">Work in this area is coming soon.</p>
+            <p className="text-gray-500">More information about our work in this area coming soon.</p>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {works.map((w) => (

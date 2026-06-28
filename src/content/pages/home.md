@@ -36,7 +36,7 @@ trustedBy:
 
 capabilities:
   title: "What we do"
-  subtitle: "We design, audit, and prove the cryptography behind systems that move real value."
+  subtitle: "We design, audit, and prove the cryptography behind critical systems that move real value."
   items:
     - title: "Security Audits"
       description: "We find the bugs that matter in ZK circuits, proof systems, and cryptographic protocols, before they reach production."
@@ -87,7 +87,7 @@ work:
       description: "Selected by the Bank of Israel to design privacy for its CBDC challenge."
       link: "/work/digital-shekel"
     - title: "Project Fromager"
-      context: "DARPA / Galois"
+      context: "DARPA"
       types: ["Research"]
       description: "US government-funded research advancing zero-knowledge proofs under DARPA's SIEVE program."
       link: "/work/darpa-sieve"
@@ -99,7 +99,7 @@ zsaHub:
   ctaHref: "/zsa-hub"
 
 closing:
-  title: "Let's secure your protocol"
+  title: "Secure what you're building"
   subtitle: "Talk to the team about an audit, a protocol design, or a formal-verification engagement."
   ctaText: "Get in touch"
   ctaHref: "/contact-us"

@@ -17,10 +17,6 @@ const Header = () => {
       ]
     },
     {
-      title: 'ZSA Hub',
-      href: '/zsa-hub'
-    },
-    {
       title: 'Research',
       href: '/research'
     },

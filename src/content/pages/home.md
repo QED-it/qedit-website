@@ -12,7 +12,7 @@ hero:
     href: "/contact-us"
   secondaryCta:
     text: "See our work"
-    href: "/work"
+    href: "/services/audits"
 
 trustedBy:
   title: "Trusted by"
@@ -40,7 +40,7 @@ capabilities:
   items:
     - title: "Security Audits"
       description: "We find the bugs that matter in ZK circuits, proof systems, and cryptographic protocols, before they reach production."
-      link: "/work"
+      link: "/services/audits"
       linkText: "See audit reports"
     - title: "Protocol Design"
       description: "We design cryptographic protocols from specification to implementation. We created Zcash Shielded Assets and the ZSA swap protocol."
@@ -59,18 +59,18 @@ work:
   title: "Selected work"
   subtitle: "A sample of the protocols we've designed, audited, and verified."
   ctaText: "View all work"
-  ctaHref: "/work"
+  ctaHref: "/services/audits"
   items:
     - title: "Token-2022 Confidential Transfer"
       context: "Solana"
       types: ["Audit"]
       description: "Security audit of Solana's confidential token extension."
-      link: "/work/token-2022"
+      link: "/services/audits/solana-token-2022"
     - title: "Ragu Proof-Carrying Data"
       context: "Tachyon / Zcash"
       types: ["Audit"]
       description: "Audit of the PCD scheme behind Zcash's next-generation architecture."
-      link: "/work/ragu"
+      link: "/services/audits/ragu-tachyon"
     - title: "Zcash Shielded Assets (ZSAs)"
       context: "Zcash"
       types: ["Design", "Implementation"]
@@ -80,17 +80,17 @@ work:
       context: "Zcash"
       types: ["Audit"]
       description: "Audit of the Sapling shielded-transaction protocol."
-      link: "/work/sapling"
+      link: "/services/audits/sapling"
     - title: "Digital Shekel"
       context: "Bank of Israel"
       types: ["Design"]
       description: "Selected by the Bank of Israel to design privacy for its CBDC challenge."
-      link: "/work/digital-shekel"
+      link: "/services/protocol-design/digital-shekel"
     - title: "Project Fromager"
       context: "DARPA"
       types: ["Research"]
       description: "US government-funded research advancing zero-knowledge proofs under DARPA's SIEVE program."
-      link: "/work/darpa-sieve"
+      link: "/research"
 
 zsaHub:
   title: "The home of Zcash Shielded Assets"

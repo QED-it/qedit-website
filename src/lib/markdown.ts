@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { marked } from 'marked';
 
 const contentDirectory = path.join(process.cwd(), 'src/content');
 
@@ -20,4 +21,8 @@ export function getMarkdownFiles<T>(subFolder: string): Array<{ fileName: string
         const { data, content } = matter(fileContents);
         return { fileName, data: data as T, content };
     });
+}
+
+export async function markdownToHtml(md: string): Promise<string> {
+  return marked.parse(md);
 }

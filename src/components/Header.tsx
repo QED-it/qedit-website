@@ -9,25 +9,20 @@ const Header = () => {
 
   const menuItems = [
     {
-      title: 'ZKProof',
-      href: 'https://zkproof.org',
-      external: true
-    },
-    {
-      title: 'Company',
+      title: 'Services',
       items: [
-        { title: 'About Us', href: '/about-us' },
-        { title: 'Careers', href: '/careers' },
-        { title: 'Partners', href: '/partners' },
-        { title: 'Security', href: '/security' }
+        { title: 'Security Audits', href: '/services/audits' },
+        { title: 'Protocol Design', href: '/services/protocol-design' },
+        { title: 'Formal Verification', href: '/services/formal-verification' }
       ]
     },
     {
-      title: 'Media',
-      items: [
-        { title: 'News', href: '/news' },
-        { title: 'Blog', href: '/blog' }
-      ]
+      title: 'ZSA Hub',
+      href: '/zsa-hub'
+    },
+    {
+      title: 'Research',
+      href: '/research'
     },
     {
       title: 'Contact',
@@ -108,7 +103,7 @@ const Header = () => {
                         />
                       </svg>
                     </button>
-                    <div className="absolute hidden group-hover:block w-48 pt-2 left-1/2 -translate-x-1/2">
+                    <div className="absolute hidden group-hover:block w-60 pt-2 left-1/2 -translate-x-1/2">
                       <div className="bg-[#1e2125] rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         {item.items.map((subItem) => (
                           <Link

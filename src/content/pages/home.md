@@ -25,6 +25,14 @@ trustedBy:
       logo: "/images/customers/zcash.png"
     - name: "DARPA"
       logo: "/images/customers/darpa.png"
+    - name: "Financial Privacy Inc."
+      logo: "/images/customers/financial-privacy-inc.png"
+    - name: "Deloitte"
+      logo: "/images/customers/deloitte.png"
+    - name: "VMware"
+      logo: "/images/customers/vmware.png"
+    - name: "Samsumg SDS"
+      logo: "/images/customers/samsung_sds.png"
 
 capabilities:
   title: "What we do"
@@ -63,16 +71,16 @@ work:
       types: ["Audit"]
       description: "Audit of the PCD scheme behind Zcash's next-generation architecture."
       link: "/work/ragu"
+    - title: "Zcash Shielded Assets (ZSAs)"
+      context: "Zcash"
+      types: ["Design", "Implementation"]
+      description: "Designed the protocol bringing arbitrary assets to Zcash, plus a decentralized ZSA swap."
+      link: "/zsa-hub"
     - title: "Sapling"
       context: "Zcash"
       types: ["Audit"]
       description: "Audit of the Sapling shielded-transaction protocol."
       link: "/work/sapling"
-    - title: "Zcash Shielded Assets"
-      context: "Zcash"
-      types: ["Design", "Implementation"]
-      description: "Designed the protocol bringing arbitrary assets to Zcash, plus a decentralized ZSA swap."
-      link: "/zsa-hub"
     - title: "Digital Shekel"
       context: "Bank of Israel"
       types: ["Design"]

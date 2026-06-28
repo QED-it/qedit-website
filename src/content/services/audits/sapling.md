@@ -8,7 +8,4 @@ report: ""
 order: 3
 ---
 
-## Overview
-
-<!-- Populate with the engagement write-up: scope, what was reviewed, key
-findings, and outcome. Add the report link in the `report` field above. -->
+**Final Report (April 2018) available [here](https://raw.githubusercontent.com/QED-it/sapling-audit/master/sapling-audit-report.pdf)**

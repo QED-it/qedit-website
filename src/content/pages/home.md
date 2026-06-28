@@ -95,7 +95,7 @@ work:
 zsaHub:
   title: "The home of Zcash Shielded Assets"
   description: "We designed ZSAs and the protocol that lets arbitrary assets move privately on Zcash. The ZSA Hub is the reference for the specs, the swap protocol, talks, and everything we're building next."
-  ctaText: "Enter the ZSA Hub (Coming Soon)"
+  ctaText: "Enter the ZSA Hub"
   ctaHref: ""
 
 closing:

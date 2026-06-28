@@ -194,3 +194,37 @@ export interface ResearchPageContent {
   darpa: ResearchCallout;
   closing: ResearchClosing;
 }
+
+// ZSA Hub Section
+
+export interface ZsaHubHero {
+  eyebrow: string;
+  title: string;
+  intro: string;
+}
+
+export interface ZsaHubLink {
+  label: string;
+  description?: string;
+  href: string;
+}
+
+export interface ZsaHubSection {
+  id: string;
+  title: string;
+  intro?: string;
+  links: ZsaHubLink[];
+}
+
+export interface ZsaHubClosing {
+  title: string;
+  subtitle?: string;
+  ctaText: string;
+  ctaHref: string;
+}
+
+export interface ZsaHubPageContent {
+  hero: ZsaHubHero;
+  sections: ZsaHubSection[];
+  closing: ZsaHubClosing;
+}

@@ -5,7 +5,7 @@ types: ["Audit"]
 summary: "Audit of the PCD scheme behind Zcash's next-generation architecture."
 date: "2026-04-30"
 report: ""
-order: 2
+order: 1
 ---
 
 **Final Report (April 2026)**

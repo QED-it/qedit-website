@@ -3,7 +3,7 @@ title: "Ragu Proof-Carrying Data"
 context: "Tachyon / Zcash"
 types: ["Audit"]
 summary: "Audit of the PCD scheme behind Zcash's next-generation architecture."
-date: "2024-01-01"
+date: "2026-04-30"
 report: ""
 order: 2
 ---

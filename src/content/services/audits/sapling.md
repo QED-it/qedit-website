@@ -3,9 +3,7 @@ title: "Zcash Sapling"
 context: "Zcash"
 types: ["Audit"]
 summary: "Security audit Zcash Sapling."
-date: "2024-06-01"
-report: ""
-order: 3
+date: "2018-04-30"
+report: "https://raw.githubusercontent.com/QED-it/sapling-audit/master/sapling-audit-report.pdf"
+order: 4
 ---
-
-**Final Report (April 2018) available [here](https://raw.githubusercontent.com/QED-it/sapling-audit/master/sapling-audit-report.pdf)**

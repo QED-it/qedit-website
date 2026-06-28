@@ -139,3 +139,58 @@ export interface HomePageContent {
   zsaHub: ZsaHubContent;
   closing: ClosingCtaContent;
 }
+
+// Research page specific blocks
+
+// Add to @/types/blocks
+
+export interface ResearchHero {
+  eyebrow: string;
+  title: string;
+  intro: string;
+}
+
+export interface ResearchExpertiseItem {
+  title: string;
+  description: string;
+}
+
+export interface ResearchExpertise {
+  title: string;
+  items: ResearchExpertiseItem[];
+}
+
+export interface ResearchCallout {
+  eyebrow: string;
+  title: string;
+  description: string;
+  linkText: string;
+  linkHref: string;
+}
+
+export interface ResearchEcosystemItem {
+  name: string;
+  description: string;
+}
+
+export interface ResearchEcosystems {
+  title: string;
+  subtitle?: string;
+  items: ResearchEcosystemItem[];
+}
+
+export interface ResearchClosing {
+  title: string;
+  subtitle?: string;
+  ctaText: string;
+  ctaHref: string;
+}
+
+export interface ResearchPageContent {
+  hero: ResearchHero;
+  expertise: ResearchExpertise;
+  zkproof: ResearchCallout;
+  ecosystems: ResearchEcosystems;
+  darpa: ResearchCallout;
+  closing: ResearchClosing;
+}

@@ -12,7 +12,7 @@ hero:
     href: "/contact-us"
   secondaryCta:
     text: "See our work"
-    href: "/services/audits"
+    href: "#what-we-do"
 
 trustedBy:
   title: "Trusted by"
@@ -43,9 +43,9 @@ capabilities:
       link: "/services/audits"
       linkText: "See audit reports"
     - title: "Protocol Design"
-      description: "We design cryptographic protocols from specification to implementation. We created Zcash Shielded Assets and the ZSA swap protocol."
-      link: "/zsa-hub"
-      linkText: "Explore the ZSA Hub"
+      description: "We design robust cryptographic protocols from specification to production-ready implementation."
+      link: "/services/protocol-design"
+      linkText: "See our protocol work"
     - title: "Formal Verification"
       description: "We prove cryptographic systems correct with machine-checked proofs in Lean. No critical edge case left to chance."
       link: "/services/formal-verification"
@@ -61,19 +61,19 @@ work:
   ctaText: "View all work"
   ctaHref: "/services/audits"
   items:
-    - title: "Token-2022 Confidential Transfer"
-      context: "Solana"
-      types: ["Audit"]
-      description: "Security audit of Solana's confidential token extension."
-      link: "/services/audits/solana-token-2022"
     - title: "Ragu Proof-Carrying Data"
       context: "Tachyon / Zcash"
       types: ["Audit"]
       description: "Audit of the PCD scheme behind Zcash's next-generation architecture."
       link: "/services/audits/ragu-tachyon"
+    - title: "Token-2022 Confidential Transfer"
+      context: "Solana"
+      types: ["Audit"]
+      description: "Security audit of Solana's confidential token extension."
+      link: "/services/audits/solana-token-2022"
     - title: "Zcash Shielded Assets (ZSAs)"
       context: "Zcash"
-      types: ["Design", "Implementation"]
+      types: ["Protocol", "Implementation"]
       description: "Designed the protocol bringing arbitrary assets to Zcash, plus a decentralized ZSA swap."
       link: "/zsa-hub"
     - title: "Sapling"
@@ -83,20 +83,20 @@ work:
       link: "/services/audits/sapling"
     - title: "Digital Shekel"
       context: "Bank of Israel"
-      types: ["Design"]
+      types: ["Protocol"]
       description: "Selected by the Bank of Israel to design privacy for its CBDC challenge."
       link: "/services/protocol-design/digital-shekel"
     - title: "Project Fromager"
       context: "DARPA"
-      types: ["Research"]
+      types: ["Research", "Protocol"]
       description: "US government-funded research advancing zero-knowledge proofs under DARPA's SIEVE program."
       link: "/research"
 
 zsaHub:
   title: "The home of Zcash Shielded Assets"
   description: "We designed ZSAs and the protocol that lets arbitrary assets move privately on Zcash. The ZSA Hub is the reference for the specs, the swap protocol, talks, and everything we're building next."
-  ctaText: "Enter the ZSA Hub"
-  ctaHref: "/zsa-hub"
+  ctaText: "Enter the ZSA Hub (Coming Soon)"
+  ctaHref: ""
 
 closing:
   title: "Secure what you're building"

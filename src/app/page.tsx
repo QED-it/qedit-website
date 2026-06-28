@@ -82,7 +82,7 @@ export default function Home() {
       </section>
 
       {/* Capabilities */}
-      <section className="bg-white">
+      <section id="what-we-do" className="scroll-mt-28 md:scroll-mt-36 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-3">
             {capabilities.title}

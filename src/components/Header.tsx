@@ -3,11 +3,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
+type MenuItem = {
+  title: string;
+  href?: string;
+  external?: boolean;
+  items?: { title: string; href: string }[];
+};
+
 const Header = () => {
   const [isMenuOpen,setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string>('');
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     {
       title: 'Services',
       items: [
@@ -115,7 +122,7 @@ const Header = () => {
                   </>
                 ) : (
                   <Link
-                    href={item.href}
+                    href={item.href ?? '#'}
                     className={`transition-colors text-xl ${
                       item.title === 'Contact' 
                         ? 'border-2 border-[#38b1df] rounded-full px-6 py-2 text-white hover:bg-[#38b1df] hover:text-white'
@@ -186,7 +193,7 @@ const Header = () => {
                       </div>
                     ) : (
                       <Link
-                        href={item.href}
+                        href={item.href ?? '#'}
                         className={`block transition-colors text-xl ${
                           item.title === 'Contact'
                             ? 'inline-block border-2 border-[#38b1df] rounded-full px-8 py-2 text-white hover:bg-[#38b1df] hover:text-white text-center mt-2'

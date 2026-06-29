@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# Never build the production branch (main) — GitHub Pages owns the live site
+[context.production]
+  ignore = "exit 0"
+
+# Never build other branch pushes — only pull requests
+[context.branch-deploy]
+  ignore = "exit 0"
+
+# Deploy Previews (pull requests) build normally — no ignore here

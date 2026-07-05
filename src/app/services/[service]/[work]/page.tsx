@@ -77,10 +77,12 @@ export default async function WorkPage({ params }: { params: Params }) {
         )}
 
         {bodyHtml && (
-          <div
-            className="prose prose-lg max-w-none prose-headings:font-semibold prose-a:text-[#38b1df]"
-            dangerouslySetInnerHTML={{ __html: bodyHtml }}
-          />
+          <div className="min-w-0 max-w-full overflow-hidden">
+            <div
+              className="prose prose-lg max-w-none min-w-0 prose-headings:font-semibold prose-a:text-[#38b1df] [&_pre]:max-w-full [&_pre]:overflow-x-auto"
+              dangerouslySetInnerHTML={{ __html: bodyHtml }}
+            />
+          </div>
         )}
       </div>
     </article>

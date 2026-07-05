@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import './globals.css';
 import CookieConsentBanner from '@/components/CookieConsent';
+import 'katex/dist/katex.min.css';
 
 const redHatText = Red_Hat_Text({ 
   subsets: ['latin'],

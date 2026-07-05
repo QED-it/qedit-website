@@ -17,6 +17,7 @@ expertise:
 zkproof:
   eyebrow: "Standardization"
   title: "We co-founded ZKProof"
+  image: "/images/logos/zkproof.png"
   description: "ZKProof is the open, industry-and-academia initiative standardizing the use of zero-knowledge proofs. QEDIT was a founding contributor and remains active in the effort, helping define the references and best practices the field builds on. It is a direct expression of how we work: rigorous, open, and aimed at making advanced cryptography usable in practice."
   linkText: "Visit ZKProof.org"
   linkHref: "https://zkproof.org/"

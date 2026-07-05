@@ -163,6 +163,7 @@ export interface ResearchExpertise {
 export interface ResearchCallout {
   eyebrow: string;
   title: string;
+  image?: string;
   description: string;
   linkText: string;
   linkHref: string;

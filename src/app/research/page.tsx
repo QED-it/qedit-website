@@ -1,5 +1,6 @@
 import { getMarkdownData } from '@/lib/markdown';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { ResearchPageContent } from '@/types/blocks';
 
 export default function Research() {
@@ -48,22 +49,37 @@ export default function Research() {
       {/* ZKProof */}
       <section className="bg-[#1e2125] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-widest text-[#38b1df] font-medium mb-3">
-              {zkproof.eyebrow}
-            </p>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-              {zkproof.title}
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">{zkproof.description}</p>
-            <a
-              href={zkproof.linkHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-[#38b1df] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#2c97c2] transition-colors"
-            >
-              {zkproof.linkText} →
-            </a>
+          <div className="flex flex-col md:flex-row md:items-center gap-12">
+            <div className="md:flex-1 max-w-2xl">
+              <p className="text-sm uppercase tracking-widest text-[#38b1df] font-medium mb-3">
+                {zkproof.eyebrow}
+              </p>
+              <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+                {zkproof.title}
+              </h2>
+              <p className="text-lg text-gray-300 mb-8">{zkproof.description}</p>
+              <a
+                href={zkproof.linkHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#38b1df] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#2c97c2] transition-colors"
+              >
+                {zkproof.linkText} →
+              </a>
+            </div>
+            {zkproof.image && (
+              <div className="md:flex-1 flex justify-center md:justify-end">
+                <div className="relative w-full max-w-xs h-32 md:h-40">
+                  <Image
+                    src={zkproof.image}
+                    alt="ZKProof"
+                    fill
+                    sizes="280px"
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

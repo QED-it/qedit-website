@@ -1,10 +1,19 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { marked } from 'marked';
+import { marked, type Tokens } from 'marked';
 import katex from 'katex';
 
 const contentDirectory = path.join(process.cwd(), 'src/content');
+
+interface CalloutToken extends Tokens.Generic {
+  meta: string;
+  text: string;
+}
+
+interface MathToken extends Tokens.Generic {
+  text: string;
+}
 
 // Hackmd-style blocks like :::danger etc
 const CALLOUTS: Record<string, { cls: string; label: string }> = {
@@ -32,7 +41,7 @@ const calloutExtension = {
       };
     }
   },
-  renderer(token: any) {
+  renderer(token: CalloutToken) {
     const c = CALLOUTS[token.meta] ?? CALLOUTS.info;
     const inner = marked.parse(token.text);
     return `<div class="not-prose callout mb-4 min-w-0 max-w-full rounded-lg border px-5 py-4 ${c.cls} [&_pre]:max-w-full [&_pre]:overflow-x-auto [&_pre]:min-w-0 [&_p]:break-words [&_p]:overflow-wrap-anywhere">${inner}</div>`;
@@ -48,7 +57,7 @@ const mathBlock = {
     const m = /^\$\$([\s\S]+?)\$\$/.exec(src);
     if (m) return { type: 'mathBlock', raw: m[0], text: m[1].trim(), tokens: [] };
   },
-  renderer(token: any) {
+  renderer(token: MathToken) {
     return katex.renderToString(token.text, { displayMode: true, throwOnError: false });
   },
 };
@@ -60,7 +69,7 @@ const mathInline = {
     const m = /^\$([^\$\n]+?)\$/.exec(src);
     if (m) return { type: 'mathInline', raw: m[0], text: m[1].trim(), tokens: [] };
   },
-  renderer(token: any) {
+  renderer(token: MathToken) {
     return katex.renderToString(token.text, { displayMode: false, throwOnError: false });
   },
 };

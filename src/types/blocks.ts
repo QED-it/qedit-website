@@ -197,10 +197,48 @@ export interface ResearchPageContent {
 
 // ZSA Hub Section
 
+export interface ZsaHubMeta {
+  label: string;
+  value: string;
+}
+
 export interface ZsaHubHero {
   eyebrow: string;
   title: string;
   intro: string;
+  meta: ZsaHubMeta[];
+}
+
+export interface ZsaHubProse {
+  title: string;
+  paragraphs: string[];
+}
+
+export interface ZsaHubUseCaseItem {
+  title: string;
+  icon?: string;
+  description: string;
+}
+
+export interface ZsaHubUseCases {
+  title: string;
+  intro?: string;
+  items: ZsaHubUseCaseItem[];
+}
+
+export interface ZsaHubMilestone {
+  period: string;
+  title: string;
+  description: string;
+  href?: string;
+  linkLabel?: string;
+}
+
+export interface ZsaHubTimeline {
+  title: string;
+  intro?: string;
+  milestones: ZsaHubMilestone[];
+  note?: string;
 }
 
 export interface ZsaHubLink {
@@ -209,11 +247,35 @@ export interface ZsaHubLink {
   href: string;
 }
 
+export interface ZsaHubResearchItem {
+  title: string;
+  description: string;
+  links: ZsaHubLink[];
+}
+
+export interface ZsaHubResearch {
+  title: string;
+  intro?: string;
+  items: ZsaHubResearchItem[];
+}
+
 export interface ZsaHubSection {
   id: string;
   title: string;
   intro?: string;
   links: ZsaHubLink[];
+}
+
+export interface ZsaHubFaqItem {
+  question: string;
+  answer: string;
+  linkLabel?: string;
+  linkHref?: string;
+}
+
+export interface ZsaHubFaq {
+  title: string;
+  items: ZsaHubFaqItem[];
 }
 
 export interface ZsaHubClosing {
@@ -225,6 +287,12 @@ export interface ZsaHubClosing {
 
 export interface ZsaHubPageContent {
   hero: ZsaHubHero;
+  overview: ZsaHubProse;
+  useCases: ZsaHubUseCases;
+  whyItMatters: ZsaHubProse;
+  timeline: ZsaHubTimeline;
+  research: ZsaHubResearch;
   sections: ZsaHubSection[];
+  faq: ZsaHubFaq;
   closing: ZsaHubClosing;
 }

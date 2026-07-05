@@ -362,7 +362,8 @@ Use the type `Repr` defined for the trait.
 ### [QZ1-107] Typo in specification §5.4.2 on computing OVK
 
 - **Description:** There is a typo in the use of `BLAKE2b-256` versus `BLAKE2b-512` as seen below
-![](https://i.imgur.com/KTkXaUh.png)
+
+![Blake typo](/images/services/audits/zcash-nu5/blake_typo.png)
 
 - **Recommendation:** Fix it.
 :::

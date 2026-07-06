@@ -20,11 +20,19 @@ const Footer = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-4 md:mb-8">
           <div className="col-span-1 hidden md:block">
-            <h3 className="text-lg font-semibold mb-4">Product</h3>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
-              <li><Link href="/product-overview" className="text-gray-400 hover:text-white">Overview</Link></li>
-              <li><Link href="/privacy-on-blockchains" className="text-gray-400 hover:text-white">Privacy on Blockchains</Link></li>
-              <li><Link href="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
+              <li><Link href="/services/audits" className="text-gray-400 hover:text-white">Security Audits</Link></li>
+              <li><Link href="/services/protocol-design" className="text-gray-400 hover:text-white">Protocol Design</Link></li>
+              <li><Link href="/services/formal-verification" className="text-gray-400 hover:text-white">Formal Verification</Link></li>
+            </ul>
+          </div>
+
+          <div className="col-span-1 hidden md:block">
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-3">
+              <li><Link href="/zsa-hub" className="text-gray-400 hover:text-white">Zcash Shielded Assets</Link></li>
+              <li><Link href="https://zkproof.org/" className="text-gray-400 hover:text-white">ZKProof Standards</Link></li>
             </ul>
           </div>
           
@@ -33,22 +41,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><Link href="/about-us" className="text-gray-400 hover:text-white">About</Link></li>
               <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
-              <li><Link href="/partners" className="text-gray-400 hover:text-white">Partners</Link></li>
-              <li><Link href="/security" className="text-gray-400 hover:text-white">Security</Link></li>
-            </ul>
-          </div>
-
-          <div className="col-span-1 hidden md:block">
-            <h3 className="text-lg font-semibold mb-4">Media</h3>
-            <ul className="space-y-3">
-              <li><Link href="/news" className="text-gray-400 hover:text-white">News</Link></li>
-              <li><Link href="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
-            </ul>
-          </div>
-
-          <div className="col-span-1 hidden md:block">
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <ul className="space-y-3">
+              <li><Link href="/iso27001" className="text-gray-400 hover:text-white">ISO 27001</Link></li>
               <li><Link href="/contact-us" className="text-gray-400 hover:text-white">Contact Us</Link></li>
             </ul>
           </div>

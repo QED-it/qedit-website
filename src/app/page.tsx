@@ -3,8 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { HomePageContent } from '@/types/blocks';
 
+const ACCENT = '#38b1df';
+
 export default function Home() {
-  const { data: pageData } = getMarkdownData<HomePageContent>('pages', 'home.md');
+  const { data } = getMarkdownData<HomePageContent>('pages', 'home.md');
+  const { hero, trustedBy, capabilities, work, zsaHub, closing } = data;
 
   return (
     <>
@@ -12,180 +15,213 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Secure data collaboration using Privacy Enhancing Technology | QEDIT",
-            "description": "Augment your data tools with advanced encryption, by world leaders in zero-knowledge proofs, homomorphic encryption, multi-party computation",
-            "url": "https://qed-it.com/",
-            "dateModified": "2024-07-01T20:54:34+00:00"
-          })
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'QEDIT',
+            description:
+              'Applied cryptography firm specializing in zero-knowledge proofs, formal verification, protocol design, and security audits.',
+            url: 'https://qed-it.com/',
+          }),
         }}
       />
-      <div>
-        {/* Hero Section */}
-        <div className="bg-white min-h-[calc(100vh-5rem)]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex">
-            <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between w-full">
-              <div className="flex-1 max-w-xl z-10 md:mt-[20vh]">
-                <h1 className="text-4xl md:text-5xl font-normal text-gray-900 mb-6">{pageData.hero.title}</h1>
-                <h2 className="text-xl font-normal text-gray-800 mb-4">{pageData.hero.subtitle}</h2>
-                <Link
-                  href="/contact-us"
-                  className="inline-block border-2 border-[#38b1df] text-[#38b1df] px-8 py-3 mt-6 rounded-full text-lg font-normal hover:bg-[#38b1df] hover:text-white transition-all"
-                >
-                  I&apos;m interested, tell me more
-                </Link>
-                {pageData.hero.description && (
-                  <p className="text-xl text-gray-600 mt-6">{pageData.hero.description}</p>
-                )}
-              </div>
-              <div className="w-full h-[400px] md:h-[500px] lg:h-[800px] relative md:absolute md:right-0 md:top-32 md:w-2/3">
+
+      {/* Hero */}
+      <section className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-gray-900 mb-6">
+              {hero.title}
+            </h1>
+            <p className="text-base md:text-lg font-medium text-[#38b1df] mb-5">
+              {hero.disciplines.join('  ·  ')}
+            </p>
+            <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mb-10">
+              {hero.claim}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href={hero.primaryCta.href}
+                className="inline-block text-center bg-[#38b1df] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#2c97c2] transition-colors"
+              >
+                {hero.primaryCta.text}
+              </Link>
+              <Link
+                href={hero.secondaryCta.href}
+                className="inline-block text-center border-2 border-gray-300 text-gray-800 px-8 py-3 rounded-full text-lg font-medium hover:border-[#38b1df] hover:text-[#38b1df] transition-colors"
+              >
+                {hero.secondaryCta.text}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted by */}
+      <section className="bg-[#1e2125]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <p className="text-sm uppercase tracking-widest text-white font-medium text-center mb-10">
+            {trustedBy.title}
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-x-12 md:gap-x-16 gap-y-10">
+            {trustedBy.clients.map((client) => (
+              <div
+                key={client.name}
+                className="relative h-9 md:h-10 w-28 md:w-36"
+              >
                 <Image
-                  src={pageData.hero.image || "/images/hero.svg"}
-                  alt="QEDIT Technology Illustration"
+                  src={client.logo}
+                  alt={client.name}
                   fill
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, 66vw"
-                  className="object-contain object-right-top"
-                  quality={90}
+                  sizes="160px"
+                  className="object-contain"
                 />
               </div>
-            </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Features Section */}
-        <div className="bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">{pageData.features.header.title}</h2>
-              <p className="text-2xl text-gray-800">{pageData.features.header.description}</p>
+      {/* Capabilities */}
+      <section id="what-we-do" className="scroll-mt-28 md:scroll-mt-36 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-3">
+            {capabilities.title}
+          </h2>
+          {capabilities.subtitle && (
+            <p className="text-xl text-gray-600 max-w-2xl">{capabilities.subtitle}</p>
+          )}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            {capabilities.items.map((item) => (
+              <Link
+                key={item.title}
+                href={item.link}
+                className="group block p-8 rounded-xl border border-gray-200 hover:border-[#38b1df] transition-colors"
+              >
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 mb-4">{item.description}</p>
+                <span className="text-[#38b1df] font-medium group-hover:underline">
+                  {item.linkText} →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Selected work */}
+      <section className="bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-3">
+                {work.title}
+              </h2>
+              {work.subtitle && (
+                <p className="text-xl text-gray-600 max-w-2xl">{work.subtitle}</p>
+              )}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pageData.features.items.map((feature, index) => (
-                <div key={index} className="flex flex-col p-6 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="relative h-64 mb-4">
-                    <Image
-                      src={feature.image}
-                      alt={feature.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                      className="object-contain"
-                      priority
-                    />
+            <Link
+              href={work.ctaHref}
+              className="text-[#38b1df] font-medium hover:underline whitespace-nowrap"
+            >
+              {work.ctaText} →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {work.items.map((item) => (
+              <Link
+                key={item.title}
+                href={item.link}
+                className="group block bg-white p-6 rounded-xl border border-gray-200 hover:border-[#38b1df] transition-colors"
+              >
+                <span className="text-xs uppercase tracking-widest text-[#38b1df] font-medium">
+                  {item.context}
+                </span>
+                <h3 className="text-lg font-semibold text-gray-900 mt-2 mb-2">
+                  {item.title}
+                </h3>
+                {item.types?.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {item.types.map((type) => (
+                      <span
+                        key={type}
+                        className="inline-flex items-center rounded-full bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1"
+                      >
+                        {type}
+                      </span>
+                    ))}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <Link 
-                    href={feature.link} 
-                    className="text-blue-600 hover:text-blue-800"
-                    {...(feature.link.startsWith('http') ? {
-                      target: "_blank",
-                      rel: "noopener noreferrer"
-                    } : {})}
-                  >
-                    {feature.linkText} →
-                  </Link>
-                </div>
-              ))}
-            </div>
+                )}
+                <p className="text-sm text-gray-600">{item.description}</p>
+              </Link>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Benefits Section */}
-        <div className="bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-4">{pageData.benefits.title}</h2>
-            <p className="text-xl text-gray-800 mb-12">{pageData.benefits.subtitle}</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              {pageData.benefits.items.map((benefit, index) => (
-                <div key={index} className="flex flex-col items-center text-center p-6 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="relative w-36 h-36 mb-6">
-                    <Image
-                      src={benefit.icon}
-                      alt={benefit.title}
-                      fill
-                      sizes="(max-width: 768px) 144px, 144px"
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>      
-
-        {/* Partners Section */}
-        <div className="bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 className="text-3xl font-normal text-center mb-12">{pageData.partners.title}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-              {pageData.partners.partners.map((partner, index) => (
-                <div key={index} className="relative h-12">
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-contain"
-                  />
-                </div>
-              ))}
-            </div>
+      {/* ZSA Hub spotlight */}
+      <section className="bg-[#1e2125] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-3xl">
+            <span className="text-sm uppercase tracking-widest text-[#38b1df] font-medium">
+              ZSA Hub
+            </span>
+            <h2 className="text-3xl md:text-4xl font-semibold mt-3 mb-4">
+              {zsaHub.title}
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">{zsaHub.description}</p>
+            <Link
+              href={zsaHub.ctaHref}
+              className="inline-block bg-[#38b1df] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#2c97c2] transition-colors"
+            >
+              {zsaHub.ctaText} →
+            </Link>
           </div>
         </div>
+      </section>
 
-        {/* Media Features Section */}
-        <div className="bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 mb-24">
-            <h2 className="text-3xl font-normal text-center mb-12">{pageData.media.title}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-              {pageData.media.items.map((media, index) => (
-                <a 
-                  key={index} 
-                  href={media.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="relative h-12"
-                >
-                  <Image
-                    src={media.logo}
-                    alt={media.name}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-contain"
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
+      {/* Closing CTA */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
+            {closing.title}
+          </h2>
+          {closing.subtitle && (
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+              {closing.subtitle}
+            </p>
+          )}
+          <Link
+            href={closing.ctaHref}
+            className="inline-block bg-[#38b1df] text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-[#2c97c2] transition-colors"
+          >
+            {closing.ctaText}
+          </Link>
         </div>
-      </div>
+      </section>
     </>
   );
 }
 
 export const metadata = {
-  title: 'Secure data collaboration using Privacy Enhancing Technology | QEDIT',
-  description: 'Augment your data tools with advanced encryption, by world leaders in zero-knowledge proofs, homomorphic encryption, multi-party computation',
+  title: 'Applied Cryptography, ZK Proofs & Security Audits | QEDIT',
+  description:
+    "Security audits, protocol design, and formal verification for zero-knowledge proofs and cryptographic systems. The team behind Zcash Shielded Assets and the ZKProof standards effort.",
   alternates: {
     canonical: 'https://qed-it.com/',
   },
   openGraph: {
-    title: 'Secure data collaboration using Privacy Enhancing Technology | QEDIT',
-    description: 'Augment your data tools with advanced encryption, by world leaders in zero-knowledge proofs, homomorphic encryption, multi-party computation',
+    title: 'Applied Cryptography, ZK Proofs & Security Audits | QEDIT',
+    description:
+      'Security audits, protocol design, and formal verification for zero-knowledge proofs and cryptographic systems.',
     url: 'https://qed-it.com/',
     locale: 'en_US',
     type: 'website',
     siteName: 'QEDIT',
-    modifiedTime: '2024-07-01T20:54:34+00:00',
   },
   twitter: {
     card: 'summary_large_image',
   },
-  other: {
-    'article:modified_time': '2024-07-01T20:54:34+00:00',
-  }
 };

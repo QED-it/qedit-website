@@ -1,15 +1,31 @@
-import { Red_Hat_Text } from 'next/font/google';
+import { Red_Hat_Text, Red_Hat_Display, Poppins } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import './globals.css';
 import CookieConsentBanner from '@/components/CookieConsent';
 import 'katex/dist/katex.min.css';
 
-const redHatText = Red_Hat_Text({ 
+const redHatText = Red_Hat_Text({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
   fallback: ['sans-serif']
+});
+
+const redHatDisplay = Red_Hat_Display({
+  subsets: ['latin'],
+  weight: ['700', '900'],
+  display: 'swap',
+  fallback: ['sans-serif'],
+  variable: '--font-display'
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['600'],
+  display: 'swap',
+  fallback: ['sans-serif'],
+  variable: '--font-accent'
 });
 
 export const metadata = {
@@ -57,7 +73,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={redHatText.className}>
+      <body className={`${redHatText.className} ${redHatDisplay.variable} ${poppins.variable}`}>
         <Header />
         <main className="min-h-screen pt-20 md:pt-32">
           {children}

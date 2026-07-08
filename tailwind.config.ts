@@ -18,6 +18,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        display: ["var(--font-display)", "sans-serif"],
+        accent: ["var(--font-accent)", "sans-serif"],
+      },
       typography: {
         DEFAULT: {
           css: {

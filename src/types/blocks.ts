@@ -97,6 +97,7 @@ export interface CapabilitiesContent {
 export type WorkType =
   | 'Audit'
   | 'Design'
+  | 'Protocol'
   | 'Implementation'
   | 'Formal Verification'
   | 'Research';

@@ -12,6 +12,7 @@ export interface ServiceMeta {
   title: string;
   tagline?: string;
   intro?: string;
+  illustration?: string; // path under /public, e.g. /images/illustrations/…
   order?: number;
   content: string; // markdown body (optional richer intro)
 }
@@ -52,6 +53,7 @@ export function getServiceMeta(slug: string): ServiceMeta | null {
     title: data.title ?? slug,
     tagline: data.tagline,
     intro: data.intro,
+    illustration: data.illustration,
     order: data.order,
     content,
   };

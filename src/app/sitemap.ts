@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getMarkdownFiles } from '@/lib/markdown'
+import { getServiceSlugs, getServiceWorks } from '@/lib/services'
 import fs from 'fs'
 import path from 'path'
 
@@ -44,9 +45,17 @@ function getAppRoutes(dir: string = 'src/app'): string[] {
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://qed-it.com'
-  
-  // Get all app routes
+
+  // Get all static app routes (skips dynamic [..] folders)
   const appRoutes = getAppRoutes()
+
+  // Service pages live under dynamic [service]/[work] routes, so the folder
+  // walker above misses them. Enumerate them from the content instead, the
+  // same way the pages are generated.
+  const serviceLandingRoutes = getServiceSlugs().map((service) => `/services/${service}`)
+  const serviceWorkRoutes = getServiceSlugs().flatMap((service) =>
+    getServiceWorks(service).map((w) => `/services/${service}/${w.slug}`)
+  )
 
   // Get all content
   const blogPosts = getMarkdownFiles<BlogPost>('blog')
@@ -57,7 +66,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const newsItemsPerPage = 12;
   const totalBlogPages = Math.ceil(blogPosts.length / blogItemsPerPage);
   const totalNewsPages = Math.ceil(pressReleases.length / newsItemsPerPage);
-  
+
   // Generate blog pagination URLs
   const blogPaginationUrls = Array.from({ length: totalBlogPages - 1 }, (_, i) => ({
     url: `${baseUrl}/blog/page/${i + 2}`,
@@ -83,6 +92,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: route === '/' ? 1 : 0.8,
     })),
 
+    // Service landing pages (/services/audits, ...)
+    ...serviceLandingRoutes.map((route) => ({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+
+    // Service work / case-study pages (/services/audits/ragu-tachyon, ...)
+    ...serviceWorkRoutes.map((route) => ({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+
     // Blog pagination pages
     ...blogPaginationUrls,
 
@@ -105,4 +130,4 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     })),
   ]
-} 
+}

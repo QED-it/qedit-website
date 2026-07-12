@@ -149,23 +149,24 @@ export default function Research() {
   );
 }
 
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
+
 export const metadata = {
-  title: 'Research | QEDIT',
+  title: 'Research - ZKProof, Zero-Knowledge & Applied Cryptography | QEDIT',
   description:
     "QEDIT's cryptography research: co-founders of the ZKProof standardization effort, with R&D across Zcash, Solana, Ethereum, permissioned networks, and DARPA-funded zero-knowledge work. We bring academic cryptography to production in Rust.",
   alternates: {
     canonical: 'https://qed-it.com/research/',
   },
   openGraph: {
-    title: 'Research | QEDIT',
+    ...OG_DEFAULTS,
+    title: 'Research - ZKProof, Zero-Knowledge & Applied Cryptography | QEDIT',
     description:
       'Co-founders of ZKProof. R&D across public and permissioned chains. Bringing academic cryptography to production.',
     url: 'https://qed-it.com/research/',
-    locale: 'en_US',
-    type: 'website',
-    siteName: 'QEDIT',
   },
   twitter: {
-    card: 'summary_large_image',
+    ...TWITTER_DEFAULTS,
+    title: 'Research - ZKProof, Zero-Knowledge & Applied Cryptography | QEDIT',
   },
 };

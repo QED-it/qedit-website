@@ -217,6 +217,8 @@ export default function NewsPage() {
   );
 }
 
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
+
 export const metadata = {
   title: 'Press — QEDIT in the press | QEDIT',
   description:
@@ -225,15 +227,14 @@ export const metadata = {
     canonical: 'https://qed-it.com/news/',
   },
   openGraph: {
+    ...OG_DEFAULTS,
     title: 'Press — QEDIT in the press | QEDIT',
     description:
       'Press coverage, media assets, and company background for QEDIT.',
-    url: 'https://qed-it.com/news',
-    locale: 'en_US',
-    type: 'website',
-    siteName: 'QEDIT',
+    url: 'https://qed-it.com/news/',
   },
   twitter: {
-    card: 'summary_large_image',
+    ...TWITTER_DEFAULTS,
+    title: 'Press — QEDIT in the press | QEDIT',
   },
 };

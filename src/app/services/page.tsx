@@ -73,6 +73,8 @@ export default function ServicesPage() {
   );
 }
 
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
+
 export const metadata = {
   title: 'Services — Security Audits, Protocol Design & Formal Verification | QEDIT',
   description:
@@ -81,15 +83,14 @@ export const metadata = {
     canonical: 'https://qed-it.com/services/',
   },
   openGraph: {
+    ...OG_DEFAULTS,
     title: 'Services — Security Audits, Protocol Design & Formal Verification | QEDIT',
     description:
       'Security audits, protocol design, and formal verification for zero-knowledge proofs and cryptographic systems.',
-    url: 'https://qed-it.com/services',
-    locale: 'en_US',
-    type: 'website',
-    siteName: 'QEDIT',
+    url: 'https://qed-it.com/services/',
   },
   twitter: {
-    card: 'summary_large_image',
+    ...TWITTER_DEFAULTS,
+    title: 'Services — Security Audits, Protocol Design & Formal Verification | QEDIT',
   },
 };

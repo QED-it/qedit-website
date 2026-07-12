@@ -271,25 +271,24 @@ export default function AboutUs() {
   );
 }
 
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
+
 export const metadata = {
-  title: "About Us - Meet Qedits' Professional Team | QEDIT",
-  description: "Want to know all About Us? So just Click Here and Meet Qedit Professional Team at your service! For Further Information About us - Click Here >>>",
+  title: 'About Us - The Team | QEDIT',
+  description:
+    'QEDIT is an applied cryptography firm. Meet the cryptographers, protocol engineers, and formal-methods specialists who design, audit, and prove cryptographic systems correct.',
   alternates: {
     canonical: 'https://qed-it.com/about-us/',
   },
   openGraph: {
-    title: "About Us - Meet Qedits' Professional Team | QEDIT",
-    description: "Want to know all About Us? So just Click Here and Meet Qedit Professional Team at your service! For Further Information About us - Click Here >>>",
+    ...OG_DEFAULTS,
+    title: 'About Us - The Team | QEDIT',
+    description:
+      'Meet the cryptographers, protocol engineers, and formal-methods specialists behind QEDIT.',
     url: 'https://qed-it.com/about-us/',
-    locale: 'en_US',
-    type: 'article',
-    siteName: 'QEDIT',
-    modifiedTime: '2024-11-24T11:15:13+00:00',
   },
   twitter: {
-    card: 'summary_large_image',
+    ...TWITTER_DEFAULTS,
+    title: 'About Us - The Team | QEDIT',
   },
-  other: {
-    'article:modified_time': '2024-11-24T11:15:13+00:00',
-  }
-}; 
+};

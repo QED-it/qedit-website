@@ -134,6 +134,7 @@ export default function Partners() {
 export const metadata = {
   title: 'Join our global partner network and grow your business',
   description: 'Join our global partner network. Businesses that thrive are pooling data resources to accelerate growth and increase productivity while remaining compliant',
+  robots: { index: false, follow: true },
   alternates: {
     canonical: 'https://qed-it.com/partners/',
   },

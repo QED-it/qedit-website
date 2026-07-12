@@ -5,9 +5,8 @@ import {
   getServiceMeta,
   getServiceWorks,
 } from '@/lib/services';
+import { markdownToHtml } from '@/lib/markdown';
 
-// Next 15 passes params as a Promise. On Next 14, change the type to
-// `{ service: string }` and drop the `await`.
 type Params = Promise<{ service: string }>;
 
 export const dynamicParams = false;
@@ -32,6 +31,7 @@ export default async function ServicePage({ params }: { params: Params }) {
   if (!meta) notFound();
 
   const works = getServiceWorks(service);
+  const bodyHtml = meta.content ? await markdownToHtml(meta.content) : '';
 
   return (
     <>
@@ -55,6 +55,18 @@ export default async function ServicePage({ params }: { params: Params }) {
         </div>
       </section>
 
+      {/* Long-form body (from the markdown below the frontmatter) */}
+      {bodyHtml && (
+        <section className="bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div
+              className="prose prose-lg max-w-none prose-headings:font-semibold prose-a:text-[#38b1df] [&_pre]:max-w-full [&_pre]:overflow-x-auto"
+              dangerouslySetInnerHTML={{ __html: bodyHtml }}
+            />
+          </div>
+        </section>
+      )}
+
       {/* Work list */}
       <section className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -62,7 +74,9 @@ export default async function ServicePage({ params }: { params: Params }) {
             Our work
           </h2>
           {works.length === 0 ? (
-            <p className="text-gray-500">More information about our work in this area coming soon.</p>
+            <p className="text-gray-500">
+              More information about our work in this area coming soon.
+            </p>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {works.map((w) => (

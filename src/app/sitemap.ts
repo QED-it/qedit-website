@@ -33,14 +33,20 @@ const APP_ROUTE_PRIORITY: Record<string, number> = {
   '/': 1,               // homepage — the one page that should be 1.0
   '/zsa-hub': 0.9,      // flagship positioning
   '/research': 0.9,     // flagship positioning
+  '/services': 0.9,     // services index
   // low-value utility / deprecated index pages
   '/privacy-policy': 0.3,
   '/careers': 0.3,
-  '/developers': 0.3,
   '/blog': 0.3,
   '/news': 0.4,
 }
 const DEFAULT_APP_PRIORITY = 0.7  // about, security, contact, partners, faq, ...
+
+// The site is exported with `trailingSlash: true`, so every URL must end in "/"
+// to match the form that is actually served and declared as canonical.
+function url(baseUrl: string, route: string): string {
+  return route === '/' ? `${baseUrl}/` : `${baseUrl}${route}/`
+}
 
 // Helper function to get all routes
 function getAppRoutes(dir: string = 'src/app'): string[] {
@@ -97,7 +103,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Generate blog pagination URLs
   const blogPaginationUrls = Array.from({ length: totalBlogPages - 1 }, (_, i) => ({
-    url: `${baseUrl}/blog/page/${i + 2}`,
+    url: url(baseUrl, `/blog/page/${i + 2}`),
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.4,
@@ -105,7 +111,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Generate news pagination URLs
   const newsPaginationUrls = Array.from({ length: totalNewsPages - 1 }, (_, i) => ({
-    url: `${baseUrl}/news/page/${i + 2}`,
+    url: url(baseUrl, `/news/page/${i + 2}`),
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.4,
@@ -114,23 +120,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     // Dynamic app routes — tiered via APP_ROUTE_PRIORITY, default 0.7
     ...appRoutes.map((route) => ({
-      url: `${baseUrl}${route}`,
+      url: url(baseUrl, route),
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: APP_ROUTE_PRIORITY[route] ?? DEFAULT_APP_PRIORITY,
     })),
 
-    // Service landing pages (/services/audits, ...)
+    // Service landing pages (/services/audits/, ...)
     ...serviceLandingRoutes.map((route) => ({
-      url: `${baseUrl}${route}`,
+      url: url(baseUrl, route),
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     })),
 
-    // Service work / case-study pages (/services/audits/ragu-tachyon, ...)
+    // Service work / case-study pages (/services/audits/ragu-tachyon/, ...)
     ...serviceWorkRoutes.map((route) => ({
-      url: `${baseUrl}${route}`,
+      url: url(baseUrl, route),
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
@@ -143,8 +149,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...newsPaginationUrls,
 
     // Blog posts (legacy archive — kept indexed but low priority)
+    // NOTE: root-level URLs. If you move posts under /blog/, change to:
+    //   url(baseUrl, `/blog/${post.fileName.replace(/\.md$/, '')}`)
     ...blogPosts.map((post) => ({
-      url: `${baseUrl}/${post.fileName.replace(/\.md$/, '')}`,
+      url: url(baseUrl, `/${post.fileName.replace(/\.md$/, '')}`),
       lastModified: new Date(post.data.date),
       changeFrequency: 'monthly' as const,
       priority: 0.3,
@@ -152,7 +160,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // Press releases (legacy archive)
     ...pressReleases.map((release) => ({
-      url: `${baseUrl}/news/${release.fileName.replace(/\.md$/, '')}`,
+      url: url(baseUrl, `/news/${release.fileName.replace(/\.md$/, '')}`),
       lastModified: new Date(release.data.date),
       changeFrequency: 'monthly' as const,
       priority: 0.4,

@@ -48,25 +48,24 @@ export default function ContactUs() {
   );
 }
 
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
+
 export const metadata = {
-  title: "Contact us & Leverage your company's data | QEDIT",
-  description: "Want to know more about how QEDIT's Privacy Enhancing Technology can help leverage your company's data? Interested in becoming a partner? Contact us.",
+  title: 'Contact QEDIT - Audits, Protocol Design & Formal Verification',
+  description:
+    'Talk to QEDIT about a security audit, a protocol design, or a formal-verification engagement. Tell us what you are building and we will tell you honestly whether we are the right fit.',
   alternates: {
     canonical: 'https://qed-it.com/contact-us/',
   },
   openGraph: {
-    title: "Contact us & Leverage your company's data | QEDIT",
-    description: "Want to know more about how QEDIT's Privacy Enhancing Technology can help leverage your company's data? Interested in becoming a partner? Contact us.",
+    ...OG_DEFAULTS,
+    title: 'Contact QEDIT - Audits, Protocol Design & Formal Verification',
+    description:
+      'Talk to QEDIT about a security audit, a protocol design, or a formal-verification engagement.',
     url: 'https://qed-it.com/contact-us/',
-    locale: 'en_US',
-    type: 'article',
-    siteName: 'QEDIT',
-    modifiedTime: '2021-04-18T06:53:25+00:00',
   },
   twitter: {
-    card: 'summary_large_image',
+    ...TWITTER_DEFAULTS,
+    title: 'Contact QEDIT - Audits, Protocol Design & Formal Verification',
   },
-  other: {
-    'article:modified_time': '2021-04-18T06:53:25+00:00',
-  }
-}; 
+};

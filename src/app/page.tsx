@@ -308,8 +308,10 @@ export const metadata = {
     locale: 'en_US',
     type: 'website',
     siteName: 'QEDIT',
+    images: ['/images/qedit-og.png'],
   },
   twitter: {
     card: 'summary_large_image',
+    images: ['/images/qedit-og.png'],
   },
 };

@@ -52,23 +52,24 @@ export default function FAQ() {
   );
 }
 
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
+
 export const metadata = {
-  title: 'FAQ - QEDIT',
+  title: 'FAQ - Applied Cryptography, Audits & Formal Verification | QEDIT',
+  description:
+    'Common questions about QEDIT: what we do, how a cryptography audit differs from a standard code review, when formal verification is worth it, and how engagements start.',
   alternates: {
     canonical: 'https://qed-it.com/faq/',
   },
   openGraph: {
-    title: 'FAQ - QEDIT',
+    ...OG_DEFAULTS,
+    title: 'FAQ - Applied Cryptography, Audits & Formal Verification | QEDIT',
+    description:
+      'Common questions about QEDIT: what we do, how cryptography audits work, and when formal verification is worth it.',
     url: 'https://qed-it.com/faq/',
-    locale: 'en_US',
-    type: 'article',
-    siteName: 'QEDIT',
-    modifiedTime: '2021-05-06T07:16:52+00:00',
   },
   twitter: {
-    card: 'summary_large_image',
+    ...TWITTER_DEFAULTS,
+    title: 'FAQ - Applied Cryptography, Audits & Formal Verification | QEDIT',
   },
-  other: {
-    'article:modified_time': '2021-05-06T07:16:52+00:00',
-  }
-}; 
+};

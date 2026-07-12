@@ -22,34 +22,35 @@ const Footer = () => {
           <div className="col-span-1 hidden md:block">
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
-              <li><Link href="/services/audits" className="text-gray-400 hover:text-white">Security Audits</Link></li>
-              <li><Link href="/services/protocol-design" className="text-gray-400 hover:text-white">Protocol Design</Link></li>
-              <li><Link href="/services/formal-verification" className="text-gray-400 hover:text-white">Formal Verification</Link></li>
+              <li><Link href="/services/audits/" className="text-gray-400 hover:text-white">Security Audits</Link></li>
+              <li><Link href="/services/protocol-design/" className="text-gray-400 hover:text-white">Protocol Design</Link></li>
+              <li><Link href="/services/formal-verification/" className="text-gray-400 hover:text-white">Formal Verification</Link></li>
             </ul>
           </div>
 
           <div className="col-span-1 hidden md:block">
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-3">
-              <li><Link href="/zsa-hub" className="text-gray-400 hover:text-white">Zcash Shielded Assets</Link></li>
+              <li><Link href="/zsa-hub/" className="text-gray-400 hover:text-white">Zcash Shielded Assets</Link></li>
               <li><Link href="https://zkproof.org/" className="text-gray-400 hover:text-white">ZKProof Standards</Link></li>
+              <li><Link href="/news/" className="text-gray-400 hover:text-white">News</Link></li>
             </ul>
           </div>
           
           <div className="col-span-1 hidden md:block">
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
-              <li><Link href="/about-us" className="text-gray-400 hover:text-white">About</Link></li>
-              <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
-              <li><Link href="/iso27001" className="text-gray-400 hover:text-white">ISO 27001</Link></li>
-              <li><Link href="/contact-us" className="text-gray-400 hover:text-white">Contact Us</Link></li>
+              <li><Link href="/about-us/" className="text-gray-400 hover:text-white">About</Link></li>
+              <li><Link href="/careers/" className="text-gray-400 hover:text-white">Careers</Link></li>
+              <li><Link href="/iso27001/" className="text-gray-400 hover:text-white">ISO 27001</Link></li>
+              <li><Link href="/contact-us/" className="text-gray-400 hover:text-white">Contact Us</Link></li>
             </ul>
           </div>
 
           <div className="col-span-1 hidden md:block">
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-3">
-              <li><Link href="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
+              <li><Link href="/privacy-policy/" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
               {/* <li><Link href="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link></li>
               <li><Link href="/cookies" className="text-gray-400 hover:text-white">Cookie Policy</Link></li> */}
             </ul>

@@ -64,6 +64,7 @@ export default function DataProcessingAgreement() {
 
 export const metadata = {
   title: 'Data Processing Agreement - QEDIT',
+  robots: { index: false, follow: true },
   alternates: {
     canonical: 'https://qed-it.com/data-processing-agreement/',
   },

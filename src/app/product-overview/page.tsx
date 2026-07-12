@@ -230,13 +230,14 @@ export default function ProductOverview() {
 export const metadata = {
   title: 'Privacy enhancing technology 4 secure data collaboration | Qedit',
   description: 'Qedit uses privacy-enhancing technology to empower safe cross-company data collaboration. Gain critical data insights with GDPR compliance.',
+  robots: { index: false, follow: true },
   alternates: {
-    canonical: 'https://qed-it.com/product-overview/',
+    canonical: 'https://qed-it.com/product-overview',
   },
   openGraph: {
     title: 'Privacy enhancing technology 4 secure data collaboration | Qedit',
     description: 'Qedit uses privacy-enhancing technology to empower safe cross-company data collaboration. Gain critical data insights with GDPR compliance.',
-    url: 'https://qed-it.com/product-overview/',
+    url: 'https://qed-it.com/product-overview',
     locale: 'en_US',
     type: 'article',
     siteName: 'QEDIT',

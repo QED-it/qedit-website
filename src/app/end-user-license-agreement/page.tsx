@@ -50,6 +50,7 @@ export default function EndUserLicenseAgreement() {
 
 export const metadata = {
   title: 'End User License Agreement - QEDIT',
+  robots: { index: false, follow: true },
   alternates: {
     canonical: 'https://qed-it.com/end-user-license-agreement/',
   },

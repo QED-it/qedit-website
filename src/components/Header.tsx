@@ -18,18 +18,22 @@ const Header = () => {
     {
       title: 'Services',
       items: [
-        { title: 'Security Audits', href: '/services/audits' },
-        { title: 'Protocol Design', href: '/services/protocol-design' },
-        { title: 'Formal Verification', href: '/services/formal-verification' }
+        { title: 'Security Audits', href: '/services/audits/' },
+        { title: 'Protocol Design', href: '/services/protocol-design/' },
+        { title: 'Formal Verification', href: '/services/formal-verification/' }
       ]
     },
     {
       title: 'Research',
-      href: '/research'
+      href: '/research/'
+    },
+    {
+      title: 'Team',
+      href: '/about-us/'
     },
     {
       title: 'Contact',
-      href: '/contact-us'
+      href: '/contact-us/'
     }
   ];
 

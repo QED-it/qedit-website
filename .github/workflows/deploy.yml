@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages (Prod)
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -18,10 +20,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: '20'
           cache: 'npm'
@@ -33,10 +35,15 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_SITE_URL: https://qed-it.com
-          NEXT_PUBLIC_WEB3FORMS_KEY: ${{ secrets.NEXT_PUBLIC_WEB3FORMS_KEY }}          
+          NEXT_PUBLIC_WEB3FORMS_KEY: ${{ secrets.NEXT_PUBLIC_WEB3FORMS_KEY }}
+
+      # Fail the deploy if the sitemap advertises URLs that were never built.
+      # Catches things like /news/<slug> entries with no matching route.
+      - name: Check sitemap URLs resolve to built pages
+        run: node scripts/check-sitemap.mjs
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./out
 
@@ -49,4 +56,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4

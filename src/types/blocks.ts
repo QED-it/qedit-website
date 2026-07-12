@@ -142,8 +142,6 @@ export interface HomePageContent {
 
 // Research page specific blocks
 
-// Add to @/types/blocks
-
 export interface ResearchHero {
   eyebrow: string;
   title: string;
@@ -296,4 +294,48 @@ export interface ZsaHubPageContent {
   sections: ZsaHubSection[];
   faq: ZsaHubFaq;
   closing: ZsaHubClosing;
+}
+
+// News page blocks
+
+export interface NewsHero {
+  eyebrow: string;
+  title: string;
+  intro: string;
+}
+
+export interface NewsOutlet {
+  name: string;
+  logo: string;
+}
+
+export interface NewsAsSeenIn {
+  title: string;
+  outlets: NewsOutlet[];
+}
+
+export interface PressKitLink {
+  label: string;
+  description?: string;
+  href: string;
+  external?: boolean;
+}
+
+export interface NewsPressKit {
+  eyebrow: string;
+  title: string;
+  description: string;
+  links: PressKitLink[];
+}
+
+export interface NewsCoverage {
+  title: string;
+  intro?: string;
+}
+
+export interface NewsPageContent {
+  hero: NewsHero;
+  asSeenIn: NewsAsSeenIn;
+  pressKit: NewsPressKit;
+  coverage: NewsCoverage;
 }

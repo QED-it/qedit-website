@@ -1,7 +1,8 @@
-import { getMarkdownFiles } from '@/lib/markdown';
+import { getMarkdownData, getMarkdownFiles } from '@/lib/markdown';
 import Image from 'next/image';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
+import type { NewsPageContent } from '@/types/blocks';
 
 interface PressRelease {
   title: string;
@@ -15,7 +16,10 @@ interface PressRelease {
 
 export default function NewsPage() {
   const itemsPerPage = 12;
-  
+
+  const { data } = getMarkdownData<NewsPageContent>('pages', 'news.md');
+  const { hero, asSeenIn, pressKit, coverage } = data;
+
   const pressReleases = getMarkdownFiles<PressRelease>('press-releases')
     .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
@@ -30,17 +34,103 @@ export default function NewsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Read the Latest news & updates on data privacy challenges",
-            "description": "Qedit News. Get the latest news about Qedit Privacy Enhancing Technology. Data Collaboration Tools, and the New Data Economy",
-            "url": "https://qed-it.com/news/",
-            "dateModified": "2021-05-09T10:19:38+00:00"
+            "name": "Press — QEDIT in the press",
+            "description": "Press coverage, media assets, and company background for QEDIT, an applied cryptography firm.",
+            "url": "https://qed-it.com/news",
+            "dateModified": new Date().toISOString()
           })
         }}
       />
+
+      {/* Hero */}
+      <section className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-44 pb-16">
+          <p className="text-sm uppercase tracking-widest text-[#38b1df] font-medium mb-4">
+            {hero.eyebrow}
+          </p>
+          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-gray-900 mb-6">
+            {hero.title}
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl">{hero.intro}</p>
+        </div>
+      </section>
+
+      {/* As seen in */}
+      <section className="bg-gray-50 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <p className="text-sm uppercase tracking-widest text-gray-500 text-center mb-10">
+            {asSeenIn.title}
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-x-12 md:gap-x-16 gap-y-10">
+            {asSeenIn.outlets.map((outlet) => (
+              <div key={outlet.name} className="relative h-8 md:h-9 w-28 md:w-36">
+                <Image
+                  src={outlet.logo}
+                  alt={outlet.name}
+                  fill
+                  sizes="160px"
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Press kit */}
+      <section className="bg-[#1e2125] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <p className="text-sm uppercase tracking-widest text-[#38b1df] font-medium mb-3">
+            {pressKit.eyebrow}
+          </p>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-4">{pressKit.title}</h2>
+          <p className="text-lg text-gray-300 max-w-2xl mb-10">{pressKit.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {pressKit.links.map((link) =>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="group block p-6 rounded-xl border border-white/15 hover:border-[#38b1df] transition-colors"
+                >
+                  <h3 className="text-base font-semibold group-hover:text-[#38b1df] transition-colors mb-1">
+                    {link.label} →
+                  </h3>
+                  {link.description && (
+                    <p className="text-sm text-gray-400">{link.description}</p>
+                  )}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="group block p-6 rounded-xl border border-white/15 hover:border-[#38b1df] transition-colors"
+                >
+                  <h3 className="text-base font-semibold group-hover:text-[#38b1df] transition-colors mb-1">
+                    {link.label} →
+                  </h3>
+                  {link.description && (
+                    <p className="text-sm text-gray-400">{link.description}</p>
+                  )}
+                </Link>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Coverage */}
       <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl font-semibold text-gray-900 mb-12 text-center md:text-left">News</h1>
-          
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-3">
+            {coverage.title}
+          </h2>
+          {coverage.intro && (
+            <p className="text-xl text-gray-600 max-w-2xl mb-12">{coverage.intro}</p>
+          )}
+
           {/* Top Pagination */}
           {totalPages > 1 && (
             <div className="mb-8 flex justify-center space-x-2">
@@ -128,24 +218,22 @@ export default function NewsPage() {
 }
 
 export const metadata = {
-  title: 'Read the Latest news & updates on data privacy challenges',
-  description: 'Qedit News. Get the latest news about Qedit Privacy Enhancing Technology. Data Collaboration Tools, and the New Data Economy',
+  title: 'Press — QEDIT in the press | QEDIT',
+  description:
+    'Press coverage, media assets, and company background for QEDIT. Our work in zero-knowledge proofs, protocol design, and security audits, as covered by the press.',
   alternates: {
-    canonical: 'https://qed-it.com/news/',
+    canonical: 'https://qed-it.com/news',
   },
   openGraph: {
-    title: 'Read the Latest news & updates on data privacy challenges',
-    description: 'Qedit News. Get the latest news about Qedit Privacy Enhancing Technology. Data Collaboration Tools, and the New Data Economy',
-    url: 'https://qed-it.com/news/',
+    title: 'Press — QEDIT in the press | QEDIT',
+    description:
+      'Press coverage, media assets, and company background for QEDIT.',
+    url: 'https://qed-it.com/news',
     locale: 'en_US',
-    type: 'article',
+    type: 'website',
     siteName: 'QEDIT',
-    modifiedTime: '2021-05-09T10:19:38+00:00',
   },
   twitter: {
     card: 'summary_large_image',
   },
-  other: {
-    'article:modified_time': '2021-05-09T10:19:38+00:00',
-  }
-}; 
+};

@@ -222,7 +222,7 @@ export const metadata = {
   description:
     'Press coverage, media assets, and company background for QEDIT. Our work in zero-knowledge proofs, protocol design, and security audits, as covered by the press.',
   alternates: {
-    canonical: 'https://qed-it.com/news',
+    canonical: 'https://qed-it.com/news/',
   },
   openGraph: {
     title: 'Press — QEDIT in the press | QEDIT',

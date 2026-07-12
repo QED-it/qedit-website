@@ -119,7 +119,7 @@ export const metadata = {
   description: 'Get Started with QEDIT for Spreadsheets using our step-by-step tutorial, and discover how your organization can benefit from privacy-enabled data collaboration.',
   robots: { index: false, follow: true },
   alternates: {
-    canonical: 'https://qed-it.com/tutorial-for-excel-add-in',
+    canonical: 'https://qed-it.com/tutorial-for-excel-add-in/',
   },
   openGraph: {
     title: 'Tutorial QEDIT for Spreadsheets - QEDIT',

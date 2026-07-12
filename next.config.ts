@@ -1,9 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',  // Enable static exports
+  // Enable static exports
+  output: 'export',
+  // Foldered routes (about-us/index.html) so GitHub Pages
+  // serves /about-us/ directly and 301s /about-us -> /about-us/
+  trailingSlash: true,
   images: {
-    unoptimized: true, // Required for static export
+    // Required for static export
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

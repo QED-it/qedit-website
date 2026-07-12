@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getAllServices, getServiceWorks } from '@/lib/services';
+import { getAllServices } from '@/lib/services';
 
 export default function ServicesPage() {
   const services = getAllServices();

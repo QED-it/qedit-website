@@ -59,7 +59,7 @@ export const metadata = {
   description: 'Learn more about how QEDIT for Spreadsheets works under the hood, and discover how our privacy-enahbled data comparison tool can benefit your organization.',
   robots: { index: false, follow: true },
   alternates: {
-    canonical: 'https://qed-it.com/faq-excel-google-sheets',
+    canonical: 'https://qed-it.com/faq-excel-google-sheets/',
   },
   openGraph: {
     title: 'FAQ QEDIT for Spreadsheets - QEDIT',

@@ -195,7 +195,7 @@ export const metadata = {
   description: 'Mitigate risk and gain a competitive edge by comparing sensitive lists with other organizations in your ecosystem to reveal overlapping data.',
   robots: { index: false, follow: true },
   alternates: {
-    canonical: 'https://qed-it.com/qedit-for-spreadsheets',
+    canonical: 'https://qed-it.com/qedit-for-spreadsheets/',
   },
   openGraph: {
     title: 'QEDIT for Spreadsheets - QEDIT',

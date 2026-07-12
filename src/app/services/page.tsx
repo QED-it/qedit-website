@@ -78,7 +78,7 @@ export const metadata = {
   description:
     'QEDIT designs cryptographic protocols, audits the systems that implement them, and proves them correct with machine-checked proofs in Lean.',
   alternates: {
-    canonical: 'https://qed-it.com/services',
+    canonical: 'https://qed-it.com/services/',
   },
   openGraph: {
     title: 'Services — Security Audits, Protocol Design & Formal Verification | QEDIT',

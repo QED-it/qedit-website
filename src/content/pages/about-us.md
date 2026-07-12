@@ -2,13 +2,13 @@
 title: "Team"
 aboutUs:
   title: "About Us"
-  subtitle: "QEDIT enables companies to accelerate growth, mitigate risk and monetize insights via regulatory-compliant, cross-organizational data collaborations."
+  subtitle: "QEDIT is a team of cryptographers, protocol engineers, and formal-methods specialists who design, audit, and prove the cryptography behind systems that move real value"
   description: |
-    Founded in 2016 by a world-class team of accomplished tech entrepreneurs, researchers, and developers, QEDIT has emerged as a global leader in the field of Zero-Knowledge Proofs.
+    Founded in 2016, QEDIT is an applied cryptography firm. We design cryptographic protocols, audit the systems that implement them, and prove them correct with machine-checked proofs.
 
-    The company comprises industry experts and professionals with a passion for applied maths and is overseen by a Scientific Advisory Board that includes world-renowned cryptographers from leading academic institutions all over the globe.
+    Our team combines world leading cryptographers, protocol engineers, and formal-methods specialists, working across zero-knowledge proofs, privacy-preserving protocol design, and formal verification.
 
-    QEDIT is leading the standardization of Zero-Knowledge Proofs through the ZKProof.org Workshops, and builds production-grade ZKP systems for blockchain. We are a growing startup and always on the lookout for phenomenal individuals who share our vision to reclaim privacy in the digital world.
+    We co-founded ZKProof, the open industry-and-academia initiative standardizing zero-knowledge proofs, and we continue to help shape how the field is specified and verified. The work we take on is the kind where correctness cannot fail - and where a proof, not a test suite, is the standard of evidence.
 groupImage:
   image: "/images/team/group-2025-short.png"
   alt: "QEDIT Team Group Photo 2025"
@@ -47,7 +47,6 @@ teamMembers:
     role: "Cryptographic Protocol Researcher"
     bio: "Oana is a cryptography researcher and co-author of PLONK. She has a dual focus on both designing new cryptographic protocols and stress-testing them as an active security auditor."
     image: "/images/team/oana-ciobotaru-2025.png"
-
 
   - name: "Vivek Arte"
     role: "Cryptography Engineer"
@@ -91,7 +90,7 @@ teamMembers:
 
   - name: "Antoine Rondelet"
     role: "Scientific Advisor"
-    bio: "Antoine is a French computer science engineer turned entrepreneur living in London where he founded Ganddee. Antoine worked in startups at different stages in Amsterdam and London. Before starting his own venture, Antoine served as Head of R&D at Clearmatics where he oversaw multiple teams and where he led the applied cryptography department. Antoine worked on a series of privacy preserving protocols on Ethereum and other EVM chains."
+    bio: "Antoine is a French computer science engineer turned entrepreneur. Before starting his own venture, Antoine served as Head of R&D at Clearmatics where he started the applied cryptography department and managed teams of data engineers, quants and applied cryptographers. Antoine worked on a series of privacy preserving protocols on Ethereum and other smart contract chains."
     image: "/images/team/antoine-rondelet.png"
 
   - name: "Nurit Kaplan Daniel"

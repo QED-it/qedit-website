@@ -1,6 +1,7 @@
 import { getMarkdownData } from '@/lib/markdown';
 import FAQAccordion from '@/components/FAQAccordion';
 import Image from 'next/image';
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 interface CareersContent {
   title: string;
@@ -125,24 +126,21 @@ export default function Careers() {
 }
 
 export const metadata = {
-  title: 'Careers at QEDIT- Join a leading privacy tech startup',
-  description: 'Learn about career opportunities at QEDIT and join a world-class team of accomplished tech entrepreneurs, researchers, and developers.',
+  title: 'Careers at QEDIT - Applied Cryptography Roles',
+  description:
+    'Career opportunities at QEDIT, an applied cryptography firm working on zero-knowledge proofs, protocol design, and formal verification.',
   alternates: {
     canonical: 'https://qed-it.com/careers/',
   },
   openGraph: {
-    title: 'Careers at QEDIT- Join a leading privacy tech startup',
-    description: 'Learn about career opportunities at QEDIT and join a world-class team of accomplished tech entrepreneurs, researchers, and developers.',
+    ...OG_DEFAULTS,
+    title: 'Careers at QEDIT - Applied Cryptography Roles',
+    description:
+      'Career opportunities at QEDIT, an applied cryptography firm working on zero-knowledge proofs, protocol design, and formal verification.',
     url: 'https://qed-it.com/careers/',
-    locale: 'en_US',
-    type: 'article',
-    siteName: 'QEDIT',
-    modifiedTime: '2022-12-01T11:59:52+00:00',
   },
   twitter: {
-    card: 'summary_large_image',
+    ...TWITTER_DEFAULTS,
+    title: 'Careers at QEDIT - Applied Cryptography Roles',
   },
-  other: {
-    'article:modified_time': '2022-12-01T11:59:52+00:00',
-  }
-}; 
+};

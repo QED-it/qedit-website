@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getAllServices } from '@/lib/services';
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export default function ServicesPage() {
   const services = getAllServices();
@@ -72,8 +73,6 @@ export default function ServicesPage() {
     </>
   );
 }
-
-import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export const metadata = {
   title: 'Services — Security Audits, Protocol Design & Formal Verification | QEDIT',

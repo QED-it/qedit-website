@@ -1,6 +1,7 @@
 import { getMarkdownData } from '@/lib/markdown';
 import FAQAccordion from '@/components/FAQAccordion';
 import Image from 'next/image';
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 interface FAQContent {
   title: string;
@@ -65,8 +66,6 @@ export default function FAQ() {
     </>
   );
 }
-
-import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export const metadata = {
   title: 'FAQ - Applied Cryptography, Audits & Formal Verification | QEDIT',

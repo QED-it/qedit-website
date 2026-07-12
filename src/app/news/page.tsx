@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
 import type { NewsPageContent } from '@/types/blocks';
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 interface PressRelease {
   title: string;
@@ -216,8 +217,6 @@ export default function NewsPage() {
     </>
   );
 }
-
-import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export const metadata = {
   title: 'Press — QEDIT in the press | QEDIT',

@@ -29,22 +29,24 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'QEDIT - Enterprise Privacy Solutions',
-  description: 'QEDIT provides privacy-enhancing technology solutions for enterprises',
+  title: 'QEDIT - Applied Cryptography, ZK Proofs & Formal Verification',
+  description:
+    'QEDIT designs cryptographic protocols, audits the systems that implement them, and proves them correct with machine-checked proofs. The team behind Zcash Shielded Assets and a co-founder of the ZKProof standardization effort.',
   metadataBase: new URL('https://qed-it.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'QEDIT - Enterprise Privacy Solutions',
-    description: 'QEDIT provides privacy-enhancing technology solutions for enterprises',
+    title: 'QEDIT - Applied Cryptography, ZK Proofs & Formal Verification',
+    description:
+      'Security audits, protocol design, and formal verification for zero-knowledge proofs and cryptographic systems.',
     url: 'https://qed-it.com',
     siteName: 'QEDIT',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/images/qedit-og.png', // Make sure to add this image
+        url: '/images/qedit-og.png',
         width: 1200,
         height: 630,
       },
@@ -52,9 +54,10 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'QEDIT - Enterprise Privacy Solutions',
-    description: 'QEDIT provides privacy-enhancing technology solutions for enterprises',
-    images: ['/images/qedit-og.png'], // Same image as OG
+    title: 'QEDIT - Applied Cryptography, ZK Proofs & Formal Verification',
+    description:
+      'Security audits, protocol design, and formal verification for zero-knowledge proofs and cryptographic systems.',
+    images: ['/images/qedit-og.png'],
   },
   robots: {
     index: true,

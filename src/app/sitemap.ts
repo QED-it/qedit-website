@@ -34,11 +34,11 @@ const APP_ROUTE_PRIORITY: Record<string, number> = {
   '/zsa-hub': 0.9,      // flagship positioning
   '/research': 0.9,     // flagship positioning
   '/services': 0.9,     // services index
+  '/news': 0.7,         // press hub
   // low-value utility / deprecated index pages
   '/privacy-policy': 0.3,
   '/careers': 0.3,
   '/blog': 0.3,
-  '/news': 0.4,
 }
 const DEFAULT_APP_PRIORITY = 0.7  // about, security, contact, partners, faq, ...
 
@@ -84,8 +84,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const appRoutes = getAppRoutes()
 
   // Service pages live under dynamic [service]/[work] routes, so the folder
-  // walker above misses them. Enumerate them from the content instead, the
-  // same way the pages are generated.
+  // walker above misses them. Enumerate them from the content instead.
   const serviceLandingRoutes = getServiceSlugs().map((service) => `/services/${service}`)
   const serviceWorkRoutes = getServiceSlugs().flatMap((service) =>
     getServiceWorks(service).map((w) => `/services/${service}/${w.slug}`)
@@ -95,7 +94,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPosts = getMarkdownFiles<BlogPost>('blog')
   const pressReleases = getMarkdownFiles<PressRelease>('press-releases')
 
-  // Calculate total pages for blog and news
+  // Calculate total pages for blog and news pagination
   const blogItemsPerPage = 9;
   const newsItemsPerPage = 12;
   const totalBlogPages = Math.ceil(blogPosts.length / blogItemsPerPage);
@@ -149,7 +148,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...newsPaginationUrls,
 
     // Blog posts (legacy archive — kept indexed but low priority)
-    // NOTE: root-level URLs. If you move posts under /blog/, change to:
+    // NOTE: root-level URLs. If posts move under /blog/, change to:
     //   url(baseUrl, `/blog/${post.fileName.replace(/\.md$/, '')}`)
     ...blogPosts.map((post) => ({
       url: url(baseUrl, `/${post.fileName.replace(/\.md$/, '')}`),
@@ -158,12 +157,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.3,
     })),
 
-    // Press releases (legacy archive)
-    ...pressReleases.map((release) => ({
-      url: url(baseUrl, `/news/${release.fileName.replace(/\.md$/, '')}`),
-      lastModified: new Date(release.data.date),
-      changeFrequency: 'monthly' as const,
-      priority: 0.4,
-    })),
+    // NOTE: press releases are deliberately NOT in the sitemap.
+    // The files in content/press-releases/ are card metadata only — there is no
+    // /news/<slug> route, and each card links straight out to `externalUrl`.
+    // Emitting them produced ~35 URLs that 404. Only /news/ and its pagination
+    // are real pages and belong in the sitemap.
   ]
 }

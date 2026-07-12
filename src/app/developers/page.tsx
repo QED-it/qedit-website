@@ -168,6 +168,7 @@ export default function Developers() {
 export const metadata = {
   title: 'Privacy enhancing technology 4 secure data collaboration | Qedit',
   description: 'Qedit uses privacy-enhancing technology to empower safe cross-company data collaboration. Gain critical data insights with GDPR compliance.',
+  robots: { index: false, follow: true },
   alternates: {
     canonical: 'https://qed-it.com/developers/',
   },

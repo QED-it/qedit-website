@@ -193,13 +193,14 @@ export default function QeditForSpreadsheets() {
 export const metadata = {
   title: 'QEDIT for Spreadsheets - QEDIT',
   description: 'Mitigate risk and gain a competitive edge by comparing sensitive lists with other organizations in your ecosystem to reveal overlapping data.',
+  robots: { index: false, follow: true },
   alternates: {
-    canonical: 'https://qed-it.com/qedit-for-spreadsheets/',
+    canonical: 'https://qed-it.com/qedit-for-spreadsheets',
   },
   openGraph: {
     title: 'QEDIT for Spreadsheets - QEDIT',
     description: 'Mitigate risk and gain a competitive edge by comparing sensitive lists with other organizations in your ecosystem to reveal overlapping data.',
-    url: 'https://qed-it.com/qedit-for-spreadsheets/',
+    url: 'https://qed-it.com/qedit-for-spreadsheets',
     locale: 'en_US',
     type: 'article',
     siteName: 'QEDIT',

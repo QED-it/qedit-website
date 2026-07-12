@@ -58,20 +58,6 @@ export default function Home() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'QEDIT',
-            description:
-              'Applied cryptography firm specializing in zero-knowledge proofs, formal verification, protocol design, and security audits.',
-            url: 'https://qed-it.com/',
-          }),
-        }}
-      />
-
       {/* Hero */}
       <section className="relative bg-white overflow-hidden">
         <div

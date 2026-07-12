@@ -2,6 +2,7 @@ import { icons } from 'lucide-react';
 import { getMarkdownData } from '@/lib/markdown';
 import Link from 'next/link';
 import type { ZsaHubPageContent } from '@/types/blocks';
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export default function ZsaHub() {
   const { data } = getMarkdownData<ZsaHubPageContent>('pages', 'zsa-hub.md');
@@ -311,8 +312,6 @@ export default function ZsaHub() {
     </>
   );
 }
-
-import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export const metadata = {
   title: 'ZSA Hub — Zcash Shielded Assets (OrchardZSA) | QEDIT',

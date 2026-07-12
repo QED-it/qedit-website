@@ -1,5 +1,6 @@
 import { getMarkdownData } from '@/lib/markdown';
 import Image from 'next/image';
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 interface TeamMember {
   name: string;
@@ -270,8 +271,6 @@ export default function AboutUs() {
     </>
   );
 }
-
-import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export const metadata = {
   title: 'About Us - The Team | QEDIT',

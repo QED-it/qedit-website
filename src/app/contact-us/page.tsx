@@ -1,5 +1,6 @@
 import ContactForm from '@/components/ContactForm';
 import Image from 'next/image';
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export default function ContactUs() {
   return (
@@ -47,8 +48,6 @@ export default function ContactUs() {
     </>
   );
 }
-
-import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export const metadata = {
   title: 'Contact QEDIT - Audits, Protocol Design & Formal Verification',

@@ -2,6 +2,7 @@ import { getMarkdownData } from '@/lib/markdown';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { ResearchPageContent } from '@/types/blocks';
+import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export default function Research() {
   const { data } = getMarkdownData<ResearchPageContent>('pages', 'research.md');
@@ -148,8 +149,6 @@ export default function Research() {
     </>
   );
 }
-
-import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export const metadata = {
   title: 'Research - ZKProof, Zero-Knowledge & Applied Cryptography | QEDIT',

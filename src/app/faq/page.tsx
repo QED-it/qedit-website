@@ -10,6 +10,15 @@ interface FAQContent {
   }>;
 }
 
+/** Strip the HTML in the markdown answers — schema.org wants plain text. */
+function toPlainText(html: string): string {
+  return html
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 export default function FAQ() {
   const { data: pageData } = getMarkdownData<FAQContent>('pages', 'faq.md');
 
@@ -19,12 +28,17 @@ export default function FAQ() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "FAQ - QEDIT",
-            "url": "https://qed-it.com/faq/",
-            "dateModified": "2021-05-06T07:16:52+00:00"
-          })
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: pageData.questions.map((q) => ({
+              '@type': 'Question',
+              name: q.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: toPlainText(q.answer),
+              },
+            })),
+          }),
         }}
       />
       <div className="min-h-screen bg-white relative pb-48 md:pb-60">

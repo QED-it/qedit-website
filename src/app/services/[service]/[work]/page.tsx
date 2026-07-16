@@ -18,6 +18,9 @@ export async function generateMetadata({ params }: { params: Params }) {
   return {
     title: `${w.title} | QEDIT`,
     description: w.summary,
+    alternates: {
+      canonical: `https://qed-it.com/services/${service}/${work}/`,
+    },
   };
 }
 

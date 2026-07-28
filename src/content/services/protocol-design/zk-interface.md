@@ -1,8 +1,10 @@
 ---
-title: "zkInterface"
+title: "zkInterface: A Standard for Zero-Knowledge Interoperability"
 context: "Zero-Knowledge Standards"
 types: ["Design", "Implementation"]
 summary: "An open standard, designed and built by QEDIT, for interoperability between zero-knowledge proof systems — letting circuits written in one framework be proved by another."
+metaTitle: "zkInterface - A Standard for Zero-Knowledge Proof Interoperability"
+metaDescription: "QEDIT designed and built zkInterface, an open standard for interoperability between zero-knowledge proof systems, letting R1CS circuits from one framework be proved by another. Contributed to ZKProof."
 date: "2019-01-01"
 report: ""
 order: 5
@@ -10,7 +12,7 @@ order: 5
 
 ## What zkInterface is
 
-zkInterface is an open standard for interoperability between zero-knowledge proof systems. Zero-knowledge tooling is fragmented: circuits are written in many different frontends — libsnark, ZoKrates, jsnark, Snarky, Bellman, and others — and consumed by many different proving backends, each with its own formats and conventions. zkInterface defines a common, framework-agnostic way to describe a constraint system and its witness, so a circuit built in one framework can be proved by another.
+zkInterface is an open standard for interoperability between zero-knowledge proof systems. Zero-knowledge tooling is fragmented: circuits are written in many different frontends — e.g. zkSNARK libraries like libsnark, ZoKrates, jsnark, Snarky, Bellman, and others — and consumed by many different proving backends, each with its own formats and conventions. zkInterface defines a common, framework-agnostic way to describe a constraint system and its witness, so a circuit built in one framework can be proved by another.
 
 QEDIT designed and implemented zkInterface, and contributed it to the ZKProof standardization effort as a reference for zero-knowledge interoperability.
 
@@ -25,7 +27,7 @@ zkInterface specifies a small, purely functional, message-based interface built 
 
 ## Why it matters
 
-Interoperability is a precondition for a healthy zero-knowledge ecosystem. It lets developers choose the best frontend for expressing a circuit and the best backend for proving it, reuse low-level building blocks across projects, and build shared benchmarks. By standardizing the boundary between frontends and backends, zkInterface reduces lock-in and makes advanced cryptography more composable — the same philosophy behind QEDIT's broader work on [zero-knowledge standardization](/research).
+Interoperability is a precondition for a healthy zero-knowledge proof ecosystem. It lets developers choose the best frontend for expressing a circuit and the best backend for proving it, reuse low-level building blocks across projects, and build shared benchmarks. By standardizing the boundary between frontends and backends, zkInterface reduces lock-in and makes advanced cryptography more composable — the same philosophy behind QEDIT's broader work on [zero-knowledge standardization](/research).
 
 ## Resources
 

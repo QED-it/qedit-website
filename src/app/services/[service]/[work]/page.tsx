@@ -20,15 +20,20 @@ export async function generateMetadata({ params }: { params: Params }) {
   const title = w.metaTitle
     ? `${w.metaTitle} | QEDIT`
     : `${w.title} | QEDIT`;
-  
+
   // SEO description: explicit metaDescription, else summary (truncated by Google).
   const description = w.metaDescription ?? w.summary;
 
-    return {
-    title: title,
-    description: description,
+  // Canonical: explicit override (e.g. point a portfolio entry at the ZSA Hub),
+  // otherwise the page's own URL.
+  const canonical =
+    w.canonical ?? `https://qed-it.com/services/${service}/${work}/`;
+
+  return {
+    title,
+    description,
     alternates: {
-      canonical: `https://qed-it.com/services/${service}/${work}/`,
+      canonical,
     },
   };
 }

@@ -28,6 +28,7 @@ export interface WorkMeta {
   summary?: string;
   metaTitle?: string; // SEO <title>, independent of on-page <h1>
   metaDescription?: string; // SEO meta description
+  canonical?: string; // SEO canonical URL override; defaults to self
   date?: string;
   report?: string; // link to the report / repo / talk
   order?: number;
@@ -116,6 +117,7 @@ export function getWork(service: string, work: string): WorkMeta | null {
     summary: data.summary,
     metaTitle: data.metaTitle,
     metaDescription: data.metaDescription,
+    canonical: data.canonical,
     date: data.date,
     report: data.report,
     order: data.order,

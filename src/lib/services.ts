@@ -10,10 +10,13 @@ const SERVICES_DIR = path.join(process.cwd(), 'src', 'content', 'services');
 export interface ServiceMeta {
   slug: string;
   title: string;
+  shortTitle?: string; // short label for CTAs / nav, e.g. "security audits"
   tagline?: string;
   intro?: string;
+  metaTitle?: string; // SEO <title>, independent of on-page <h1>
+  metaDescription?: string; // SEO meta description
   order?: number;
-  content: string; // markdown body (optional richer intro)
+  content: string; // markdown body (long-form intro)
 }
 
 export interface WorkMeta {
@@ -50,8 +53,11 @@ export function getServiceMeta(slug: string): ServiceMeta | null {
   return {
     slug,
     title: data.title ?? slug,
+    shortTitle: data.shortTitle,
     tagline: data.tagline,
     intro: data.intro,
+    metaTitle: data.metaTitle,
+    metaDescription: data.metaDescription,
     order: data.order,
     content,
   };

@@ -19,9 +19,18 @@ export async function generateMetadata({ params }: { params: Params }) {
   const { service } = await params;
   const meta = getServiceMeta(service);
   if (!meta) return {};
+
+  // SEO title: explicit metaTitle if set, otherwise the on-page H1.
+  const title = meta.metaTitle
+    ? `${meta.metaTitle} | QEDIT`
+    : `${meta.title} | QEDIT`;
+
+  // SEO description: explicit metaDescription, else intro, else tagline.
+  const description = meta.metaDescription ?? meta.intro ?? meta.tagline;
+
   return {
-    title: `${meta.title} | QEDIT`,
-    description: meta.tagline,
+    title,
+    description,
     alternates: {
       canonical: `https://qed-it.com/services/${service}/`,
     },
@@ -44,7 +53,7 @@ export default async function ServicePage({ params }: { params: Params }) {
           <p className="text-sm uppercase tracking-widest text-[#38b1df] font-medium mb-4">
             Services
           </p>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-gray-900 mb-6 max-w-3xl">
             {meta.title}
           </h1>
           {meta.tagline && (
@@ -122,7 +131,7 @@ export default async function ServicePage({ params }: { params: Params }) {
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">
-            Have a {meta.title.toLowerCase()} engagement in mind?
+            Have a {(meta.shortTitle ?? meta.title).toLowerCase()} engagement in mind?
           </h2>
           <Link
             href="/contact-us"

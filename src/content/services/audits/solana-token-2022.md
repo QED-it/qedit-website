@@ -1,8 +1,10 @@
 ---
-title: "Token-2022 Confidential Transfer"
+title: "Security audit of Solana's Token-2022 Confidential Transfer"
 context: "Solana"
 types: ["Audit"]
 summary: "Security audit of Solana's confidential token extension."
+metaTitle: "Solana Token-2022 Confidential Transfer Security Audit"
+metaDescription: "QEDIT's cryptographic audit of Solana's Token-2022 Confidential Transfer extension: twisted ElGamal encryption, sigma protocols, and Bulletproof range proofs for private token amounts."
 date: "2025-12-22"
 report: ""
 order: 2
@@ -66,7 +68,7 @@ Our audit approach combines:
     - **Attack Vector Testing:** Reproduction and testing of known attack patterns and novel exploit scenarios
 - **Test Coverage Analysis:** Evaluation of existing test suites and creation of additional test cases
 
-## Team
+## Audit Team
 
 This audit is being conducted by:
 

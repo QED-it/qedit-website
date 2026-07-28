@@ -15,9 +15,18 @@ export async function generateMetadata({ params }: { params: Params }) {
   const { service, work } = await params;
   const w = getWork(service, work);
   if (!w) return {};
-  return {
-    title: `${w.title} | QEDIT`,
-    description: w.summary,
+
+  // SEO title: explicit metaTitle if set, otherwise the on-page H1.
+  const title = w.metaTitle
+    ? `${w.metaTitle} | QEDIT`
+    : `${w.title} | QEDIT`;
+  
+  // SEO description: explicit metaDescription, else summary (truncated by Google).
+  const description = w.metaDescription ?? w.summary;
+
+    return {
+    title: title,
+    description: description,
     alternates: {
       canonical: `https://qed-it.com/services/${service}/${work}/`,
     },

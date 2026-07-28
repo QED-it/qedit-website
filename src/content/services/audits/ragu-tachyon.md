@@ -1,8 +1,10 @@
 ---
-title: "Ragu Proof-Carrying Data"
+title: "Security Audit of Ragu Proof-Carrying Data"
 context: "Tachyon / Zcash"
 types: ["Audit"]
-summary: "Audit of the PCD scheme behind Zcash's next-generation architecture."
+summary: "Security audit of Ragu, the Proof Carrying Data (PCD) scheme for the next-generation of Zcash."
+metaTitle: "Ragu PCD Security Audit - Recursive Proofs for Next-Gen Zcash"
+metaDescription: "QEDIT's cryptographic audit of Ragu, a proof-carrying data framework for Zcash: split-accumulation folding over the Pasta cycle, revdot R1CS-type constraints, and CycleFold-style recursion."
 date: "2026-04-30"
 report: ""
 order: 1
@@ -104,7 +106,7 @@ The audit was carried out in the following ways:
 1. **Bottom-up review:** Each crate was audited following the dependency layering, starting from the foundational crates: `ragu_arithmetic`, `ragu_core`, `ragu_macros` . Progressing through `ragu_primitives`, `ragu_circuits`, and `ragu_pasta` before tackling `ragu_pcd`. Ensuring lower-level correctness assumptions were verified and team familiarity acquired before auditing the code that depends on them.
 2. **Protocol-to-implementation tracing:** For `ragu_pcd`, the audit traced the protocol design through the fuse pipeline, verifying that each stage's constraints, transcript correctness, and challenge derivations match the intended protocol semantics. In the absence of a formal specification, protocol intent was reconstructed from the code, inline documentation, and the version of the WIP Ragu Book available at the time of the audit.
 
-## Team
+## Audit Team
 
 This audit was conducted by:
 

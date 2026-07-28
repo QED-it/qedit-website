@@ -6,6 +6,7 @@ import {
   getServiceWorks,
 } from '@/lib/services';
 import { markdownToHtml } from '@/lib/markdown';
+import WorkCard from '@/components/WorkCard';
 
 type Params = Promise<{ service: string }>;
 
@@ -44,6 +45,14 @@ export default async function ServicePage({ params }: { params: Params }) {
 
   const works = getServiceWorks(service);
   const bodyHtml = meta.content ? await markdownToHtml(meta.content) : '';
+
+  // Other services, excluding the current one. Skip any with missing meta.
+  const otherServices = getServiceSlugs()
+    .filter((s) => s !== service)
+    .map((s) => ({ slug: s, meta: getServiceMeta(s) }))
+    .filter((s): s is { slug: string; meta: NonNullable<ReturnType<typeof getServiceMeta>> } =>
+      s.meta != null
+    );
 
   return (
     <>
@@ -92,35 +101,7 @@ export default async function ServicePage({ params }: { params: Params }) {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {works.map((w) => (
-                <Link
-                  key={w.slug}
-                  href={`/services/${service}/${w.slug}`}
-                  className="group block bg-white p-6 rounded-xl border border-gray-200 hover:border-[#38b1df] transition-colors"
-                >
-                  {w.context && (
-                    <span className="text-xs uppercase tracking-widest text-[#38b1df] font-medium">
-                      {w.context}
-                    </span>
-                  )}
-                  <h3 className="text-lg font-semibold text-gray-900 mt-2 mb-2">
-                    {w.title}
-                  </h3>
-                  {w.types && w.types.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {w.types.map((t) => (
-                        <span
-                          key={t}
-                          className="inline-flex items-center rounded-full bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  {w.summary && (
-                    <p className="text-sm text-gray-600">{w.summary}</p>
-                  )}
-                </Link>
+                <WorkCard key={w.slug} service={service} work={w} />
               ))}
             </div>
           )}
@@ -141,6 +122,36 @@ export default async function ServicePage({ params }: { params: Params }) {
           </Link>
         </div>
       </section>
+
+      {/* Other services */}
+      {otherServices.length > 0 && (
+        <section className="bg-gray-50 border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-10">
+              Other services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {otherServices.map(({ slug, meta: m }) => (
+                <Link
+                  key={slug}
+                  href={`/services/${slug}`}
+                  className="group block bg-white p-6 rounded-xl border border-gray-200 hover:border-[#38b1df] transition-colors"
+                >
+                  <span className="text-xs uppercase tracking-widest text-[#38b1df] font-medium">
+                    Services
+                  </span>
+                  <h3 className="text-lg font-semibold text-gray-900 mt-2 mb-2">
+                    {m.title}
+                  </h3>
+                  {m.tagline && (
+                    <p className="text-sm text-gray-600">{m.tagline}</p>
+                  )}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }

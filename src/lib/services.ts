@@ -26,6 +26,8 @@ export interface WorkMeta {
   context?: string;
   types?: WorkType[];
   summary?: string;
+  metaTitle?: string; // SEO <title>, independent of on-page <h1>
+  metaDescription?: string; // SEO meta description
   date?: string;
   report?: string; // link to the report / repo / talk
   order?: number;
@@ -112,6 +114,8 @@ export function getWork(service: string, work: string): WorkMeta | null {
     context: data.context,
     types: data.types,
     summary: data.summary,
+    metaTitle: data.metaTitle,
+    metaDescription: data.metaDescription,
     date: data.date,
     report: data.report,
     order: data.order,

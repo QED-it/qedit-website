@@ -1,8 +1,10 @@
 ---
-title: "Zcash Sapling"
+title: "Security Audit of Zcash Sapling"
 context: "Zcash"
 types: ["Audit"]
-summary: "Security review of the Zcash Sapling Spend and Output circuits, comparing the sapling-crypto implementation against the specification."
+summary: "Security audit of the Zcash Sapling Spend and Output circuits, comparing the sapling-crypto implementation against the specification."
+metaTitle: "Zcash Sapling Security Audit - Spend & Output Circuit Review"
+metaDescription: "QEDIT's cryptographic audit of Zcash Sapling: a spec-to-implementation review of the Spend and Output zk-SNARK circuits, Pedersen hash and commitment security, and Blake2s gadgets."
 date: "2018-10-25"
 report: "https://raw.githubusercontent.com/QED-it/sapling-audit/master/sapling-audit-report.pdf"
 order: 4
@@ -14,7 +16,7 @@ QEDIT reviewed the cryptography and constraint system of Zcash's Sapling upgrade
 
 The work covered both correctness (does the circuit enforce what the spec requires?) and security (do the underlying cryptographic constructions provide the properties they are relied on for?).
 
-## Scope
+## Scope of the audit
 
 The review examined:
 
@@ -24,7 +26,7 @@ The review examined:
 - The `GroupHash` / `FindGroupHash` construction and its use of Blake2s as a random oracle.
 - The **Blake2s** circuit itself: the compress function, and the XOR and MultiEq modules used within it.
 
-## What we found
+## Audit summary
 
 The audit did not identify critical vulnerabilities. Its value was in the depth of the specification-to-implementation comparison, the security arguments for the Pedersen constructions, and a set of findings and recommendations, the most notable being:
 

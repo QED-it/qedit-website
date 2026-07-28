@@ -1,8 +1,10 @@
 ---
-title: "Zcash NU5"
+title: "Security audit of Zcash NU5"
 context: "Zcash"
 types: ["Audit"]
-summary: "Security audit Zcash NU5."
+summary: "Specification and implementation review of Zcash's NU5 upgrade, focused on the Halo 2 proving system and the Orchard shielded protocol end to end."
+metaTitle: "Zcash NU5 Security Audit - Halo 2 & Orchard Protocol Review"
+metaDescription: "QEDIT's cryptographic audit of the Zcash NU5 upgrade: the Halo 2 proving system, the Orchard protocol and its primitives, key derivation, curve arithmetic, and the Orchard Action circuit."
 date: "2021-09-01"
 order: 3
 ---

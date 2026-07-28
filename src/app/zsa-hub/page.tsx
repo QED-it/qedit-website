@@ -2,6 +2,7 @@ import { icons } from 'lucide-react';
 import { getMarkdownData } from '@/lib/markdown';
 import Link from 'next/link';
 import type { ZsaHubPageContent } from '@/types/blocks';
+import { getServiceSlugs, getServiceMeta } from '@/lib/services';
 import { OG_DEFAULTS, TWITTER_DEFAULTS } from '@/lib/seo';
 
 export default function ZsaHub() {
@@ -17,6 +18,13 @@ export default function ZsaHub() {
     ...sections.map((s) => ({ id: s.id, label: s.title })),
     { id: 'faq', label: faq.title },
   ];
+  
+  // All services, same pattern as the services page. Skip any with missing meta.
+  const services = getServiceSlugs()
+    .map((s) => ({ slug: s, meta: getServiceMeta(s) }))
+    .filter((s): s is { slug: string; meta: NonNullable<ReturnType<typeof getServiceMeta>> } =>
+      s.meta != null
+    );
 
   return (
     <>
@@ -290,6 +298,41 @@ export default function ZsaHub() {
         </div>
       </section>
 
+      {/* Services / related work */}
+      {services.length > 0 && (
+        <section className="bg-white border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-3">
+              Work with QEDIT
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mb-12">
+              ZSAs are one product of the same core disciplines we bring to every
+              engagement: designing cryptographic protocols, auditing the systems
+              that implement them, and proving them correct.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {services.map(({ slug, meta: m }) => (
+                <Link
+                  key={slug}
+                  href={`/services/${slug}`}
+                  className="group block bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-[#38b1df] transition-colors"
+                >
+                  <span className="text-xs uppercase tracking-widest text-[#38b1df] font-medium">
+                    Services
+                  </span>
+                  <h3 className="text-lg font-semibold text-gray-900 mt-2 mb-2 group-hover:text-[#38b1df] transition-colors">
+                    {m.title}
+                  </h3>
+                  {m.tagline && (
+                    <p className="text-sm text-gray-600">{m.tagline}</p>
+                  )}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Closing CTA */}
       <section className="bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
@@ -316,7 +359,7 @@ export default function ZsaHub() {
 export const metadata = {
   title: 'ZSA Hub — Zcash Shielded Assets (OrchardZSA) | QEDIT',
   description:
-    'The definitive reference for Zcash Shielded Assets (ZSAs): what they are, why they matter, the multi-year R&D, and every spec, audit, and resource. OrchardZSA, designed by QEDIT.',
+    'The reference for Zcash Shielded Assets (ZSAs): what they are, why they matter, the multi-year R&D, and every spec, audit, and resource. OrchardZSA, designed by QEDIT.',
   alternates: {
     canonical: 'https://qed-it.com/zsa-hub/',
   },
@@ -324,13 +367,11 @@ export const metadata = {
     ...OG_DEFAULTS,
     title: 'ZSA Hub — Zcash Shielded Assets (OrchardZSA) | QEDIT',
     description:
-      'The definitive reference for Zcash Shielded Assets: scope, use cases, R&D history, specs, audits, and tooling. Designed by QEDIT.',
-    url: 'https://qed-it.com/zsa-hub/',
-    images: ['/images/zsa-og.png'],
+      'The reference for Zcash Shielded Assets: scope, use cases, R&D history, specs, audits, and tooling. Designed by QEDIT.',
+    url: 'https://qed-it.com/zsa-hub/'
   },
   twitter: {
     ...TWITTER_DEFAULTS,
-    title: 'ZSA Hub — Zcash Shielded Assets (OrchardZSA) | QEDIT',
-    images: ['/images/zsa-og.png'],
+    title: 'ZSA Hub — Zcash Shielded Assets (OrchardZSA) | QEDIT'
   },
 };

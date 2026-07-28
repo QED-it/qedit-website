@@ -1,7 +1,7 @@
 ---
 hero:
   eyebrow: "ZSA Hub"
-  title: "The home of Zcash Shielded Assets"
+  title: "Zcash Shielded Assets (ZSAs)"
   intro: "Zcash Shielded Assets (ZSAs) bring arbitrary user-defined assets — stablecoins, tokens, NFTs — into Zcash's shielded pool, so they inherit the strongest privacy in the crypto space. The protocol is called OrchardZSA. QEDIT designed and built it. This page is the canonical reference for what it is, why it matters, the multi-year R&D behind it, and every spec, audit, and resource available on the topic."
   meta:
     - label: "Status"
@@ -14,14 +14,14 @@ hero:
       value: "2021 · 5+ years"
 
 overview:
-  title: "What ZSAs are"
+  title: "What are Zcash Shielded Assets?"
   paragraphs:
     - "OrchardZSA extends Zcash's Orchard shielded protocol so that any user-defined asset can be issued, transferred, and burned inside the same shielded pool as ZEC, with the same privacy guarantees. Where most chains expose the sender, receiver, amount, and asset type of every token transfer, a ZSA transfer reveals none of them."
     - "OrchardZSA is a full protocol, not a feature. It defines new issuance keys and asset identifiers, a note and commitment structure for custom assets, a version 6 transaction format, consensus rules for supply tracking and finalization, and an updated fee model. It is specified across two interdependent ZIPs, independently audited, and being merged into Zcash's consensus-critical crates."
     - "The result is a general-purpose asset layer for private value: the machinery for anyone to issue and move their own assets privately on Zcash."
 
 useCases:
-  title: "What it enables"
+  title: "What private assets can you build with ZSAs?"
   intro: "One protocol, a wide surface of applications."
   items:
     - title: "Private stablecoins"
@@ -44,7 +44,7 @@ useCases:
       description: "Transaction controls let issuers attach rules to assets, supporting compliance use-cases while preserving privacy."
 
 whyItMatters:
-  title: "Why it matters"
+  title: "Shielded assets improve blockchain privacy"
   paragraphs:
     - "Zcash offers the strongest financial privacy in the world. Using zero-knowledge proofs, it cryptographically proves a transaction is valid without revealing the sender, receiver, or amount. Unlike other protocols, which rely on privacy add-ons or trusted third parties, Zcash was designed with a privacy-first mindset."
     - "Today, those privacy guarantees only apply to ZEC (Zcash's native token) - not the stablecoins, tokenized assets, or NFTs people actually want to move privately."

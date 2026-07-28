@@ -1,8 +1,10 @@
 ---
-title: "Digital Shekel"
+title: "Digital Shekel: Bank of Israel CBDC"
 context: "Bank of Israel"
 types: ["Protocol"]
 summary: "Selected by the Bank of Israel as one of 14 teams to develop use-cases for a potential digital shekel in its CBDC sandbox."
+metaTitle: "Digital Shekel Challenge - QEDIT in Bank of Israel's CBDC Sandbox"
+metaDescription: "QEDIT was selected as one of 14 teams in the Bank of Israel's Digital Shekel Challenge, building privacy and compliance use-cases for a potential CBDC alongside PayPal, Fireblocks, and IDEMIA."
 date: "2024-07-23"
 report: "https://www.globalgovernmentfinance.com/bank-of-israel-digital-shekel-challenge-14-projects/"
 order: 3

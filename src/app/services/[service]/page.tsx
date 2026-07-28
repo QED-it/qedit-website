@@ -96,7 +96,7 @@ export default async function ServicePage({ params }: { params: Params }) {
           </h2>
           {works.length === 0 ? (
             <p className="text-gray-500">
-              More information about our work in this area coming soon.
+              More information about our work in this area coming soon. Stay tuned.
             </p>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

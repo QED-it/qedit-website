@@ -87,12 +87,16 @@ const auditsMark = (() => {
 // than filled circles, which read as bulbs. Messages run lifeline to lifeline:
 // commit out, challenge back in gold, response out.
 const protocolMark = (() => {
-  const lx = 22, rx = 98, capW = 11;
+  const lx = 22, rx = 98, capW = 5.5;
   // The cap sits directly on the head of its lifeline so each party reads as
-  // one mark, not a bar floating above a line.
+  // one mark, not a bar floating above a line. Drawn symmetrically about the
+  // lifeline x, so it stays centred whatever capW is.
   const top = 26, lifeBot = 106;
   const rows = [44, 67, 90];
-  const cap = (x, color) => stroke(`M${n(x - capW)} ${top}L${n(x + capW)} ${top}`, color, 7);
+  // Sat flush at `top` the lifeline's round cap poked above the bar. Lifting the
+  // bar 3px puts it over that end instead, so each party reads as a clean T.
+  const capY = top - 3;
+  const cap = (x, color) => stroke(`M${n(x - capW)} ${capY}L${n(x + capW)} ${capY}`, color, 3.5);
   const lifeline = (x) =>
     `<path d="M${n(x)} ${top}L${n(x)} ${lifeBot}" fill="none" stroke="${NAVY}" stroke-width="4.2" stroke-linecap="round" stroke-opacity=".9"/>`;
   return (

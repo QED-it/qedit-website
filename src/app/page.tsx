@@ -2,6 +2,7 @@ import { getMarkdownData } from '@/lib/markdown';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { HomePageContent } from '@/types/blocks';
+import CapabilityIcon, { type CapabilityIconName } from '@/components/CapabilityIcon';
 
 const CONTAINER = 'max-w-[1200px] mx-auto px-6 min-[860px]:px-10';
 
@@ -25,21 +26,21 @@ const CARD =
 const BADGE =
   'inline-flex items-center rounded-full px-[14px] py-[6px] text-[13px] font-semibold';
 
-const CAPABILITY_META: Record<string, { illustration: string; eyebrow: string }> = {
+const CAPABILITY_META: Record<string, { icon: CapabilityIconName; eyebrow: string }> = {
   'Security Audits': {
-    illustration: '/images/illustrations/certified-secure.png',
+    icon: 'point-field',
     eyebrow: 'Audits',
   },
   'Protocol Design': {
-    illustration: '/images/illustrations/standard-crypto.png',
+    icon: 'round-transcript',
     eyebrow: 'Engineering',
   },
   'Formal Verification': {
-    illustration: '/images/illustrations/checkmark.png',
+    icon: 'domain-coverage',
     eyebrow: 'Assurance',
   },
   'Research & Standardization': {
-    illustration: '/images/illustrations/benchmarking-stats.png',
+    icon: 'lattice-basis',
     eyebrow: 'Field work',
   },
 };
@@ -149,12 +150,9 @@ export default function Home() {
                   className={`${CARD} flex flex-col items-start p-9`}
                 >
                   {meta && (
-                    <Image
-                      src={meta.illustration}
-                      alt=""
-                      width={92}
-                      height={92}
-                      className="w-[92px] h-[92px] object-contain mb-5"
+                    <CapabilityIcon
+                      name={meta.icon}
+                      className="w-[120px] h-[120px] mb-5"
                     />
                   )}
                   {meta && <span className={`${EYEBROW} mb-2`}>{meta.eyebrow}</span>}

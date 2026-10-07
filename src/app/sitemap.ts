@@ -86,8 +86,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Service pages live under dynamic [service]/[work] routes, so the folder
   // walker above misses them. Enumerate them from the content instead.
   const serviceLandingRoutes = getServiceSlugs().map((service) => `/services/${service}`)
+  // Works whose canonical points elsewhere (e.g. zcash-zsa -> /zsa-hub/) are
+  // non-canonical, so they stay out of the sitemap.
   const serviceWorkRoutes = getServiceSlugs().flatMap((service) =>
-    getServiceWorks(service).map((w) => `/services/${service}/${w.slug}`)
+    getServiceWorks(service)
+      .filter((w) => !w.canonical || w.canonical === url(baseUrl, `/services/${service}/${w.slug}`))
+      .map((w) => `/services/${service}/${w.slug}`)
   )
 
   // Get all content

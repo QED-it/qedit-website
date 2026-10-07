@@ -237,7 +237,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-    }
+    },
+    alternates: {
+      canonical: `https://qed-it.com/${slug}/`,
+    },
   };
 
   // Return default metadata if no SEO data exists

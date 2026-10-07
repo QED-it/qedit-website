@@ -26,6 +26,16 @@ interface PageProps {
   params: Promise<{ page: string }>;
 }
 
+export async function generateMetadata({ params }: PageProps) {
+  const { page } = await params;
+  const pageNumber = parseInt(page);
+  return {
+    alternates: {
+      canonical: `https://qed-it.com/blog/page/${pageNumber}/`,
+    },
+  };
+}
+
 export default async function BlogPaginatedPage({ params }: PageProps) {
   const { page } = await params;
   const pageNumber = parseInt(page);

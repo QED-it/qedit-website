@@ -90,6 +90,7 @@ export function getServiceWorks(slug: string): WorkMeta[] {
         context: data.context,
         types: data.types,
         summary: data.summary,
+        canonical: data.canonical,
         date: data.date,
         report: data.report,
         order: data.order,

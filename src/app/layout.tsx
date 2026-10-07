@@ -71,9 +71,8 @@ export const metadata = {
   description:
     'QEDIT designs cryptographic protocols, audits the systems that implement them, and proves them correct with machine-checked proofs. The team behind Zcash Shielded Assets and a co-founder of the ZKProof standardization effort.',
   metadataBase: new URL('https://qed-it.com'),
-  alternates: {
-    canonical: '/',
-  },
+  // No site-wide canonical: a default here is inherited by every page that
+  // doesn't override it, pointing them all at the homepage. Each page sets its own.
   openGraph: {
     ...OG_DEFAULTS,
     title: 'QEDIT - Applied Cryptography, ZK Proofs & Formal Verification',

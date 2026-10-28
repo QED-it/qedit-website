@@ -357,7 +357,7 @@ export default function ZsaHub() {
 }
 
 export const metadata = {
-  title: 'ZSA Hub — Zcash Shielded Assets (OrchardZSA) | QEDIT',
+  title: 'ZSA Hub - Zcash Shielded Assets (OrchardZSA) | QEDIT',
   description:
     'The reference for Zcash Shielded Assets (ZSAs): what they are, why they matter, the multi-year R&D, and every spec, audit, and resource. OrchardZSA, designed by QEDIT.',
   alternates: {
@@ -365,13 +365,13 @@ export const metadata = {
   },
   openGraph: {
     ...OG_DEFAULTS,
-    title: 'ZSA Hub — Zcash Shielded Assets (OrchardZSA) | QEDIT',
+    title: 'ZSA Hub - Zcash Shielded Assets (OrchardZSA) | QEDIT',
     description:
       'The reference for Zcash Shielded Assets: scope, use cases, R&D history, specs, audits, and tooling. Designed by QEDIT.',
     url: 'https://qed-it.com/zsa-hub/'
   },
   twitter: {
     ...TWITTER_DEFAULTS,
-    title: 'ZSA Hub — Zcash Shielded Assets (OrchardZSA) | QEDIT'
+    title: 'ZSA Hub - Zcash Shielded Assets (OrchardZSA) | QEDIT'
   },
 };

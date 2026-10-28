@@ -9,7 +9,7 @@ hero:
     - label: "Activation"
       value: "Community decision"
     - label: "Funding"
-      value: "$4M+ across ZF + ZCG grants"
+      value: "$4M+ across ZCG grants"
     - label: "Since"
       value: "2021 · 5+ years"
 
@@ -52,7 +52,7 @@ whyItMatters:
 
 timeline:
   title: "The R&D behind it"
-  intro: "Five years of protocol design, implementation, audit and integration by QEDIT, funded across Zcash Foundation and Zcash Community Grants, with reviews and contributions from core Zcash developers."
+  intro: "Five years of protocol design, implementation, audit and integration by QEDIT, funded by Zcash Community Grants, with reviews and contributions from core Zcash developers."
   milestones:
     - period: "2021"
       title: "The proposal"
@@ -103,7 +103,7 @@ timeline:
       href: "https://zechub.substack.com/p/zcash-arborist-call-update-october"
       linkLabel: "Arborist call, 15 October 2026"
   
-  note: "In total, more than $4M has been awarded across Zcash Foundation and Zcash Community Grants over 5+ years. Over that period, every network upgrade changed the ground beneath ZSAs: NU6, NU6.1, the NU6.2 circuit fix, the NU6.3 Ironwood pool, and two redesigns of the v6 transaction format. Each one meant updating and rebasing OrchardZSA across orchard, halo2, sinsemilla, sapling-crypto, librustzcash, Zebra, zcash-test-vectors, the ZIPs and zcash_tx_tool, then taking the result back through upstream review. Big thanks and love to @daira, @str4d, and everyone involved for their reviews and guidance throughout the years ♥."
+  note: "In total, more than $4M has been awarded across Zcash Community Grants over 5+ years. Over that period, every network upgrade changed the ground beneath ZSAs: NU6, NU6.1, the NU6.2 circuit fix, the NU6.3 Ironwood pool, and two redesigns of the v6 transaction format. Each one meant updating and rebasing OrchardZSA across orchard, halo2, sinsemilla, sapling-crypto, librustzcash, Zebra, zcash-test-vectors, the ZIPs and zcash_tx_tool, then taking the result back through upstream review. Big thanks and love to @daira, @str4d, and everyone involved for their reviews and guidance throughout the years ♥."
 
 research:
   title: "Research threads"
@@ -248,7 +248,7 @@ faq:
     - question: "What applications will ZSAs enable?"
       answer: "ZSAs make Zcash a home for private versions of the assets people actually use. That includes stablecoins that move with full shielded privacy (and, via transaction controls, with compliance where it's required), private and atomic asset swaps directly on Zcash, tokenized real-world assets and NFTs that stay confidential, and wrapped or bridged assets brought over from other chains. In short, any asset that benefits from strong privacy becomes possible on the world's most private financial network."
     - question: "Is OrchardZSA audited?"
-      answer: "Yes. Least Authority completed an independent security audit of the OrchardZSA protocol, commissioned by Zcash Community Grants as Zcash Ecosystem Security Lead, with the final report completed in January 2025. The report is linked in the Security & Audits section above."
+      answer: "Yes. Least Authority completed an independent security audit of the OrchardZSA protocol, with the final report completed in January 2025. The report is linked in the Security & Audits section above."
     - question: "How can I start building with ZSAs?"
       answer: "Start with the specifications (ZIPs 226, 227 and 228) and QEDIT's zcash_tx_tool for constructing and testing ZSA transactions on the feature testnet, all linked above. If you're planning an integration or have a specific use-case in mind, get in touch - we designed the protocol and are happy to help."
 

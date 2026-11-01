@@ -63,10 +63,6 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 text-center md:text-left">
               <div className="flex flex-col md:flex-row md:items-center md:space-x-2">
                 <span className="text-sm text-gray-400">© {currentYear} QEDIT. All Rights Reserved</span>
-                <span className="hidden md:inline text-gray-400">|</span>
-                <span className="text-sm text-gray-400">Rothschild 22, Tel-Aviv - Yafo, Israel</span>
-                <span className="hidden md:inline text-gray-400">|</span>
-                <span className="text-sm text-gray-500">Designed And Developed By YARA</span>
               </div>
             </div>
 

@@ -9,7 +9,7 @@ hero:
     - label: "Activation"
       value: "Community decision"
     - label: "Funding"
-      value: "$4M+ across ZCG grants"
+      value: "ZCG grants"
     - label: "Since"
       value: "2021 · 5+ years"
 
@@ -103,7 +103,7 @@ timeline:
       href: "https://zechub.substack.com/p/zcash-arborist-call-update-october"
       linkLabel: "Arborist call, 15 October 2026"
   
-  note: "In total, more than $4M has been awarded across Zcash Community Grants over 5+ years. Over that period, every network upgrade changed the ground beneath ZSAs: NU6, NU6.1, the NU6.2 circuit fix, the NU6.3 Ironwood pool, and two redesigns of the v6 transaction format. Each one meant updating and rebasing OrchardZSA across orchard, halo2, sinsemilla, sapling-crypto, librustzcash, Zebra, zcash-test-vectors, the ZIPs and zcash_tx_tool, then taking the result back through upstream review. Big thanks and love to @daira, @str4d, and everyone involved for their reviews and guidance throughout the years ♥."
+  note: "ZSA was funded by several Zcash Community Grants over 5+ years. Over that period, every network upgrade changed the ground beneath ZSAs: NU6, NU6.1, the NU6.2 circuit fix, the NU6.3 Ironwood pool, and two redesigns of the v6 transaction format. Each one meant updating and rebasing OrchardZSA across orchard, halo2, sinsemilla, sapling-crypto, librustzcash, Zebra, zcash-test-vectors, the ZIPs and zcash_tx_tool, then taking the result back through upstream review. Big thanks and love to @daira, @str4d, and everyone involved for their reviews and guidance throughout the years ♥."
 
 research:
   title: "Research threads"
